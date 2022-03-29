@@ -1,0 +1,36 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.1.0
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cvmfs-contrib/egi-cvmfs/:
+      branch: master
+      repo: https://github.com/cvmfs-contrib/egi-cvmfs/
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cvmfs-contrib/egi-cvmfs/ git:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-saffron-grasshopper.sh
+        container: qc.acc_cheeky-magenta-bat
+  QC.Doc:
+    repos:
+      github.com/cvmfs-contrib/egi-cvmfs/ find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.dorky-copper-dolphin.sh
+        container: qc.doc_skimpy-ecru-caterpillar
+      github.com/cvmfs-contrib/egi-cvmfs/ markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-puce-drever.sh
+        container: qc.doc_chummy-brass-fowl
+  QC.Lic:
+    repos:
+      github.com/cvmfs-contrib/egi-cvmfs/ licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-magnolia-flounder.sh
+        container: qc.lic_sleepy-blue-squirrel
+timeout: 600
