@@ -2,35 +2,41 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.1.0
+      branch: release/1.7.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/cvmfs-contrib/egi-cvmfs/:
+    github.com/I2PC/scipion-docker/:
       branch: master
-      repo: https://github.com/cvmfs-contrib/egi-cvmfs/
+      repo: https://github.com/I2PC/scipion-docker/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/cvmfs-contrib/egi-cvmfs/ git:
+      github.com/I2PC/scipion-docker/ git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-saffron-grasshopper.sh
-        container: qc.acc_cheeky-magenta-bat
+        - /usr/bin/env sh .sqa/script.tacky-cobalt-ragdoll.sh
+        container: qc.acc_droopy-maroon-skunk
   QC.Doc:
     repos:
-      github.com/cvmfs-contrib/egi-cvmfs/ find_doc_files.py:
+      github.com/I2PC/scipion-docker/ find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-copper-dolphin.sh
-        container: qc.doc_skimpy-ecru-caterpillar
-      github.com/cvmfs-contrib/egi-cvmfs/ markdownlint:
+        - /usr/bin/env sh .sqa/script.queasy-lavender-chimpanzee.sh
+        container: qc.doc_nerdy-razzmatazz-quail
+      github.com/I2PC/scipion-docker/ markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-puce-drever.sh
-        container: qc.doc_chummy-brass-fowl
+        - /usr/bin/env sh .sqa/script.hasty-buff-moth.sh
+        container: qc.doc_craggy-sepia-impala
   QC.Lic:
     repos:
-      github.com/cvmfs-contrib/egi-cvmfs/ licensee:
+      github.com/I2PC/scipion-docker/ licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-magnolia-flounder.sh
-        container: qc.lic_sleepy-blue-squirrel
+        - /usr/bin/env sh .sqa/script.pasty-cream-wombat.sh
+        container: qc.lic_gamy-sapphire-cuscus
+  QC.Ver:
+    repos:
+      github.com/I2PC/scipion-docker/ get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleazy-chartreuse-newt.sh
+        container: qc.ver_pasty-pear-audemer
 timeout: 600
