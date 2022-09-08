@@ -1,4 +1,4 @@
 (
-cd github.com/I2PC/scipion-docker/ &&
+cd github.com/ufcg-lsd/saps-docker/ &&
     find_doc_files.py --file_type all
 )

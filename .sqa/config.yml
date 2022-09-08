@@ -2,41 +2,63 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.0
+      branch: 1.7.0_no_kubectl
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/I2PC/scipion-docker/:
+    github.com/ufcg-lsd/saps-docker/:
       branch: master
-      repo: https://github.com/I2PC/scipion-docker/
+      repo: https://github.com/ufcg-lsd/saps-docker/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/I2PC/scipion-docker/ git:
+      github.com/ufcg-lsd/saps-docker/ git:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-cobalt-ragdoll.sh
-        container: qc.acc_droopy-maroon-skunk
+        - /usr/bin/env sh .sqa/script.smelly-ivory-echidna.sh
+        container: qc.acc_zippy-white-lion
   QC.Doc:
     repos:
-      github.com/I2PC/scipion-docker/ find_doc_files.py:
+      github.com/ufcg-lsd/saps-docker/ find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-lavender-chimpanzee.sh
-        container: qc.doc_nerdy-razzmatazz-quail
-      github.com/I2PC/scipion-docker/ markdownlint:
+        - /usr/bin/env sh .sqa/script.hilly-rose-liger.sh
+        container: qc.doc_sunny-mustard-coati
+      github.com/ufcg-lsd/saps-docker/ git:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-buff-moth.sh
-        container: qc.doc_craggy-sepia-impala
+        - /usr/bin/env sh .sqa/script.pokey-harlequin-camel.sh
+        container: qc.doc_squeaky-dandelion-tortoise
+      github.com/ufcg-lsd/saps-docker/ markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-aqua-insect.sh
+        container: qc.doc_lousy-coral-labradoodle
+  QC.FAIR:
+    repos:
+      github.com/ufcg-lsd/saps-docker/ F-UJI:
+        commands:
+        - /usr/bin/env sh .sqa/script.snappy-charcoal-ladybird.sh
+        container: qc.fair_leaky-tangerine-ostrich
   QC.Lic:
     repos:
-      github.com/I2PC/scipion-docker/ licensee:
+      github.com/ufcg-lsd/saps-docker/ licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-cream-wombat.sh
-        container: qc.lic_gamy-sapphire-cuscus
+        - /usr/bin/env sh .sqa/script.craggy-cinnabar-buffalo.sh
+        container: qc.lic_muzzy-orchid-quail
+  QC.Sec:
+    repos:
+      github.com/ufcg-lsd/saps-docker/ bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-black-lion.sh
+        container: qc.sec_boozy-buff-baboon
+  QC.Sty:
+    repos:
+      github.com/ufcg-lsd/saps-docker/ flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-ruby-cattle.sh
+        container: qc.sty_trippy-carmine-caiman
   QC.Ver:
     repos:
-      github.com/I2PC/scipion-docker/ get_git_tags.py:
+      github.com/ufcg-lsd/saps-docker/ get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-chartreuse-newt.sh
-        container: qc.ver_pasty-pear-audemer
-timeout: 600
+        - /usr/bin/env sh .sqa/script.stealthy-corn-quetzal.sh
+        container: qc.ver_flabby-eggplant-millipede
+timeout: 1800
