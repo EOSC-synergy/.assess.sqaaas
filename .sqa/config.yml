@@ -1,9 +1,9 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/saps-catalog:
-      branch: develop
-      repo: https://github.com/EOSC-synergy/saps-catalog/
+    github.com/EOSC-synergy/dataverse-kubernetes:
+      branch: '5.11'
+      repo: http://github.com/EOSC-synergy/dataverse-kubernetes/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: 1.7.0_no_kubectl
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
@@ -13,46 +13,50 @@ environment:
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/saps-catalog git:
+      github.com/EOSC-synergy/dataverse-kubernetes git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-amethyst-horse.sh
-        container: qc.acc_cranky-sepia-barb
+        - /usr/bin/env sh .sqa/script.randy-mauve-sparrow.sh
+        container: qc.acc_tasty-saffron-numbat
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/saps-catalog find_doc_files.py:
+      github.com/EOSC-synergy/dataverse-kubernetes find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-lavender-seal.sh
-        container: qc.doc_squirrely-ochre-mongoose
-      github.com/EOSC-synergy/saps-catalog git:
+        - /usr/bin/env sh .sqa/script.gamy-brass-rat.sh
+        container: qc.doc_ugly-cerise-gerbil
+      github.com/EOSC-synergy/dataverse-kubernetes git:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-ochre-gopher.sh
-        container: qc.doc_droopy-champagne-pinscher
-      github.com/EOSC-synergy/saps-catalog markdownlint:
+        - /usr/bin/env sh .sqa/script.flaky-crimson-dachshund.sh
+        container: qc.doc_snoopy-chestnut-anteater
+      github.com/EOSC-synergy/dataverse-kubernetes markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-smalt-dane.sh
-        container: qc.doc_wiggy-silver-ferret
+        - /usr/bin/env sh .sqa/script.gimpy-rust-peccary.sh
+        container: qc.doc_wimpy-olive-albatross
+      github.com/EOSC-synergy/dataverse-kubernetes restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-olivine-blue.sh
+        container: qc.doc_stealthy-wheat-lionfish
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/saps-catalog licensee:
+      github.com/EOSC-synergy/dataverse-kubernetes licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-ruby-hornet.sh
-        container: qc.lic_beady-tomato-wildebeest
+        - /usr/bin/env sh .sqa/script.chummy-gold-lizard.sh
+        container: qc.lic_lovely-seashell-wolf
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/saps-catalog bandit:
+      github.com/EOSC-synergy/dataverse-kubernetes bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-yellow-schnauzer.sh
-        container: qc.sec_squirrely-seashell-kiwi
+        - /usr/bin/env sh .sqa/script.bluesy-beige-snake.sh
+        container: qc.sec_clammy-aquamarine-barnacle
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/saps-catalog flake8:
+      github.com/EOSC-synergy/dataverse-kubernetes flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-asparagus-cassowary.sh
-        container: qc.sty_boozy-razzmatazz-snake
+        - /usr/bin/env sh .sqa/script.squirrely-red-kudu.sh
+        container: qc.sty_sickly-aquamarine-fousek
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/saps-catalog get_git_tags.py:
+      github.com/EOSC-synergy/dataverse-kubernetes get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-chocolate-flamingo.sh
-        container: qc.ver_stealthy-periwinkle-warthog
+        - /usr/bin/env sh .sqa/script.gamy-bronze-capuchin.sh
+        container: qc.ver_leaky-myrtle-urchin
 timeout: 1800
