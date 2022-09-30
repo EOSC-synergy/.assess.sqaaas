@@ -4,61 +4,55 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: 1.7.0_no_kubectl
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/ufcg-lsd/saps-docker/:
+    github.com/grycap/oscar:
       branch: master
-      repo: https://github.com/ufcg-lsd/saps-docker/
+      repo: https://github.com/grycap/oscar/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/ufcg-lsd/saps-docker/ git:
+      github.com/grycap/oscar git:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-ivory-echidna.sh
-        container: qc.acc_zippy-white-lion
+        - /usr/bin/env sh .sqa/script.skanky-peach-goat.sh
+        container: qc.acc_squirrely-cornflower-emu
   QC.Doc:
     repos:
-      github.com/ufcg-lsd/saps-docker/ find_doc_files.py:
+      github.com/grycap/oscar find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-rose-liger.sh
-        container: qc.doc_sunny-mustard-coati
-      github.com/ufcg-lsd/saps-docker/ git:
+        - /usr/bin/env sh .sqa/script.snippy-silver-squirt.sh
+        container: qc.doc_scummy-apricot-birman
+      github.com/grycap/oscar git:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-harlequin-camel.sh
-        container: qc.doc_squeaky-dandelion-tortoise
-      github.com/ufcg-lsd/saps-docker/ markdownlint:
+        - /usr/bin/env sh .sqa/script.sleepy-cinnamon-axolotl.sh
+        container: qc.doc_scaly-periwinkle-kiwi
+      github.com/grycap/oscar markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-aqua-insect.sh
-        container: qc.doc_lousy-coral-labradoodle
-  QC.FAIR:
-    repos:
-      github.com/ufcg-lsd/saps-docker/ F-UJI:
-        commands:
-        - /usr/bin/env sh .sqa/script.snappy-charcoal-ladybird.sh
-        container: qc.fair_leaky-tangerine-ostrich
+        - /usr/bin/env sh .sqa/script.beady-peach-cockroach.sh
+        container: qc.doc_beady-periwinkle-lemur
   QC.Lic:
     repos:
-      github.com/ufcg-lsd/saps-docker/ licensee:
+      github.com/grycap/oscar licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-cinnabar-buffalo.sh
-        container: qc.lic_muzzy-orchid-quail
+        - /usr/bin/env sh .sqa/script.hazy-pumpkin-capybara.sh
+        container: qc.lic_bluesy-lavender-squid
   QC.Sec:
     repos:
-      github.com/ufcg-lsd/saps-docker/ bandit:
+      github.com/grycap/oscar bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-black-lion.sh
-        container: qc.sec_boozy-buff-baboon
+        - /usr/bin/env sh .sqa/script.sunny-emerald-camel.sh
+        container: qc.sec_messy-sapphire-orangutan
   QC.Sty:
     repos:
-      github.com/ufcg-lsd/saps-docker/ flake8:
+      github.com/grycap/oscar flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-ruby-cattle.sh
-        container: qc.sty_trippy-carmine-caiman
+        - /usr/bin/env sh .sqa/script.cozy-orchid-squirt.sh
+        container: qc.sty_craggy-tomato-spaniel
   QC.Ver:
     repos:
-      github.com/ufcg-lsd/saps-docker/ get_git_tags.py:
+      github.com/grycap/oscar get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-corn-quetzal.sh
-        container: qc.ver_flabby-eggplant-millipede
+        - /usr/bin/env sh .sqa/script.sickly-heliotrope-dalmatian.sh
+        container: qc.ver_crappy-alizarin-bombay
 timeout: 1800

@@ -1,4 +1,4 @@
 (
-cd github.com/ufcg-lsd/saps-docker/ &&
+cd github.com/grycap/oscar &&
     git rev-parse --is-inside-work-tree
 )
