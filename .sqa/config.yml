@@ -1,76 +1,62 @@
 config:
   credentials: []
   project_repos:
-    git.scc.kit.edu/synergy.o3as/o3api:
-      branch: hackathon
-      repo: https://git.scc.kit.edu/synergy.o3as/o3api/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/rjdmartins/try_ibergrid2022_sqaaas:
+      branch: master
+      repo: https://github.com/rjdmartins/try_ibergrid2022_sqaaas/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      git.scc.kit.edu/synergy.o3as/o3api git:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-charcoal-eagle.sh
-        container: qc.acc_sunny-corn-balinese
+        - /usr/bin/env sh .sqa/script.seedy-asparagus-okapi.sh
+        container: qc.acc_skimpy-russet-ibis
   QC.Doc:
     repos:
-      git.scc.kit.edu/synergy.o3as/o3api find_doc_files.py:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-malachite-cougar.sh
-        container: qc.doc_chewy-white-wombat
-      git.scc.kit.edu/synergy.o3as/o3api git:
+        - /usr/bin/env sh .sqa/script.lovely-jade-falcon.sh
+        container: qc.doc_wimpy-amaranth-hedgehog
+      github.com/rjdmartins/try_ibergrid2022_sqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-white-hedgehog.sh
-        container: qc.doc_sloppy-cornflower-tamarin
-      git.scc.kit.edu/synergy.o3as/o3api markdownlint:
+        - /usr/bin/env sh .sqa/script.shabby-olive-anteater.sh
+        container: qc.doc_gloppy-cerise-coral
+      github.com/rjdmartins/try_ibergrid2022_sqaaas markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-ruby-bracke.sh
-        container: qc.doc_snappy-xanthic-chinook
-      git.scc.kit.edu/synergy.o3as/o3api restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.tasty-mustard-coyote.sh
+        container: qc.doc_goopy-auburn-buzzard
+      github.com/rjdmartins/try_ibergrid2022_sqaaas restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-cardinal-kakapo.sh
-        container: qc.doc_smelly-wisteria-fly
+        - /usr/bin/env sh .sqa/script.pasty-indigo-lion.sh
+        container: qc.doc_nerdy-taupe-mist
   QC.Lic:
     repos:
-      git.scc.kit.edu/synergy.o3as/o3api licensee:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-copper-monster.sh
-        container: qc.lic_freaky-amaranth-albatross
-  QC.Met:
-    repos:
-      git.scc.kit.edu/synergy.o3as/o3api validate_codemeta:
-        commands:
-        - /usr/bin/env sh .sqa/script.woozy-red-fousek.sh
-        container: qc.met_gamy-pink-lynx
+        - /usr/bin/env sh .sqa/script.tasty-pear-deer.sh
+        container: qc.lic_bumpy-magenta-spitz
   QC.Sec:
     repos:
-      git.scc.kit.edu/synergy.o3as/o3api bandit:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-harlequin-deer.sh
-        container: qc.sec_bluesy-saffron-peccary
+        - /usr/bin/env sh .sqa/script.trippy-harlequin-elephant.sh
+        container: qc.sec_tacky-zucchini-tiger
   QC.Sty:
     repos:
-      git.scc.kit.edu/synergy.o3as/o3api flake8:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-cinnabar-beaver.sh
-        container: qc.sty_slimy-rust-caracal
-      git.scc.kit.edu/synergy.o3as/o3api hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.bluesy-amber-lion.sh
-        container: qc.sty_nerdy-turquoise-okapi
-      git.scc.kit.edu/synergy.o3as/o3api jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.grumpy-chocolate-cougar.sh
-        container: qc.sty_scanty-lilac-dane
+        - /usr/bin/env sh .sqa/script.hasty-black-wasp.sh
+        container: qc.sty_leaky-cream-echidna
   QC.Ver:
     repos:
-      git.scc.kit.edu/synergy.o3as/o3api get_git_tags.py:
+      github.com/rjdmartins/try_ibergrid2022_sqaaas get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-maroon-zorse.sh
-        container: qc.ver_bluesy-auburn-zebra
+        - /usr/bin/env sh .sqa/script.pretty-cerulean-flamingo.sh
+        container: qc.ver_tacky-tangerine-peccary
 timeout: 1800
