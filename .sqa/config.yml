@@ -1,70 +1,66 @@
 config:
   credentials: []
   project_repos:
+    git.scc.kit.edu/synergy.o3as/o3api:
+      branch: hackathon
+      repo: https://git.scc.kit.edu/synergy.o3as/o3api/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/tdviet/fedcloudclient:
-      branch: sqaaas-test
-      repo: https://github.com/tdviet/fedcloudclient/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/tdviet/fedcloudclient git:
+      git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-goldenrod-russel.sh
-        container: qc.acc_skanky-corn-manatee
+        - /usr/bin/env sh .sqa/script.clammy-red-saola.sh
+        container: qc.acc_paltry-sapphire-stoat
   QC.Doc:
     repos:
-      github.com/tdviet/fedcloudclient find_doc_files.py:
+      git.scc.kit.edu/synergy.o3as/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-corn-audemer.sh
-        container: qc.doc_hasty-sangria-flounder
-      github.com/tdviet/fedcloudclient git:
+        - /usr/bin/env sh .sqa/script.trippy-seashell-kakapo.sh
+        container: qc.doc_gamy-magnolia-badger
+      git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-beige-shrew.sh
-        container: qc.doc_squeaky-chartreuse-caterpillar
-      github.com/tdviet/fedcloudclient markdownlint:
+        - /usr/bin/env sh .sqa/script.slaphappy-ruby-starfish.sh
+        container: qc.doc_stealthy-russet-kangaroo
+      git.scc.kit.edu/synergy.o3as/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-auburn-moth.sh
-        container: qc.doc_dorky-azure-bordeaux
-      github.com/tdviet/fedcloudclient restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.boozy-blue-flounder.sh
+        container: qc.doc_messy-seashell-robin
+      git.scc.kit.edu/synergy.o3as/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-zucchini-caracal.sh
-        container: qc.doc_scummy-rose-pinscher
+        - /usr/bin/env sh .sqa/script.ugly-ultramarine-lizard.sh
+        container: qc.doc_whiny-azure-bonobo
   QC.Lic:
     repos:
-      github.com/tdviet/fedcloudclient licensee:
+      git.scc.kit.edu/synergy.o3as/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-amber-neanderthal.sh
-        container: qc.lic_muzzy-rose-oriole
+        - /usr/bin/env sh .sqa/script.sickly-burgundy-crocodile.sh
+        container: qc.lic_chewy-cerulean-crocodile
   QC.Sec:
     repos:
-      github.com/tdviet/fedcloudclient bandit:
+      git.scc.kit.edu/synergy.o3as/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-saffron-penguin.sh
-        container: qc.sec_skimpy-tangerine-ladybird
+        - /usr/bin/env sh .sqa/script.queasy-ochre-elephant.sh
+        container: qc.sec_skimpy-alizarin-yak
   QC.Sty:
     repos:
-      github.com/tdviet/fedcloudclient flake8:
+      git.scc.kit.edu/synergy.o3as/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-white-saola.sh
-        container: qc.sty_woozy-lemon-capybara
-      github.com/tdviet/fedcloudclient hadolint:
+        - /usr/bin/env sh .sqa/script.breezy-indigo-blue.sh
+        container: qc.sty_cranky-amaranth-orangutan
+      git.scc.kit.edu/synergy.o3as/o3api hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-rose-rattlesnake.sh
-        container: qc.sty_wiggy-alizarin-tarsier
-      github.com/tdviet/fedcloudclient jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.silly-tomato-flounder.sh
-        container: qc.sty_cheeky-flax-ocelot
+        - /usr/bin/env sh .sqa/script.homey-peach-akbash.sh
+        container: qc.sty_lovely-seashell-cougar
   QC.Ver:
     repos:
-      github.com/tdviet/fedcloudclient get_git_tags.py:
+      git.scc.kit.edu/synergy.o3as/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-tomato-zorse.sh
-        container: qc.ver_wiggy-amethyst-cockroach
+        - /usr/bin/env sh .sqa/script.squeaky-platinum-wrasse.sh
+        container: qc.ver_squeaky-teal-jackal
 timeout: 1800
