@@ -1,62 +1,76 @@
 config:
   credentials: []
   project_repos:
+    git.scc.kit.edu/synergy.o3as/o3api:
+      branch: hackathon
+      repo: https://git.scc.kit.edu/synergy.o3as/o3api/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/indigo-dc/flaat:
-      branch: master
-      repo: https://github.com/indigo-dc/flaat/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/indigo-dc/flaat git:
+      git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-emerald-frise.sh
-        container: qc.acc_stuffy-red-schnauzer
+        - /usr/bin/env sh .sqa/script.randy-charcoal-eagle.sh
+        container: qc.acc_sunny-corn-balinese
   QC.Doc:
     repos:
-      github.com/indigo-dc/flaat find_doc_files.py:
+      git.scc.kit.edu/synergy.o3as/o3api find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-beige-rottweiler.sh
-        container: qc.doc_bumpy-beige-mist
-      github.com/indigo-dc/flaat git:
+        - /usr/bin/env sh .sqa/script.stealthy-malachite-cougar.sh
+        container: qc.doc_chewy-white-wombat
+      git.scc.kit.edu/synergy.o3as/o3api git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-blue-macaque.sh
-        container: qc.doc_cheeky-peach-booby
-      github.com/indigo-dc/flaat markdownlint:
+        - /usr/bin/env sh .sqa/script.tasty-white-hedgehog.sh
+        container: qc.doc_sloppy-cornflower-tamarin
+      git.scc.kit.edu/synergy.o3as/o3api markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-goldenrod-vole.sh
-        container: qc.doc_shaggy-rust-dugong
-      github.com/indigo-dc/flaat restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.sloppy-ruby-bracke.sh
+        container: qc.doc_snappy-xanthic-chinook
+      git.scc.kit.edu/synergy.o3as/o3api restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-tomato-caracal.sh
-        container: qc.doc_homely-tomato-orangutan
+        - /usr/bin/env sh .sqa/script.boozy-cardinal-kakapo.sh
+        container: qc.doc_smelly-wisteria-fly
   QC.Lic:
     repos:
-      github.com/indigo-dc/flaat licensee:
+      git.scc.kit.edu/synergy.o3as/o3api licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-cyan-vole.sh
-        container: qc.lic_nerdy-crimson-sparrow
+        - /usr/bin/env sh .sqa/script.stinky-copper-monster.sh
+        container: qc.lic_freaky-amaranth-albatross
+  QC.Met:
+    repos:
+      git.scc.kit.edu/synergy.o3as/o3api validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.woozy-red-fousek.sh
+        container: qc.met_gamy-pink-lynx
   QC.Sec:
     repos:
-      github.com/indigo-dc/flaat bandit:
+      git.scc.kit.edu/synergy.o3as/o3api bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-tangerine-insect.sh
-        container: qc.sec_zippy-cobalt-mandrill
+        - /usr/bin/env sh .sqa/script.slaphappy-harlequin-deer.sh
+        container: qc.sec_bluesy-saffron-peccary
   QC.Sty:
     repos:
-      github.com/indigo-dc/flaat flake8:
+      git.scc.kit.edu/synergy.o3as/o3api flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-eggplant-vulture.sh
-        container: qc.sty_snippy-seashell-bullfrog
+        - /usr/bin/env sh .sqa/script.lumpy-cinnabar-beaver.sh
+        container: qc.sty_slimy-rust-caracal
+      git.scc.kit.edu/synergy.o3as/o3api hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-amber-lion.sh
+        container: qc.sty_nerdy-turquoise-okapi
+      git.scc.kit.edu/synergy.o3as/o3api jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-chocolate-cougar.sh
+        container: qc.sty_scanty-lilac-dane
   QC.Ver:
     repos:
-      github.com/indigo-dc/flaat get_git_tags.py:
+      git.scc.kit.edu/synergy.o3as/o3api get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-grey-tapir.sh
-        container: qc.ver_frumpy-bronze-tiger
+        - /usr/bin/env sh .sqa/script.cozy-maroon-zorse.sh
+        container: qc.ver_bluesy-auburn-zebra
 timeout: 1800
