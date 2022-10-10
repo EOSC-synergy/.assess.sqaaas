@@ -1,62 +1,70 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/dataverse-kubernetes:
-      branch: '5.11'
-      repo: http://github.com/EOSC-synergy/dataverse-kubernetes/
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: 1.7.0_no_kubectl
+      branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/tdviet/fedcloudclient:
+      branch: sqaaas-test
+      repo: https://github.com/tdviet/fedcloudclient/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/dataverse-kubernetes git:
+      github.com/tdviet/fedcloudclient git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-mauve-sparrow.sh
-        container: qc.acc_tasty-saffron-numbat
+        - /usr/bin/env sh .sqa/script.chewy-goldenrod-russel.sh
+        container: qc.acc_skanky-corn-manatee
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/dataverse-kubernetes find_doc_files.py:
+      github.com/tdviet/fedcloudclient find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-brass-rat.sh
-        container: qc.doc_ugly-cerise-gerbil
-      github.com/EOSC-synergy/dataverse-kubernetes git:
+        - /usr/bin/env sh .sqa/script.trippy-corn-audemer.sh
+        container: qc.doc_hasty-sangria-flounder
+      github.com/tdviet/fedcloudclient git:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-crimson-dachshund.sh
-        container: qc.doc_snoopy-chestnut-anteater
-      github.com/EOSC-synergy/dataverse-kubernetes markdownlint:
+        - /usr/bin/env sh .sqa/script.gimpy-beige-shrew.sh
+        container: qc.doc_squeaky-chartreuse-caterpillar
+      github.com/tdviet/fedcloudclient markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-rust-peccary.sh
-        container: qc.doc_wimpy-olive-albatross
-      github.com/EOSC-synergy/dataverse-kubernetes restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.gimpy-auburn-moth.sh
+        container: qc.doc_dorky-azure-bordeaux
+      github.com/tdviet/fedcloudclient restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-olivine-blue.sh
-        container: qc.doc_stealthy-wheat-lionfish
+        - /usr/bin/env sh .sqa/script.snoopy-zucchini-caracal.sh
+        container: qc.doc_scummy-rose-pinscher
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/dataverse-kubernetes licensee:
+      github.com/tdviet/fedcloudclient licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-gold-lizard.sh
-        container: qc.lic_lovely-seashell-wolf
+        - /usr/bin/env sh .sqa/script.hazy-amber-neanderthal.sh
+        container: qc.lic_muzzy-rose-oriole
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/dataverse-kubernetes bandit:
+      github.com/tdviet/fedcloudclient bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-beige-snake.sh
-        container: qc.sec_clammy-aquamarine-barnacle
+        - /usr/bin/env sh .sqa/script.ready-saffron-penguin.sh
+        container: qc.sec_skimpy-tangerine-ladybird
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/dataverse-kubernetes flake8:
+      github.com/tdviet/fedcloudclient flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-red-kudu.sh
-        container: qc.sty_sickly-aquamarine-fousek
+        - /usr/bin/env sh .sqa/script.skimpy-white-saola.sh
+        container: qc.sty_woozy-lemon-capybara
+      github.com/tdviet/fedcloudclient hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-rose-rattlesnake.sh
+        container: qc.sty_wiggy-alizarin-tarsier
+      github.com/tdviet/fedcloudclient jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-tomato-flounder.sh
+        container: qc.sty_cheeky-flax-ocelot
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/dataverse-kubernetes get_git_tags.py:
+      github.com/tdviet/fedcloudclient get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-bronze-capuchin.sh
-        container: qc.ver_leaky-myrtle-urchin
+        - /usr/bin/env sh .sqa/script.muzzy-tomato-zorse.sh
+        container: qc.ver_wiggy-amethyst-cockroach
 timeout: 1800
