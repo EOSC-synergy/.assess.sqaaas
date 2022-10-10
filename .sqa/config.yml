@@ -1,66 +1,62 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/onedataSim:
-      branch: dev
-      repo: https://github.com/EOSC-synergy/onedataSim/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/indigo-dc/flaat:
+      branch: master
+      repo: https://github.com/indigo-dc/flaat/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/onedataSim git:
+      github.com/indigo-dc/flaat git:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-ecru-tarantula.sh
-        container: qc.acc_stuffy-bistre-macaque
+        - /usr/bin/env sh .sqa/script.bumpy-emerald-frise.sh
+        container: qc.acc_stuffy-red-schnauzer
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/onedataSim find_doc_files.py:
+      github.com/indigo-dc/flaat find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-gold-chinchilla.sh
-        container: qc.doc_pretty-scarlet-woodpecker
-      github.com/EOSC-synergy/onedataSim git:
+        - /usr/bin/env sh .sqa/script.skimpy-beige-rottweiler.sh
+        container: qc.doc_bumpy-beige-mist
+      github.com/indigo-dc/flaat git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-blue-leopard.sh
-        container: qc.doc_ready-wheat-terrier
-      github.com/EOSC-synergy/onedataSim markdownlint:
+        - /usr/bin/env sh .sqa/script.sunny-blue-macaque.sh
+        container: qc.doc_cheeky-peach-booby
+      github.com/indigo-dc/flaat markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-brass-dhole.sh
-        container: qc.doc_breezy-ruby-mau
+        - /usr/bin/env sh .sqa/script.zippy-goldenrod-vole.sh
+        container: qc.doc_shaggy-rust-dugong
+      github.com/indigo-dc/flaat restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-tomato-caracal.sh
+        container: qc.doc_homely-tomato-orangutan
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/onedataSim licensee:
+      github.com/indigo-dc/flaat licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-orange-peccary.sh
-        container: qc.lic_frumpy-malachite-wolfhound
+        - /usr/bin/env sh .sqa/script.crappy-cyan-vole.sh
+        container: qc.lic_nerdy-crimson-sparrow
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/onedataSim bandit:
+      github.com/indigo-dc/flaat bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cardinal-blue.sh
-        container: qc.sec_muggy-goldenrod-hyrax
+        - /usr/bin/env sh .sqa/script.slimy-tangerine-insect.sh
+        container: qc.sec_zippy-cobalt-mandrill
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/onedataSim flake8:
+      github.com/indigo-dc/flaat flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-pink-wombat.sh
-        container: qc.sty_silly-sapphire-jaguar
-      github.com/EOSC-synergy/onedataSim hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.snappy-rust-dugong.sh
-        container: qc.sty_grumpy-gold-cockroach
-      github.com/EOSC-synergy/onedataSim jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.muggy-buff-chicken.sh
-        container: qc.sty_trippy-thistle-squirrel
+        - /usr/bin/env sh .sqa/script.gloppy-eggplant-vulture.sh
+        container: qc.sty_snippy-seashell-bullfrog
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/onedataSim get_git_tags.py:
+      github.com/indigo-dc/flaat get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-tan-octopus.sh
-        container: qc.ver_skimpy-teal-mastiff
+        - /usr/bin/env sh .sqa/script.gloppy-grey-tapir.sh
+        container: qc.ver_frumpy-bronze-tiger
 timeout: 1800
