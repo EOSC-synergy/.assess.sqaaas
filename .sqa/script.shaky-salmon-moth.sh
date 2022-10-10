@@ -1,4 +1,4 @@
 (
-cd git.scc.kit.edu/synergy.o3as/o3api &&
+cd github.com/tdviet4free/fedcloudclient &&
     bandit -f json --quiet  --confidence-level high --severity-level high --recursive .
 )
