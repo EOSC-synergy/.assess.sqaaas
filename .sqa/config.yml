@@ -1,70 +1,66 @@
 config:
   credentials: []
   project_repos:
+    github.com/EOSC-synergy/onedataSim:
+      branch: dev
+      repo: https://github.com/EOSC-synergy/onedataSim/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/tdviet4free/fedcloudclient:
-      branch: sqaaas-test
-      repo: https://github.com/tdviet4free/fedcloudclient/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/tdviet4free/fedcloudclient git:
+      github.com/EOSC-synergy/onedataSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-lavender-havanese.sh
-        container: qc.acc_bumpy-taupe-chipmunk
+        - /usr/bin/env sh .sqa/script.nerdy-ecru-tarantula.sh
+        container: qc.acc_stuffy-bistre-macaque
   QC.Doc:
     repos:
-      github.com/tdviet4free/fedcloudclient find_doc_files.py:
+      github.com/EOSC-synergy/onedataSim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-auburn-maltese.sh
-        container: qc.doc_squeaky-mauve-dingo
-      github.com/tdviet4free/fedcloudclient git:
+        - /usr/bin/env sh .sqa/script.craggy-gold-chinchilla.sh
+        container: qc.doc_pretty-scarlet-woodpecker
+      github.com/EOSC-synergy/onedataSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-persimmon-dunker.sh
-        container: qc.doc_lovely-emerald-zonkey
-      github.com/tdviet4free/fedcloudclient markdownlint:
+        - /usr/bin/env sh .sqa/script.fuzzy-blue-leopard.sh
+        container: qc.doc_ready-wheat-terrier
+      github.com/EOSC-synergy/onedataSim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-corn-indri.sh
-        container: qc.doc_woolly-pear-retriever
-      github.com/tdviet4free/fedcloudclient restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.tasty-aquamarine-antelope.sh
-        container: qc.doc_silly-gold-husky
+        - /usr/bin/env sh .sqa/script.snazzy-brass-dhole.sh
+        container: qc.doc_breezy-ruby-mau
   QC.Lic:
     repos:
-      github.com/tdviet4free/fedcloudclient licensee:
+      github.com/EOSC-synergy/onedataSim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-orange-magpie.sh
-        container: qc.lic_bluesy-maroon-chinook
+        - /usr/bin/env sh .sqa/script.dorky-orange-peccary.sh
+        container: qc.lic_frumpy-malachite-wolfhound
   QC.Sec:
     repos:
-      github.com/tdviet4free/fedcloudclient bandit:
+      github.com/EOSC-synergy/onedataSim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-salmon-moth.sh
-        container: qc.sec_bumpy-cyan-ibis
+        - /usr/bin/env sh .sqa/script.scanty-cardinal-blue.sh
+        container: qc.sec_muggy-goldenrod-hyrax
   QC.Sty:
     repos:
-      github.com/tdviet4free/fedcloudclient flake8:
+      github.com/EOSC-synergy/onedataSim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-brass-loon.sh
-        container: qc.sty_scummy-ochre-oyster
-      github.com/tdviet4free/fedcloudclient hadolint:
+        - /usr/bin/env sh .sqa/script.pretty-pink-wombat.sh
+        container: qc.sty_silly-sapphire-jaguar
+      github.com/EOSC-synergy/onedataSim hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-plum-labradoodle.sh
-        container: qc.sty_foggy-maroon-duck
-      github.com/tdviet4free/fedcloudclient jsonlint:
+        - /usr/bin/env sh .sqa/script.snappy-rust-dugong.sh
+        container: qc.sty_grumpy-gold-cockroach
+      github.com/EOSC-synergy/onedataSim jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-coral-akbash.sh
-        container: qc.sty_sloppy-flax-dugong
+        - /usr/bin/env sh .sqa/script.muggy-buff-chicken.sh
+        container: qc.sty_trippy-thistle-squirrel
   QC.Ver:
     repos:
-      github.com/tdviet4free/fedcloudclient get_git_tags.py:
+      github.com/EOSC-synergy/onedataSim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-green-clam.sh
-        container: qc.ver_pretty-denim-kakapo
+        - /usr/bin/env sh .sqa/script.fuzzy-tan-octopus.sh
+        container: qc.ver_skimpy-teal-mastiff
 timeout: 1800
