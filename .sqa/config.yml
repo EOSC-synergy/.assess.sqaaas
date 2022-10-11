@@ -4,59 +4,81 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/rjdmartins/try_ibergrid2022_sqaaas:
-      branch: master
-      repo: https://github.com/rjdmartins/try_ibergrid2022_sqaaas/
+    github.com/grycap/im:
+      branch: devel
+      repo: https://github.com/grycap/im/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/rjdmartins/try_ibergrid2022_sqaaas git:
+      github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-magnolia-koala.sh
-        container: qc.acc_flaky-linen-dachshund
+        - /usr/bin/env sh .sqa/script.cheeky-lavender-mole.sh
+        container: qc.acc_geeky-lilac-hippopotamus
   QC.Doc:
     repos:
-      github.com/rjdmartins/try_ibergrid2022_sqaaas find_doc_files.py:
+      github.com/grycap/im find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-indigo-sheepdog.sh
-        container: qc.doc_gloppy-ecru-ladybird
-      github.com/rjdmartins/try_ibergrid2022_sqaaas git:
+        - /usr/bin/env sh .sqa/script.wheezy-amethyst-collie.sh
+        container: qc.doc_grumpy-sapphire-mist
+      github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-ruby-tang.sh
-        container: qc.doc_randy-linen-hummingbird
-      github.com/rjdmartins/try_ibergrid2022_sqaaas markdownlint:
+        - /usr/bin/env sh .sqa/script.crabby-platinum-shrew.sh
+        container: qc.doc_scanty-blue-tang
+      github.com/grycap/im markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-auburn-angelfish.sh
-        container: qc.doc_squirrely-viridian-bonobo
-      github.com/rjdmartins/try_ibergrid2022_sqaaas restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.baggy-fuchsia-abyssinian.sh
+        container: qc.doc_snazzy-orange-shrimp
+      github.com/grycap/im restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-ochre-numbat.sh
-        container: qc.doc_skimpy-indigo-wallaby
+        - /usr/bin/env sh .sqa/script.queasy-cardinal-affenpinscher.sh
+        container: qc.doc_woozy-fuchsia-ray
   QC.Lic:
     repos:
-      github.com/rjdmartins/try_ibergrid2022_sqaaas licensee:
+      github.com/grycap/im licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-teal-flounder.sh
-        container: qc.lic_pasty-cinnamon-capybara
+        - /usr/bin/env sh .sqa/script.muggy-tan-chinook.sh
+        container: qc.lic_skimpy-vermilion-snail
+  QC.Met:
+    repos:
+      github.com/grycap/im validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.hazy-auburn-wolfhound.sh
+        container: qc.met_flimsy-charcoal-hyena
   QC.Sec:
     repos:
-      github.com/rjdmartins/try_ibergrid2022_sqaaas bandit:
+      github.com/grycap/im bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-rose-kangaroo.sh
-        container: qc.sec_pokey-cyan-goose
+        - /usr/bin/env sh .sqa/script.sleepy-violet-axolotl.sh
+        container: qc.sec_sunny-pumpkin-fossa
   QC.Sty:
     repos:
-      github.com/rjdmartins/try_ibergrid2022_sqaaas flake8:
+      github.com/grycap/im flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-red-jaguar.sh
-        container: qc.sty_gummy-orange-dachsbracke
+        - /usr/bin/env sh .sqa/script.scanty-ivory-jaguar.sh
+        container: qc.sty_sunny-puce-kakapo
+      github.com/grycap/im hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-azure-weasel.sh
+        container: qc.sty_queasy-magenta-turkey
+      github.com/grycap/im jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.clammy-myrtle-tiger.sh
+        container: qc.sty_freaky-lilac-elephant
+      github.com/grycap/im rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.bumpy-russet-retriever.sh
+        container: qc.sty_ugly-sapphire-chinchilla
+      github.com/grycap/im stylelint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-amber-mayfly.sh
+        container: qc.sty_breezy-yellow-ladybird
   QC.Ver:
     repos:
-      github.com/rjdmartins/try_ibergrid2022_sqaaas get_git_tags.py:
+      github.com/grycap/im get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-thistle-butterfly.sh
-        container: qc.ver_whiny-fuchsia-camel
+        - /usr/bin/env sh .sqa/script.scaly-orchid-neanderthal.sh
+        container: qc.ver_breezy-cinnabar-cichlid
 timeout: 1800

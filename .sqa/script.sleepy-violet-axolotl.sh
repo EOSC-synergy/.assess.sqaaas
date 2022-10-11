@@ -1,4 +1,4 @@
 (
-cd github.com/rjdmartins/try_ibergrid2022_sqaaas &&
+cd github.com/grycap/im &&
     bandit -f json --quiet  --confidence-level high --severity-level high --recursive .
 )
