@@ -15,70 +15,70 @@ sqa_criteria:
     repos:
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-black-mayfly.sh
-        container: qc.acc_snoopy-cerulean-leopard
+        - /usr/bin/env sh .sqa/script.nippy-russet-setter.sh
+        container: qc.acc_foggy-chestnut-ocelot
   QC.Doc:
     repos:
       github.com/grycap/im find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-amber-armadillo.sh
-        container: qc.doc_muzzy-crimson-bordeaux
+        - /usr/bin/env sh .sqa/script.seedy-corn-bombay.sh
+        container: qc.doc_fuzzy-linen-uguisu
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-cerise-shrew.sh
-        container: qc.doc_wheezy-asparagus-dog
+        - /usr/bin/env sh .sqa/script.lumpy-jade-avocet.sh
+        container: qc.doc_dorky-sapphire-fish
       github.com/grycap/im markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-maroon-peccary.sh
-        container: qc.doc_messy-denim-panda
+        - /usr/bin/env sh .sqa/script.cheeky-cardinal-seahorse.sh
+        container: qc.doc_snazzy-red-tapir
       github.com/grycap/im restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-silver-neanderthal.sh
-        container: qc.doc_lanky-brown-civet
+        - /usr/bin/env sh .sqa/script.squeaky-bronze-havanese.sh
+        container: qc.doc_gummy-cobalt-monkey
   QC.Lic:
     repos:
       github.com/grycap/im licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-gold-dormouse.sh
-        container: qc.lic_flabby-rose-dog
+        - /usr/bin/env sh .sqa/script.stinky-jade-collie.sh
+        container: qc.lic_scanty-maroon-macaw
   QC.Met:
     repos:
       github.com/grycap/im validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-jade-capuchin.sh
-        container: qc.met_lumpy-wheat-coati
+        - /usr/bin/env sh .sqa/script.randy-coral-paradise.sh
+        container: qc.met_chewy-coral-tetra
   QC.Sec:
     repos:
       github.com/grycap/im bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-linen-snake.sh
-        container: qc.sec_scaly-sepia-oriole
+        - /usr/bin/env sh .sqa/script.woozy-emerald-woodpecker.sh
+        container: qc.sec_snippy-persimmon-beagle
   QC.Sty:
     repos:
       github.com/grycap/im flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-russet-bat.sh
-        container: qc.sty_skimpy-lemon-tortoise
+        - /usr/bin/env sh .sqa/script.freaky-corn-maltese.sh
+        container: qc.sty_snazzy-taupe-rhinoceros
       github.com/grycap/im hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-ruby-rattlesnake.sh
-        container: qc.sty_foggy-orange-cougar
+        - /usr/bin/env sh .sqa/script.surly-cinnamon-armadillo.sh
+        container: qc.sty_scummy-violet-lizard
       github.com/grycap/im jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-auburn-tiger.sh
-        container: qc.sty_snoopy-tan-gibbon
+        - /usr/bin/env sh .sqa/script.wiggy-maroon-corgi.sh
+        container: qc.sty_slaphappy-azure-walrus
       github.com/grycap/im rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-firebrick-bombay.sh
-        container: qc.sty_lousy-green-penguin
+        - /usr/bin/env sh .sqa/script.ready-mustard-numbat.sh
+        container: qc.sty_homey-periwinkle-audemer
       github.com/grycap/im stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-razzmatazz-affenpinscher.sh
-        container: qc.sty_snippy-charcoal-heron
+        - /usr/bin/env sh .sqa/script.snoopy-ivory-liger.sh
+        container: qc.sty_shaky-orange-monster
   QC.Ver:
     repos:
       github.com/grycap/im get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-white-antelope.sh
-        container: qc.ver_foggy-cobalt-robin
+        - /usr/bin/env sh .sqa/script.frumpy-orange-turtle.sh
+        container: qc.ver_homely-bronze-fly
 timeout: 1800
