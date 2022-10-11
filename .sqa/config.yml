@@ -15,70 +15,70 @@ sqa_criteria:
     repos:
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-buff-moose.sh
-        container: qc.acc_bluesy-mauve-chipmunk
+        - /usr/bin/env sh .sqa/script.gimpy-green-sloth.sh
+        container: qc.acc_woolly-ochre-otter
   QC.Doc:
     repos:
       github.com/grycap/im find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-chestnut-mongrel.sh
-        container: qc.doc_thirsty-amethyst-grouse
+        - /usr/bin/env sh .sqa/script.snazzy-olive-badger.sh
+        container: qc.doc_surly-indigo-setter
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-plum-chicken.sh
-        container: qc.doc_shaky-azure-stingray
+        - /usr/bin/env sh .sqa/script.wiggy-eggplant-raccoon.sh
+        container: qc.doc_shabby-rust-coral
       github.com/grycap/im markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-magenta-owl.sh
-        container: qc.doc_jumpy-violet-dachshund
+        - /usr/bin/env sh .sqa/script.flaky-orchid-dugong.sh
+        container: qc.doc_queasy-turquoise-chinchilla
       github.com/grycap/im restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-alizarin-kingfisher.sh
-        container: qc.doc_pasty-tan-tetra
+        - /usr/bin/env sh .sqa/script.squirrely-russet-dachshund.sh
+        container: qc.doc_ready-amethyst-crocodile
   QC.Lic:
     repos:
       github.com/grycap/im licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-ecru-woodlouse.sh
-        container: qc.lic_goopy-lavender-coati
+        - /usr/bin/env sh .sqa/script.sleepy-razzmatazz-tapir.sh
+        container: qc.lic_jumpy-olive-lemming
   QC.Met:
     repos:
       github.com/grycap/im validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-gamboge-tarantula.sh
-        container: qc.met_hilly-linen-cuscus
+        - /usr/bin/env sh .sqa/script.frumpy-turquoise-toad.sh
+        container: qc.met_messy-amethyst-bandicoot
   QC.Sec:
     repos:
       github.com/grycap/im bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-sapphire-gibbon.sh
-        container: qc.sec_hasty-emerald-eel
+        - /usr/bin/env sh .sqa/script.sleepy-buff-catfish.sh
+        container: qc.sec_lumpy-denim-alligator
   QC.Sty:
     repos:
       github.com/grycap/im flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-brown-goat.sh
-        container: qc.sty_dorky-indigo-frog
+        - /usr/bin/env sh .sqa/script.woozy-gold-wildebeest.sh
+        container: qc.sty_baggy-saffron-bullfrog
       github.com/grycap/im hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-sapphire-sloth.sh
-        container: qc.sty_lanky-green-lobster
+        - /usr/bin/env sh .sqa/script.ready-burgundy-beagle.sh
+        container: qc.sty_muggy-peach-angelfish
       github.com/grycap/im jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-xanthic-ray.sh
-        container: qc.sty_stealthy-emerald-serval
+        - /usr/bin/env sh .sqa/script.gamy-blue-mongrel.sh
+        container: qc.sty_skimpy-peach-stoat
       github.com/grycap/im rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-lavender-lobster.sh
-        container: qc.sty_stuffy-dandelion-beaver
+        - /usr/bin/env sh .sqa/script.flabby-chocolate-badger.sh
+        container: qc.sty_lovely-russet-penguin
       github.com/grycap/im stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-razzmatazz-hummingbird.sh
-        container: qc.sty_hazy-eggplant-ray
+        - /usr/bin/env sh .sqa/script.freaky-bronze-mayfly.sh
+        container: qc.sty_messy-cerise-falcon
   QC.Ver:
     repos:
       github.com/grycap/im get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-ultramarine-vole.sh
-        container: qc.ver_beady-blue-meerkat
+        - /usr/bin/env sh .sqa/script.snoopy-magnolia-zorse.sh
+        container: qc.ver_geeky-azure-goat
 timeout: 1800
