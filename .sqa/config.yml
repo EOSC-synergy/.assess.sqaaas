@@ -15,70 +15,70 @@ sqa_criteria:
     repos:
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-lavender-mole.sh
-        container: qc.acc_geeky-lilac-hippopotamus
+        - /usr/bin/env sh .sqa/script.lanky-buff-moose.sh
+        container: qc.acc_bluesy-mauve-chipmunk
   QC.Doc:
     repos:
       github.com/grycap/im find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-amethyst-collie.sh
-        container: qc.doc_grumpy-sapphire-mist
+        - /usr/bin/env sh .sqa/script.squeaky-chestnut-mongrel.sh
+        container: qc.doc_thirsty-amethyst-grouse
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-platinum-shrew.sh
-        container: qc.doc_scanty-blue-tang
+        - /usr/bin/env sh .sqa/script.wimpy-plum-chicken.sh
+        container: qc.doc_shaky-azure-stingray
       github.com/grycap/im markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-fuchsia-abyssinian.sh
-        container: qc.doc_snazzy-orange-shrimp
+        - /usr/bin/env sh .sqa/script.shabby-magenta-owl.sh
+        container: qc.doc_jumpy-violet-dachshund
       github.com/grycap/im restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-cardinal-affenpinscher.sh
-        container: qc.doc_woozy-fuchsia-ray
+        - /usr/bin/env sh .sqa/script.homely-alizarin-kingfisher.sh
+        container: qc.doc_pasty-tan-tetra
   QC.Lic:
     repos:
       github.com/grycap/im licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-tan-chinook.sh
-        container: qc.lic_skimpy-vermilion-snail
+        - /usr/bin/env sh .sqa/script.gamy-ecru-woodlouse.sh
+        container: qc.lic_goopy-lavender-coati
   QC.Met:
     repos:
       github.com/grycap/im validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-auburn-wolfhound.sh
-        container: qc.met_flimsy-charcoal-hyena
+        - /usr/bin/env sh .sqa/script.zippy-gamboge-tarantula.sh
+        container: qc.met_hilly-linen-cuscus
   QC.Sec:
     repos:
       github.com/grycap/im bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-violet-axolotl.sh
-        container: qc.sec_sunny-pumpkin-fossa
+        - /usr/bin/env sh .sqa/script.ugly-sapphire-gibbon.sh
+        container: qc.sec_hasty-emerald-eel
   QC.Sty:
     repos:
       github.com/grycap/im flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-ivory-jaguar.sh
-        container: qc.sty_sunny-puce-kakapo
+        - /usr/bin/env sh .sqa/script.bumpy-brown-goat.sh
+        container: qc.sty_dorky-indigo-frog
       github.com/grycap/im hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-azure-weasel.sh
-        container: qc.sty_queasy-magenta-turkey
+        - /usr/bin/env sh .sqa/script.hazy-sapphire-sloth.sh
+        container: qc.sty_lanky-green-lobster
       github.com/grycap/im jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-myrtle-tiger.sh
-        container: qc.sty_freaky-lilac-elephant
+        - /usr/bin/env sh .sqa/script.craggy-xanthic-ray.sh
+        container: qc.sty_stealthy-emerald-serval
       github.com/grycap/im rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-russet-retriever.sh
-        container: qc.sty_ugly-sapphire-chinchilla
+        - /usr/bin/env sh .sqa/script.lanky-lavender-lobster.sh
+        container: qc.sty_stuffy-dandelion-beaver
       github.com/grycap/im stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-amber-mayfly.sh
-        container: qc.sty_breezy-yellow-ladybird
+        - /usr/bin/env sh .sqa/script.sickly-razzmatazz-hummingbird.sh
+        container: qc.sty_hazy-eggplant-ray
   QC.Ver:
     repos:
       github.com/grycap/im get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-orchid-neanderthal.sh
-        container: qc.ver_breezy-cinnabar-cichlid
+        - /usr/bin/env sh .sqa/script.crabby-ultramarine-vole.sh
+        container: qc.ver_beady-blue-meerkat
 timeout: 1800
