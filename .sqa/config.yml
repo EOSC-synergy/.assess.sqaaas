@@ -15,70 +15,70 @@ sqa_criteria:
     repos:
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-russet-setter.sh
-        container: qc.acc_foggy-chestnut-ocelot
+        - /usr/bin/env sh .sqa/script.hasty-violet-emu.sh
+        container: qc.acc_smelly-wisteria-akbash
   QC.Doc:
     repos:
       github.com/grycap/im find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-corn-bombay.sh
-        container: qc.doc_fuzzy-linen-uguisu
+        - /usr/bin/env sh .sqa/script.flabby-pumpkin-woodlouse.sh
+        container: qc.doc_skimpy-puce-axolotl
       github.com/grycap/im git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-jade-avocet.sh
-        container: qc.doc_dorky-sapphire-fish
+        - /usr/bin/env sh .sqa/script.shaky-viridian-olm.sh
+        container: qc.doc_blurry-olivine-chipmunk
       github.com/grycap/im markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-cardinal-seahorse.sh
-        container: qc.doc_snazzy-red-tapir
+        - /usr/bin/env sh .sqa/script.fuzzy-charcoal-cattle.sh
+        container: qc.doc_muzzy-charcoal-moorhen
       github.com/grycap/im restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-bronze-havanese.sh
-        container: qc.doc_gummy-cobalt-monkey
+        - /usr/bin/env sh .sqa/script.sleazy-lemon-monkey.sh
+        container: qc.doc_paltry-carmine-angelfish
   QC.Lic:
     repos:
       github.com/grycap/im licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-jade-collie.sh
-        container: qc.lic_scanty-maroon-macaw
+        - /usr/bin/env sh .sqa/script.seedy-seashell-zonkey.sh
+        container: qc.lic_beady-scarlet-leopard
   QC.Met:
     repos:
       github.com/grycap/im validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-coral-paradise.sh
-        container: qc.met_chewy-coral-tetra
+        - /usr/bin/env sh .sqa/script.beady-amethyst-emu.sh
+        container: qc.met_trippy-rust-frigatebird
   QC.Sec:
     repos:
       github.com/grycap/im bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.woozy-emerald-woodpecker.sh
-        container: qc.sec_snippy-persimmon-beagle
+        - /usr/bin/env sh .sqa/script.bumpy-cardinal-turtle.sh
+        container: qc.sec_bumpy-yellow-dane
   QC.Sty:
     repos:
       github.com/grycap/im flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-corn-maltese.sh
-        container: qc.sty_snazzy-taupe-rhinoceros
+        - /usr/bin/env sh .sqa/script.gimpy-teal-lionfish.sh
+        container: qc.sty_squeaky-lime-javanese
       github.com/grycap/im hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-cinnamon-armadillo.sh
-        container: qc.sty_scummy-violet-lizard
+        - /usr/bin/env sh .sqa/script.scaly-lime-scorpion.sh
+        container: qc.sty_freaky-viridian-sponge
       github.com/grycap/im jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-maroon-corgi.sh
-        container: qc.sty_slaphappy-azure-walrus
+        - /usr/bin/env sh .sqa/script.freaky-champagne-collie.sh
+        container: qc.sty_muggy-wheat-llama
       github.com/grycap/im rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-mustard-numbat.sh
-        container: qc.sty_homey-periwinkle-audemer
+        - /usr/bin/env sh .sqa/script.breezy-amaranth-woodpecker.sh
+        container: qc.sty_surly-orchid-gorilla
       github.com/grycap/im stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-ivory-liger.sh
-        container: qc.sty_shaky-orange-monster
+        - /usr/bin/env sh .sqa/script.scanty-myrtle-coyote.sh
+        container: qc.sty_ugly-aqua-coral
   QC.Ver:
     repos:
       github.com/grycap/im get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-orange-turtle.sh
-        container: qc.ver_homely-bronze-fly
+        - /usr/bin/env sh .sqa/script.leaky-olive-ostrich.sh
+        container: qc.ver_lumpy-grey-whippet
 timeout: 1800
