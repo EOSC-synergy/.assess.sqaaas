@@ -1,4 +1,4 @@
 (
-cd github.com/grycap/im &&
+cd github.com/indigo-dc/udocker &&
     git rev-parse --is-inside-work-tree
 )

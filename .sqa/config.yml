@@ -4,81 +4,65 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/grycap/im:
-      branch: devel
-      repo: https://github.com/grycap/im/
+    github.com/indigo-dc/udocker:
+      branch: devel3
+      repo: https://github.com/indigo-dc/udocker/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/grycap/im git:
+      github.com/indigo-dc/udocker git:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-violet-emu.sh
-        container: qc.acc_smelly-wisteria-akbash
+        - /usr/bin/env sh .sqa/script.hasty-tomato-yak.sh
+        container: qc.acc_blurry-amethyst-pig
   QC.Doc:
     repos:
-      github.com/grycap/im find_doc_files.py:
+      github.com/indigo-dc/udocker find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-pumpkin-woodlouse.sh
-        container: qc.doc_skimpy-puce-axolotl
-      github.com/grycap/im git:
+        - /usr/bin/env sh .sqa/script.homely-orchid-baboon.sh
+        container: qc.doc_paltry-azure-zorse
+      github.com/indigo-dc/udocker git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-viridian-olm.sh
-        container: qc.doc_blurry-olivine-chipmunk
-      github.com/grycap/im markdownlint:
+        - /usr/bin/env sh .sqa/script.fuzzy-indigo-moorhen.sh
+        container: qc.doc_zippy-silver-zebu
+      github.com/indigo-dc/udocker markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-charcoal-cattle.sh
-        container: qc.doc_muzzy-charcoal-moorhen
-      github.com/grycap/im restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.sleazy-lemon-monkey.sh
-        container: qc.doc_paltry-carmine-angelfish
+        - /usr/bin/env sh .sqa/script.snoopy-puce-neanderthal.sh
+        container: qc.doc_snazzy-red-wasp
   QC.Lic:
     repos:
-      github.com/grycap/im licensee:
+      github.com/indigo-dc/udocker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-seashell-zonkey.sh
-        container: qc.lic_beady-scarlet-leopard
+        - /usr/bin/env sh .sqa/script.flimsy-mustard-wrasse.sh
+        container: qc.lic_slimy-eggplant-chihuahua
   QC.Met:
     repos:
-      github.com/grycap/im validate_codemeta:
+      github.com/indigo-dc/udocker validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-amethyst-emu.sh
-        container: qc.met_trippy-rust-frigatebird
+        - /usr/bin/env sh .sqa/script.shabby-chestnut-chin.sh
+        container: qc.met_craggy-thistle-stoat
   QC.Sec:
     repos:
-      github.com/grycap/im bandit:
+      github.com/indigo-dc/udocker bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-cardinal-turtle.sh
-        container: qc.sec_bumpy-yellow-dane
+        - /usr/bin/env sh .sqa/script.wheezy-teal-bordeaux.sh
+        container: qc.sec_flaky-chocolate-newt
   QC.Sty:
     repos:
-      github.com/grycap/im flake8:
+      github.com/indigo-dc/udocker flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-teal-lionfish.sh
-        container: qc.sty_squeaky-lime-javanese
-      github.com/grycap/im hadolint:
+        - /usr/bin/env sh .sqa/script.gamy-lime-dugong.sh
+        container: qc.sty_chummy-cerulean-squirt
+      github.com/indigo-dc/udocker jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-lime-scorpion.sh
-        container: qc.sty_freaky-viridian-sponge
-      github.com/grycap/im jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.freaky-champagne-collie.sh
-        container: qc.sty_muggy-wheat-llama
-      github.com/grycap/im rubocop:
-        commands:
-        - /usr/bin/env sh .sqa/script.breezy-amaranth-woodpecker.sh
-        container: qc.sty_surly-orchid-gorilla
-      github.com/grycap/im stylelint:
-        commands:
-        - /usr/bin/env sh .sqa/script.scanty-myrtle-coyote.sh
-        container: qc.sty_ugly-aqua-coral
+        - /usr/bin/env sh .sqa/script.shaky-sangria-catfish.sh
+        container: qc.sty_skanky-linen-kangaroo
   QC.Ver:
     repos:
-      github.com/grycap/im get_git_tags.py:
+      github.com/indigo-dc/udocker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-olive-ostrich.sh
-        container: qc.ver_lumpy-grey-whippet
+        - /usr/bin/env sh .sqa/script.flaky-magenta-gerbil.sh
+        container: qc.ver_beady-yellow-gopher
 timeout: 1800
