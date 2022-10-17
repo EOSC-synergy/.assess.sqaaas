@@ -1,68 +1,70 @@
 config:
   credentials: []
   project_repos:
+    github.com/EOSC-synergy/onedataSim:
+      branch: dev
+      repo: https://github.com/EOSC-synergy/onedataSim/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/indigo-dc/udocker:
-      branch: devel3
-      repo: https://github.com/indigo-dc/udocker/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/indigo-dc/udocker git:
+      github.com/EOSC-synergy/onedataSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-tomato-yak.sh
-        container: qc.acc_blurry-amethyst-pig
+        - /usr/bin/env sh .sqa/script.queasy-puce-worm.sh
+        container: qc.acc_randy-violet-wolverine
   QC.Doc:
     repos:
-      github.com/indigo-dc/udocker find_doc_files.py:
+      github.com/EOSC-synergy/onedataSim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-orchid-baboon.sh
-        container: qc.doc_paltry-azure-zorse
-      github.com/indigo-dc/udocker git:
+        - /usr/bin/env sh .sqa/script.droopy-persimmon-audemer.sh
+        container: qc.doc_gimpy-wheat-spider
+      github.com/EOSC-synergy/onedataSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-indigo-moorhen.sh
-        container: qc.doc_zippy-silver-zebu
-      github.com/indigo-dc/udocker markdownlint:
+        - /usr/bin/env sh .sqa/script.bumpy-ruby-warthog.sh
+        container: qc.doc_randy-firebrick-rhinoceros
+      github.com/EOSC-synergy/onedataSim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-puce-neanderthal.sh
-        container: qc.doc_snazzy-red-wasp
+        - /usr/bin/env sh .sqa/script.skinny-ecru-binturong.sh
+        container: qc.doc_breezy-teal-termite
   QC.Lic:
     repos:
-      github.com/indigo-dc/udocker licensee:
+      github.com/EOSC-synergy/onedataSim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-mustard-wrasse.sh
-        container: qc.lic_slimy-eggplant-chihuahua
-  QC.Met:
-    repos:
-      github.com/indigo-dc/udocker validate_codemeta:
-        commands:
-        - /usr/bin/env sh .sqa/script.shabby-chestnut-chin.sh
-        container: qc.met_craggy-thistle-stoat
+        - /usr/bin/env sh .sqa/script.bluesy-crimson-vulture.sh
+        container: qc.lic_stinky-alizarin-turtle
   QC.Sec:
     repos:
-      github.com/indigo-dc/udocker bandit:
+      github.com/EOSC-synergy/onedataSim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-teal-bordeaux.sh
-        container: qc.sec_flaky-chocolate-newt
+        - /usr/bin/env sh .sqa/script.craggy-coral-newfoundland.sh
+        container: qc.sec_wiggy-salmon-mule
   QC.Sty:
     repos:
-      github.com/indigo-dc/udocker flake8:
+      github.com/EOSC-synergy/onedataSim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-lime-dugong.sh
-        container: qc.sty_chummy-cerulean-squirt
-      github.com/indigo-dc/udocker jsonlint:
+        - /usr/bin/env sh .sqa/script.sleepy-denim-emu.sh
+        container: qc.sty_chewy-white-ray
+      github.com/EOSC-synergy/onedataSim hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-sangria-catfish.sh
-        container: qc.sty_skanky-linen-kangaroo
+        - /usr/bin/env sh .sqa/script.bluesy-magnolia-balinese.sh
+        container: qc.sty_squirrely-russet-nightingale
+      github.com/EOSC-synergy/onedataSim jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-bronze-capybara.sh
+        container: qc.sty_zippy-azure-tiger
+      github.com/EOSC-synergy/onedataSim rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-bronze-bison.sh
+        container: qc.sty_frumpy-rose-cougar
   QC.Ver:
     repos:
-      github.com/indigo-dc/udocker get_git_tags.py:
+      github.com/EOSC-synergy/onedataSim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-magenta-gerbil.sh
-        container: qc.ver_beady-yellow-gopher
+        - /usr/bin/env sh .sqa/script.homey-salmon-terrier.sh
+        container: qc.ver_sleepy-coral-bloodhound
 timeout: 1800
