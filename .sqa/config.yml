@@ -15,62 +15,62 @@ sqa_criteria:
     repos:
       github.com/EOSC-synergy/onedataSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-cerulean-argentino.sh
-        container: qc.acc_sloppy-lavender-wasp
+        - /usr/bin/env sh .sqa/script.scaly-salmon-yak.sh
+        container: qc.acc_blurry-lemon-ladybird
   QC.Doc:
     repos:
       github.com/EOSC-synergy/onedataSim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-brown-markhor.sh
-        container: qc.doc_shabby-razzmatazz-lemur
+        - /usr/bin/env sh .sqa/script.droopy-puce-blue.sh
+        container: qc.doc_skinny-periwinkle-insect
       github.com/EOSC-synergy/onedataSim git:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-amber-retriever.sh
-        container: qc.doc_dorky-auburn-ragdoll
+        - /usr/bin/env sh .sqa/script.paltry-violet-tarsier.sh
+        container: qc.doc_seedy-violet-birman
       github.com/EOSC-synergy/onedataSim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-teal-weasel.sh
-        container: qc.doc_wheezy-firebrick-discus
+        - /usr/bin/env sh .sqa/script.sickly-teal-caiman.sh
+        container: qc.doc_snippy-xanthic-chamois
   QC.Lic:
     repos:
       github.com/EOSC-synergy/onedataSim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-ruby-vulture.sh
-        container: qc.lic_skimpy-periwinkle-skunk
+        - /usr/bin/env sh .sqa/script.boozy-cinnabar-dhole.sh
+        container: qc.lic_baggy-tangerine-vulture
   QC.Met:
     repos:
       github.com/EOSC-synergy/onedataSim cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-razzmatazz-bonobo.sh
-        container: qc.met_tasty-copper-dollar
+        - /usr/bin/env sh .sqa/script.hasty-orange-cassowary.sh
+        container: qc.met_scummy-ivory-hummingbird
   QC.Sec:
     repos:
       github.com/EOSC-synergy/onedataSim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-mustard-tuatara.sh
-        container: qc.sec_gimpy-smalt-bullfrog
+        - /usr/bin/env sh .sqa/script.gimpy-ruby-pinscher.sh
+        container: qc.sec_stealthy-bronze-chamois
   QC.Sty:
     repos:
       github.com/EOSC-synergy/onedataSim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-pink-goat.sh
-        container: qc.sty_flaky-zucchini-burmese
+        - /usr/bin/env sh .sqa/script.chewy-olive-terrier.sh
+        container: qc.sty_scanty-bronze-guppy
       github.com/EOSC-synergy/onedataSim hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-blue-quokka.sh
-        container: qc.sty_zippy-cobalt-mastiff
+        - /usr/bin/env sh .sqa/script.gummy-cerulean-bear.sh
+        container: qc.sty_sunny-alizarin-budgerigar
       github.com/EOSC-synergy/onedataSim jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-myrtle-whale.sh
-        container: qc.sty_slaphappy-black-russel
+        - /usr/bin/env sh .sqa/script.scanty-bronze-newfoundland.sh
+        container: qc.sty_wiggy-orange-indri
       github.com/EOSC-synergy/onedataSim rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-taupe-shrew.sh
-        container: qc.sty_snazzy-olivine-toucan
+        - /usr/bin/env sh .sqa/script.boozy-plum-raccoon.sh
+        container: qc.sty_snappy-azure-harrier
   QC.Ver:
     repos:
       github.com/EOSC-synergy/onedataSim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-myrtle-alligator.sh
-        container: qc.ver_slimy-teal-skunk
+        - /usr/bin/env sh .sqa/script.craggy-fuchsia-audemer.sh
+        container: qc.ver_shaggy-teal-spoonbill
 timeout: 1800
