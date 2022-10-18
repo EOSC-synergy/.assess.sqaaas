@@ -1,9 +1,9 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/onedataSim:
-      branch: dev
-      repo: https://github.com/EOSC-synergy/onedataSim/
+    earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer:
+      branch: master
+      repo: https://earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
@@ -13,64 +13,54 @@ environment:
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/EOSC-synergy/onedataSim git:
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer git:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-salmon-yak.sh
-        container: qc.acc_blurry-lemon-ladybird
+        - /usr/bin/env sh .sqa/script.cranky-orange-sparrow.sh
+        container: qc.acc_skimpy-ultramarine-crane
   QC.Doc:
     repos:
-      github.com/EOSC-synergy/onedataSim find_doc_files.py:
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-puce-blue.sh
-        container: qc.doc_skinny-periwinkle-insect
-      github.com/EOSC-synergy/onedataSim git:
+        - /usr/bin/env sh .sqa/script.sleazy-lemon-anteater.sh
+        container: qc.doc_boozy-chestnut-beetle
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer git:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-violet-tarsier.sh
-        container: qc.doc_seedy-violet-birman
-      github.com/EOSC-synergy/onedataSim markdownlint:
+        - /usr/bin/env sh .sqa/script.squeaky-cyan-lionfish.sh
+        container: qc.doc_seedy-dandelion-eagle
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-teal-caiman.sh
-        container: qc.doc_snippy-xanthic-chamois
+        - /usr/bin/env sh .sqa/script.blurry-chartreuse-iguana.sh
+        container: qc.doc_clammy-scarlet-dachsbracke
   QC.Lic:
     repos:
-      github.com/EOSC-synergy/onedataSim licensee:
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-cinnabar-dhole.sh
-        container: qc.lic_baggy-tangerine-vulture
-  QC.Met:
-    repos:
-      github.com/EOSC-synergy/onedataSim cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.hasty-orange-cassowary.sh
-        container: qc.met_scummy-ivory-hummingbird
+        - /usr/bin/env sh .sqa/script.scaly-pear-wolfhound.sh
+        container: qc.lic_thirsty-sapphire-squirrel
   QC.Sec:
     repos:
-      github.com/EOSC-synergy/onedataSim bandit:
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-ruby-pinscher.sh
-        container: qc.sec_stealthy-bronze-chamois
+        - /usr/bin/env sh .sqa/script.zippy-lime-fish.sh
+        container: qc.sec_jumpy-amber-dollar
   QC.Sty:
     repos:
-      github.com/EOSC-synergy/onedataSim flake8:
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-olive-terrier.sh
-        container: qc.sty_scanty-bronze-guppy
-      github.com/EOSC-synergy/onedataSim hadolint:
+        - /usr/bin/env sh .sqa/script.baggy-platinum-foxhound.sh
+        container: qc.sty_sunny-olivine-wolfhound
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-cerulean-bear.sh
-        container: qc.sty_sunny-alizarin-budgerigar
-      github.com/EOSC-synergy/onedataSim jsonlint:
+        - /usr/bin/env sh .sqa/script.woolly-violet-chinchilla.sh
+        container: qc.sty_geeky-ultramarine-beagle
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-bronze-newfoundland.sh
-        container: qc.sty_wiggy-orange-indri
-      github.com/EOSC-synergy/onedataSim rubocop:
-        commands:
-        - /usr/bin/env sh .sqa/script.boozy-plum-raccoon.sh
-        container: qc.sty_snappy-azure-harrier
+        - /usr/bin/env sh .sqa/script.snippy-buff-ferret.sh
+        container: qc.sty_leaky-platinum-sponge
   QC.Ver:
     repos:
-      github.com/EOSC-synergy/onedataSim get_git_tags.py:
+      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-fuchsia-audemer.sh
-        container: qc.ver_shaggy-teal-spoonbill
+        - /usr/bin/env sh .sqa/script.shaggy-silver-chicken.sh
+        container: qc.ver_lovely-eggplant-zonkey
 timeout: 1800
