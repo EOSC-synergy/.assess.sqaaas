@@ -1,9 +1,9 @@
 config:
   credentials: []
   project_repos:
-    earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer:
+    earth.bsc.es/gitlab/encomienda/sdswas.products:
       branch: master
-      repo: https://earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer/
+      repo: https://earth.bsc.es/gitlab/encomienda/sdswas.products/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
@@ -13,54 +13,50 @@ environment:
 sqa_criteria:
   QC.Acc:
     repos:
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer git:
+      earth.bsc.es/gitlab/encomienda/sdswas.products git:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-orange-sparrow.sh
-        container: qc.acc_skimpy-ultramarine-crane
+        - /usr/bin/env sh .sqa/script.cheeky-platinum-donkey.sh
+        container: qc.acc_freaky-periwinkle-markhor
   QC.Doc:
     repos:
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer find_doc_files.py:
+      earth.bsc.es/gitlab/encomienda/sdswas.products find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-lemon-anteater.sh
-        container: qc.doc_boozy-chestnut-beetle
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer git:
+        - /usr/bin/env sh .sqa/script.smelly-viridian-hedgehog.sh
+        container: qc.doc_wimpy-magenta-gerbil
+      earth.bsc.es/gitlab/encomienda/sdswas.products git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-cyan-lionfish.sh
-        container: qc.doc_seedy-dandelion-eagle
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer markdownlint:
+        - /usr/bin/env sh .sqa/script.bumpy-goldenrod-husky.sh
+        container: qc.doc_homey-chocolate-cuscus
+      earth.bsc.es/gitlab/encomienda/sdswas.products restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-chartreuse-iguana.sh
-        container: qc.doc_clammy-scarlet-dachsbracke
+        - /usr/bin/env sh .sqa/script.crappy-amaranth-eleuth.sh
+        container: qc.doc_sloppy-malachite-havanese
   QC.Lic:
     repos:
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer licensee:
+      earth.bsc.es/gitlab/encomienda/sdswas.products licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-pear-wolfhound.sh
-        container: qc.lic_thirsty-sapphire-squirrel
+        - /usr/bin/env sh .sqa/script.nerdy-champagne-gharial.sh
+        container: qc.lic_slimy-blue-mammoth
   QC.Sec:
     repos:
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer bandit:
+      earth.bsc.es/gitlab/encomienda/sdswas.products bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-lime-fish.sh
-        container: qc.sec_jumpy-amber-dollar
+        - /usr/bin/env sh .sqa/script.crabby-denim-frigatebird.sh
+        container: qc.sec_stinky-lilac-kiwi
   QC.Sty:
     repos:
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer flake8:
+      earth.bsc.es/gitlab/encomienda/sdswas.products flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-platinum-foxhound.sh
-        container: qc.sty_sunny-olivine-wolfhound
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer jsonlint:
+        - /usr/bin/env sh .sqa/script.foggy-buff-shark.sh
+        container: qc.sty_bluesy-lilac-koala
+      earth.bsc.es/gitlab/encomienda/sdswas.products stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-violet-chinchilla.sh
-        container: qc.sty_geeky-ultramarine-beagle
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer stylelint:
-        commands:
-        - /usr/bin/env sh .sqa/script.snippy-buff-ferret.sh
-        container: qc.sty_leaky-platinum-sponge
+        - /usr/bin/env sh .sqa/script.flaky-emerald-lizard.sh
+        container: qc.sty_silly-cinnamon-mole
   QC.Ver:
     repos:
-      earth.bsc.es/gitlab/encomienda/interactive-forecast-viewer get_git_tags.py:
+      earth.bsc.es/gitlab/encomienda/sdswas.products get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-silver-chicken.sh
-        container: qc.ver_lovely-eggplant-zonkey
+        - /usr/bin/env sh .sqa/script.shabby-cerulean-peccary.sh
+        container: qc.ver_dorky-seashell-civet
 timeout: 1800
