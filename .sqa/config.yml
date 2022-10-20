@@ -1,62 +1,68 @@
 config:
   credentials: []
   project_repos:
-    earth.bsc.es/gitlab/encomienda/sdswas.products:
-      branch: master
-      repo: https://earth.bsc.es/gitlab/encomienda/sdswas.products/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/indigo-dc/udocker:
+      branch: devel3
+      repo: https://github.com/indigo-dc/udocker/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      earth.bsc.es/gitlab/encomienda/sdswas.products git:
+      github.com/indigo-dc/udocker git:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-platinum-donkey.sh
-        container: qc.acc_freaky-periwinkle-markhor
+        - /usr/bin/env sh .sqa/script.shabby-green-sheepdog.sh
+        container: qc.acc_pokey-bistre-jellyfish
   QC.Doc:
     repos:
-      earth.bsc.es/gitlab/encomienda/sdswas.products find_doc_files.py:
+      github.com/indigo-dc/udocker find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-viridian-hedgehog.sh
-        container: qc.doc_wimpy-magenta-gerbil
-      earth.bsc.es/gitlab/encomienda/sdswas.products git:
+        - /usr/bin/env sh .sqa/script.frumpy-myrtle-baboon.sh
+        container: qc.doc_sleepy-tangerine-wolfhound
+      github.com/indigo-dc/udocker git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-goldenrod-husky.sh
-        container: qc.doc_homey-chocolate-cuscus
-      earth.bsc.es/gitlab/encomienda/sdswas.products restructuredtext-lint:
+        - /usr/bin/env sh .sqa/script.chewy-ivory-gecko.sh
+        container: qc.doc_nerdy-gamboge-dalmatian
+      github.com/indigo-dc/udocker markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-amaranth-eleuth.sh
-        container: qc.doc_sloppy-malachite-havanese
+        - /usr/bin/env sh .sqa/script.thirsty-goldenrod-abyssinian.sh
+        container: qc.doc_sleazy-seashell-dragonfly
   QC.Lic:
     repos:
-      earth.bsc.es/gitlab/encomienda/sdswas.products licensee:
+      github.com/indigo-dc/udocker licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.nerdy-champagne-gharial.sh
-        container: qc.lic_slimy-blue-mammoth
+        - /usr/bin/env sh .sqa/script.stealthy-auburn-maltese.sh
+        container: qc.lic_leaky-auburn-chipmunk
+  QC.Met:
+    repos:
+      github.com/indigo-dc/udocker validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.greasy-cerulean-zonkey.sh
+        container: qc.met_bluesy-cream-kiwi
   QC.Sec:
     repos:
-      earth.bsc.es/gitlab/encomienda/sdswas.products bandit:
+      github.com/indigo-dc/udocker bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-denim-frigatebird.sh
-        container: qc.sec_stinky-lilac-kiwi
+        - /usr/bin/env sh .sqa/script.ready-bronze-bongo.sh
+        container: qc.sec_gimpy-wheat-barb
   QC.Sty:
     repos:
-      earth.bsc.es/gitlab/encomienda/sdswas.products flake8:
+      github.com/indigo-dc/udocker flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-buff-shark.sh
-        container: qc.sty_bluesy-lilac-koala
-      earth.bsc.es/gitlab/encomienda/sdswas.products stylelint:
+        - /usr/bin/env sh .sqa/script.chummy-khaki-eagle.sh
+        container: qc.sty_greasy-celadon-shrew
+      github.com/indigo-dc/udocker jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-emerald-lizard.sh
-        container: qc.sty_silly-cinnamon-mole
+        - /usr/bin/env sh .sqa/script.whiny-purple-tuatara.sh
+        container: qc.sty_gamy-rose-pig
   QC.Ver:
     repos:
-      earth.bsc.es/gitlab/encomienda/sdswas.products get_git_tags.py:
+      github.com/indigo-dc/udocker get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-cerulean-peccary.sh
-        container: qc.ver_dorky-seashell-civet
+        - /usr/bin/env sh .sqa/script.snazzy-cyan-grouse.sh
+        container: qc.ver_squeaky-ruby-zebu
 timeout: 1800
