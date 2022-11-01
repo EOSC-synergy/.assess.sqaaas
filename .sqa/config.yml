@@ -1,66 +1,66 @@
 config:
   credentials: []
   project_repos:
-    bitbucket.org/cessda/cessda.cvs.two:
-      branch: 450-improve-SQA-rating
-      repo: https://bitbucket.org/cessda/cessda.cvs.two/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.4
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/eurise-network/technical-reference:
+      branch: master
+      repo: https://github.com/eurise-network/technical-reference/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two git:
+      github.com/eurise-network/technical-reference git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-sepia-hummingbird.sh
-        container: qc.acc_clammy-apricot-fox
+        - /usr/bin/env sh .sqa/script.flabby-cardinal-termite.sh
+        container: qc.acc_paltry-gold-akita
   QC.Doc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two find_doc_files.py:
+      github.com/eurise-network/technical-reference find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-brass-goose.sh
-        container: qc.doc_stealthy-scarlet-sheep
-      bitbucket.org/cessda/cessda.cvs.two git:
+        - /usr/bin/env sh .sqa/script.gummy-magnolia-orangutan.sh
+        container: qc.doc_cheeky-ivory-setter
+      github.com/eurise-network/technical-reference git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-ultramarine-seal.sh
-        container: qc.doc_slimy-yellow-chicken
-      bitbucket.org/cessda/cessda.cvs.two markdownlint:
+        - /usr/bin/env sh .sqa/script.silly-cerise-ostrich.sh
+        container: qc.doc_stuffy-cerulean-shrimp
+      github.com/eurise-network/technical-reference markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-heliotrope-turtle.sh
-        container: qc.doc_woolly-harlequin-mongrel
+        - /usr/bin/env sh .sqa/script.stealthy-teal-spoonbill.sh
+        container: qc.doc_scanty-ecru-moth
+      github.com/eurise-network/technical-reference restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-eggplant-javanese.sh
+        container: qc.doc_slaphappy-copper-dachsbracke
   QC.Lic:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two licensee:
+      github.com/eurise-network/technical-reference licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-corn-stoat.sh
-        container: qc.lic_cranky-beige-retriever
-  QC.Met:
+        - /usr/bin/env sh .sqa/script.clammy-turquoise-bracke.sh
+        container: qc.lic_boozy-gamboge-zonkey
+  QC.Sec:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two cff-converter-python:
+      github.com/eurise-network/technical-reference bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-amber-fly.sh
-        container: qc.met_randy-cerulean-dugong
+        - /usr/bin/env sh .sqa/script.freaky-coral-hummingbird.sh
+        container: qc.sec_homey-bronze-echidna
   QC.Sty:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two checkstyle:
+      github.com/eurise-network/technical-reference flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-blue-chow.sh
-        container: qc.sty_gloppy-goldenrod-sheepdog
-      bitbucket.org/cessda/cessda.cvs.two jsonlint:
+        - /usr/bin/env sh .sqa/script.wimpy-cyan-penguin.sh
+        container: qc.sty_surly-olivine-tapir
+      github.com/eurise-network/technical-reference rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-lime-heron.sh
-        container: qc.sty_snazzy-cardinal-lion
-      bitbucket.org/cessda/cessda.cvs.two stylelint:
-        commands:
-        - /usr/bin/env sh .sqa/script.sunny-cream-bobcat.sh
-        container: qc.sty_clammy-fuchsia-buzzard
+        - /usr/bin/env sh .sqa/script.grumpy-lilac-snail.sh
+        container: qc.sty_tasty-magnolia-sloth
   QC.Ver:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two get_git_tags.py:
+      github.com/eurise-network/technical-reference get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-heliotrope-ostrich.sh
-        container: qc.ver_thirsty-olivine-flamingo
+        - /usr/bin/env sh .sqa/script.shaggy-bistre-vulture.sh
+        container: qc.ver_droopy-thistle-moose
 timeout: 1800
