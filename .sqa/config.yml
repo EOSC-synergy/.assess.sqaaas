@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/eurise-network/technical-reference git:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-cardinal-termite.sh
-        container: qc.acc_paltry-gold-akita
+        - /usr/bin/env sh .sqa/script.snazzy-pink-stingray.sh
+        container: qc.acc_greasy-mustard-caiman
   QC.Doc:
     repos:
       github.com/eurise-network/technical-reference find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-magnolia-orangutan.sh
-        container: qc.doc_cheeky-ivory-setter
+        - /usr/bin/env sh .sqa/script.cranky-indigo-llama.sh
+        container: qc.doc_sloppy-cream-hyena
       github.com/eurise-network/technical-reference git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-cerise-ostrich.sh
-        container: qc.doc_stuffy-cerulean-shrimp
+        - /usr/bin/env sh .sqa/script.beady-chocolate-bear.sh
+        container: qc.doc_droopy-firebrick-panda
       github.com/eurise-network/technical-reference markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-teal-spoonbill.sh
-        container: qc.doc_scanty-ecru-moth
+        - /usr/bin/env sh .sqa/script.blurry-razzmatazz-mist.sh
+        container: qc.doc_sleepy-denim-starfish
       github.com/eurise-network/technical-reference restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-eggplant-javanese.sh
-        container: qc.doc_slaphappy-copper-dachsbracke
+        - /usr/bin/env sh .sqa/script.shabby-plum-rattlesnake.sh
+        container: qc.doc_cozy-lime-dragonfly
   QC.Lic:
     repos:
       github.com/eurise-network/technical-reference licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-turquoise-bracke.sh
-        container: qc.lic_boozy-gamboge-zonkey
+        - /usr/bin/env sh .sqa/script.leaky-turquoise-mouse.sh
+        container: qc.lic_scummy-peach-warthog
   QC.Sec:
     repos:
       github.com/eurise-network/technical-reference bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-coral-hummingbird.sh
-        container: qc.sec_homey-bronze-echidna
+        - /usr/bin/env sh .sqa/script.wiggy-fuchsia-butterfly.sh
+        container: qc.sec_hazy-charcoal-urchin
   QC.Sty:
     repos:
       github.com/eurise-network/technical-reference flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-cyan-penguin.sh
-        container: qc.sty_surly-olivine-tapir
+        - /usr/bin/env sh .sqa/script.dorky-salmon-dormouse.sh
+        container: qc.sty_nippy-copper-walrus
       github.com/eurise-network/technical-reference rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-lilac-snail.sh
-        container: qc.sty_tasty-magnolia-sloth
+        - /usr/bin/env sh .sqa/script.randy-cinnabar-buffalo.sh
+        container: qc.sty_gimpy-rust-llama
   QC.Ver:
     repos:
       github.com/eurise-network/technical-reference get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-bistre-vulture.sh
-        container: qc.ver_droopy-thistle-moose
+        - /usr/bin/env sh .sqa/script.greasy-lavender-gecko.sh
+        container: qc.ver_homey-amaranth-dalmatian
 timeout: 1800
