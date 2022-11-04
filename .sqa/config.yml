@@ -1,66 +1,60 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.4
-      repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/eurise-network/technical-reference:
+    bitbucket.org/cessda/cessda.cdc.searchkit/src/master:
       branch: master
-      repo: https://github.com/eurise-network/technical-reference/
+      repo: https://bitbucket.org/cessda/cessda.cdc.searchkit/src/master/
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.5
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/eurise-network/technical-reference git:
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-pink-stingray.sh
-        container: qc.acc_greasy-mustard-caiman
+        - /usr/bin/env sh .sqa/script.woolly-bistre-bullfrog.sh
+        container: qc.acc_frumpy-myrtle-terrier
   QC.Doc:
     repos:
-      github.com/eurise-network/technical-reference find_doc_files.py:
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-indigo-llama.sh
-        container: qc.doc_sloppy-cream-hyena
-      github.com/eurise-network/technical-reference git:
+        - /usr/bin/env sh .sqa/script.lousy-sepia-caterpillar.sh
+        container: qc.doc_jumpy-heliotrope-kangaroo
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master git:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-chocolate-bear.sh
-        container: qc.doc_droopy-firebrick-panda
-      github.com/eurise-network/technical-reference markdownlint:
+        - /usr/bin/env sh .sqa/script.lovely-emerald-bear.sh
+        container: qc.doc_thirsty-ivory-okapi
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-razzmatazz-mist.sh
-        container: qc.doc_sleepy-denim-starfish
-      github.com/eurise-network/technical-reference restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.shabby-plum-rattlesnake.sh
-        container: qc.doc_cozy-lime-dragonfly
+        - /usr/bin/env sh .sqa/script.shaggy-seashell-bombay.sh
+        container: qc.doc_leaky-wheat-spitz
   QC.Lic:
     repos:
-      github.com/eurise-network/technical-reference licensee:
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-turquoise-mouse.sh
-        container: qc.lic_scummy-peach-warthog
-  QC.Sec:
-    repos:
-      github.com/eurise-network/technical-reference bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.wiggy-fuchsia-butterfly.sh
-        container: qc.sec_hazy-charcoal-urchin
+        - /usr/bin/env sh .sqa/script.scummy-amethyst-tang.sh
+        container: qc.lic_beady-alizarin-dhole
   QC.Sty:
     repos:
-      github.com/eurise-network/technical-reference flake8:
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-salmon-dormouse.sh
-        container: qc.sty_nippy-copper-walrus
-      github.com/eurise-network/technical-reference rubocop:
+        - /usr/bin/env sh .sqa/script.leaky-khaki-moth.sh
+        container: qc.sty_frumpy-alizarin-labradoodle
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-cinnabar-buffalo.sh
-        container: qc.sty_gimpy-rust-llama
+        - /usr/bin/env sh .sqa/script.clammy-ivory-ant.sh
+        container: qc.sty_sleazy-cyan-shrew
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master stylelint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-cerise-dalmatian.sh
+        container: qc.sty_cheeky-malachite-tuatara
   QC.Ver:
     repos:
-      github.com/eurise-network/technical-reference get_git_tags.py:
+      bitbucket.org/cessda/cessda.cdc.searchkit/src/master get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-lavender-gecko.sh
-        container: qc.ver_homey-amaranth-dalmatian
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.gamy-xanthic-greyhound.sh
+        container: qc.ver_leaky-amaranth-tarsier
+timeout: 5400
