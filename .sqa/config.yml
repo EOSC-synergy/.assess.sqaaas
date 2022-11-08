@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master git:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-gold-chin.sh
-        container: qc.acc_dorky-firebrick-fossa
+        - /usr/bin/env sh .sqa/script.smelly-purple-mastiff.sh
+        container: qc.acc_hilly-lime-walrus
   QC.Doc:
     repos:
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-amethyst-frise.sh
-        container: qc.doc_clammy-cyan-wolf
+        - /usr/bin/env sh .sqa/script.squirrely-grey-dodo.sh
+        container: qc.doc_scanty-gamboge-saola
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master git:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-mauve-horse.sh
-        container: qc.doc_crappy-olivine-butterfly
+        - /usr/bin/env sh .sqa/script.scummy-orange-setter.sh
+        container: qc.doc_messy-zucchini-bandicoot
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-denim-oyster.sh
-        container: qc.doc_muzzy-plum-falcon
+        - /usr/bin/env sh .sqa/script.blurry-celadon-chimpanzee.sh
+        container: qc.doc_skanky-puce-salamander
   QC.Lic:
     repos:
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-orange-quetzal.sh
-        container: qc.lic_wheezy-asparagus-caracal
+        - /usr/bin/env sh .sqa/script.sickly-periwinkle-numbat.sh
+        container: qc.lic_droopy-blue-manatee
   QC.Met:
     repos:
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-chestnut-peccary.sh
-        container: qc.met_homey-lilac-barracuda
+        - /usr/bin/env sh .sqa/script.pretty-plum-bombay.sh
+        container: qc.met_flimsy-pumpkin-barnacle
   QC.Sty:
     repos:
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-brown-squirt.sh
-        container: qc.sty_queasy-periwinkle-falcon
+        - /usr/bin/env sh .sqa/script.crabby-cinnamon-sloth.sh
+        container: qc.sty_lanky-charcoal-dingo
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-gamboge-urchin.sh
-        container: qc.sty_paltry-dandelion-macaque
+        - /usr/bin/env sh .sqa/script.hasty-chestnut-sloth.sh
+        container: qc.sty_tacky-rose-mammoth
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master stylelint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-teal-chimpanzee.sh
-        container: qc.sty_woolly-grey-vulture
+        - /usr/bin/env sh .sqa/script.surly-buff-spaniel.sh
+        container: qc.sty_baggy-lime-ibis
   QC.Ver:
     repos:
       bitbucket.org/cessda/cessda.cdc.searchkit/src/master get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-cerise-woodpecker.sh
-        container: qc.ver_chewy-tomato-hornet
+        - /usr/bin/env sh .sqa/script.geeky-heliotrope-flamingo.sh
+        container: qc.ver_crappy-gold-panda
 timeout: 5400
