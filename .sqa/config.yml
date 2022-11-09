@@ -1,66 +1,74 @@
 config:
   credentials: []
   project_repos:
-    bitbucket.org/cessda/cessda.cdc.searchkit/src/master:
-      branch: master
-      repo: https://bitbucket.org/cessda/cessda.cdc.searchkit/src/master/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/grycap/oscar:
+      branch: change-doc
+      repo: https://github.com/grycap/oscar/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master git:
+      github.com/grycap/oscar git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-seashell-tang.sh
-        container: qc.acc_ready-dandelion-whippet
+        - /usr/bin/env sh .sqa/script.skimpy-thistle-dachshund.sh
+        container: qc.acc_gamy-cerulean-vulture
   QC.Doc:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master find_doc_files.py:
+      github.com/grycap/oscar find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-lemon-dollar.sh
-        container: qc.doc_cheeky-russet-duck
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master git:
+        - /usr/bin/env sh .sqa/script.gimpy-white-bison.sh
+        container: qc.doc_homey-grey-oriole
+      github.com/grycap/oscar git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-wisteria-bombay.sh
-        container: qc.doc_fuzzy-cream-paradise
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master markdownlint:
+        - /usr/bin/env sh .sqa/script.crappy-mustard-kingfisher.sh
+        container: qc.doc_cozy-sangria-frigatebird
+      github.com/grycap/oscar markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-asparagus-dragon.sh
-        container: qc.doc_tasty-yellow-stingray
+        - /usr/bin/env sh .sqa/script.slaphappy-seashell-dachshund.sh
+        container: qc.doc_cheeky-apricot-squid
   QC.Lic:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master licensee:
+      github.com/grycap/oscar licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-violet-bison.sh
-        container: qc.lic_woozy-eggplant-cheetah
-  QC.Met:
+        - /usr/bin/env sh .sqa/script.woozy-amber-macaw.sh
+        container: qc.lic_muzzy-turquoise-mole
+  QC.Sec:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master cff-converter-python:
+      github.com/grycap/oscar bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-asparagus-wallaby.sh
-        container: qc.met_cloudy-salmon-warthog
+        - /usr/bin/env sh .sqa/script.stealthy-asparagus-ostrich.sh
+        container: qc.sec_tacky-ruby-tetra
+      github.com/grycap/oscar gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.goopy-violet-dodo.sh
+        container: qc.sec_ready-goldenrod-dugong
   QC.Sty:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master hadolint:
+      github.com/grycap/oscar flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-turquoise-rottweiler.sh
-        container: qc.sty_randy-wisteria-dachsbracke
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master jsonlint:
+        - /usr/bin/env sh .sqa/script.flimsy-copper-gar.sh
+        container: qc.sty_snippy-jade-elephant
+      github.com/grycap/oscar hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-gold-discus.sh
-        container: qc.sty_clammy-burgundy-buzzard
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master stylelint:
+        - /usr/bin/env sh .sqa/script.crappy-taupe-wasp.sh
+        container: qc.sty_gloppy-lemon-robin
+      github.com/grycap/oscar jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-tan-turtle.sh
-        container: qc.sty_gummy-cobalt-gorilla
+        - /usr/bin/env sh .sqa/script.squeaky-corn-abyssinian.sh
+        container: qc.sty_whiny-pumpkin-magpie
+      github.com/grycap/oscar staticcheck:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-periwinkle-audemer.sh
+        container: qc.sty_hazy-burgundy-cuttlefish
   QC.Ver:
     repos:
-      bitbucket.org/cessda/cessda.cdc.searchkit/src/master get_git_tags.py:
+      github.com/grycap/oscar get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-grey-saola.sh
-        container: qc.ver_silly-harlequin-coati
-timeout: 5400
+        - /usr/bin/env sh .sqa/script.lumpy-persimmon-clam.sh
+        container: qc.ver_cloudy-lilac-uakari
+timeout: 1800
