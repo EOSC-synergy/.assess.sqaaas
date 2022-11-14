@@ -4,71 +4,15 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/grycap/oscar:
-      branch: change-doc
-      repo: https://github.com/grycap/oscar/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
-  QC.Acc:
+  QC.FAIR:
     repos:
-      github.com/grycap/oscar git:
+      this_repo:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-thistle-dachshund.sh
-        container: qc.acc_gamy-cerulean-vulture
-  QC.Doc:
-    repos:
-      github.com/grycap/oscar find_doc_files.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.gimpy-white-bison.sh
-        container: qc.doc_homey-grey-oriole
-      github.com/grycap/oscar git:
-        commands:
-        - /usr/bin/env sh .sqa/script.crappy-mustard-kingfisher.sh
-        container: qc.doc_cozy-sangria-frigatebird
-      github.com/grycap/oscar markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-seashell-dachshund.sh
-        container: qc.doc_cheeky-apricot-squid
-  QC.Lic:
-    repos:
-      github.com/grycap/oscar licensee:
-        commands:
-        - /usr/bin/env sh .sqa/script.woozy-amber-macaw.sh
-        container: qc.lic_muzzy-turquoise-mole
-  QC.Sec:
-    repos:
-      github.com/grycap/oscar bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.stealthy-asparagus-ostrich.sh
-        container: qc.sec_tacky-ruby-tetra
-      github.com/grycap/oscar gosec:
-        commands:
-        - /usr/bin/env sh .sqa/script.goopy-violet-dodo.sh
-        container: qc.sec_ready-goldenrod-dugong
-  QC.Sty:
-    repos:
-      github.com/grycap/oscar flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.flimsy-copper-gar.sh
-        container: qc.sty_snippy-jade-elephant
-      github.com/grycap/oscar hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.crappy-taupe-wasp.sh
-        container: qc.sty_gloppy-lemon-robin
-      github.com/grycap/oscar jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.squeaky-corn-abyssinian.sh
-        container: qc.sty_whiny-pumpkin-magpie
-      github.com/grycap/oscar staticcheck:
-        commands:
-        - /usr/bin/env sh .sqa/script.breezy-periwinkle-audemer.sh
-        container: qc.sty_hazy-burgundy-cuttlefish
-  QC.Ver:
-    repos:
-      github.com/grycap/oscar get_git_tags.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.lumpy-persimmon-clam.sh
-        container: qc.ver_cloudy-lilac-uakari
-timeout: 1800
+        - fair-eva.py -R oai-pmh -B http://digital.csic.es/dspace-oai/request --tool_endpoint
+          http://localhost:9090/v1.0/rda/rda_all
+        container: qc.fair_stealthy-crimson-emu
+timeout: 5400
