@@ -4,15 +4,53 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.5
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/ljocha/recetox-aplcms:
+      branch: sqaaas
+      repo: https://github.com/ljocha/recetox-aplcms/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
-  QC.FAIR:
+  QC.Acc:
     repos:
-      this_repo:
+      github.com/ljocha/recetox-aplcms git:
         commands:
-        - fair-eva.py -R oai-pmh -B http://digital.csic.es/dspace-oai/request --tool_endpoint
-          http://localhost:9090/v1.0/rda/rda_all
-        container: qc.fair_stealthy-crimson-emu
-timeout: 5400
+        - /usr/bin/env sh .sqa/script.sunny-charcoal-husky.sh
+        container: qc.acc_nippy-myrtle-jackal
+  QC.Doc:
+    repos:
+      github.com/ljocha/recetox-aplcms find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-black-frigatebird.sh
+        container: qc.doc_chummy-orange-elephant
+      github.com/ljocha/recetox-aplcms git:
+        commands:
+        - /usr/bin/env sh .sqa/script.whiny-rust-goat.sh
+        container: qc.doc_bluesy-pumpkin-guppy
+      github.com/ljocha/recetox-aplcms markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-red-cuscus.sh
+        container: qc.doc_snappy-aquamarine-dachsbracke
+  QC.Lic:
+    repos:
+      github.com/ljocha/recetox-aplcms licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.lovely-flax-bison.sh
+        container: qc.lic_paltry-violet-turtle
+  QC.Sty:
+    repos:
+      github.com/ljocha/recetox-aplcms hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-celadon-gopher.sh
+        container: qc.sty_slaphappy-blue-stingray
+      github.com/ljocha/recetox-aplcms jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-gamboge-buffalo.sh
+        container: qc.sty_boozy-amaranth-sheep
+  QC.Ver:
+    repos:
+      github.com/ljocha/recetox-aplcms get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-grey-chow.sh
+        container: qc.ver_cloudy-scarlet-woodlouse
+timeout: 1800
