@@ -1,4 +1,4 @@
 (
-cd github.com/ljocha/recetox-aplcms &&
+cd bitbucket.org/cessda/cessda.cvs.two &&
     git rev-parse --is-inside-work-tree
 )

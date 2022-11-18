@@ -1,56 +1,60 @@
 config:
   credentials: []
   project_repos:
+    bitbucket.org/cessda/cessda.cvs.two:
+      branch: master
+      repo: https://bitbucket.org/cessda/cessda.cvs.two/
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.5
+      branch: release/1.7.6
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/ljocha/recetox-aplcms:
-      branch: sqaaas
-      repo: https://github.com/ljocha/recetox-aplcms/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/ljocha/recetox-aplcms git:
+      bitbucket.org/cessda/cessda.cvs.two git:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-charcoal-husky.sh
-        container: qc.acc_nippy-myrtle-jackal
+        - /usr/bin/env sh .sqa/script.craggy-fuchsia-hedgehog.sh
+        container: qc.acc_greasy-orange-malamute
   QC.Doc:
     repos:
-      github.com/ljocha/recetox-aplcms find_doc_files.py:
+      bitbucket.org/cessda/cessda.cvs.two find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-black-frigatebird.sh
-        container: qc.doc_chummy-orange-elephant
-      github.com/ljocha/recetox-aplcms git:
+        - /usr/bin/env sh .sqa/script.skinny-persimmon-dhole.sh
+        container: qc.doc_flabby-lime-quokka
+      bitbucket.org/cessda/cessda.cvs.two git:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-rust-goat.sh
-        container: qc.doc_bluesy-pumpkin-guppy
-      github.com/ljocha/recetox-aplcms markdownlint:
+        - /usr/bin/env sh .sqa/script.dorky-periwinkle-caterpillar.sh
+        container: qc.doc_trippy-dandelion-foxhound
+      bitbucket.org/cessda/cessda.cvs.two markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-red-cuscus.sh
-        container: qc.doc_snappy-aquamarine-dachsbracke
+        - /usr/bin/env sh .sqa/script.slimy-cerulean-mouse.sh
+        container: qc.doc_hazy-chartreuse-dachsbracke
   QC.Lic:
     repos:
-      github.com/ljocha/recetox-aplcms licensee:
+      bitbucket.org/cessda/cessda.cvs.two licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-flax-bison.sh
-        container: qc.lic_paltry-violet-turtle
+        - /usr/bin/env sh .sqa/script.cozy-periwinkle-penguin.sh
+        container: qc.lic_freaky-gamboge-octopus
   QC.Sty:
     repos:
-      github.com/ljocha/recetox-aplcms hadolint:
+      bitbucket.org/cessda/cessda.cvs.two checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-celadon-gopher.sh
-        container: qc.sty_slaphappy-blue-stingray
-      github.com/ljocha/recetox-aplcms jsonlint:
+        - /usr/bin/env sh .sqa/script.leaky-razzmatazz-mouse.sh
+        container: qc.sty_scanty-ruby-bonobo
+      bitbucket.org/cessda/cessda.cvs.two jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-gamboge-buffalo.sh
-        container: qc.sty_boozy-amaranth-sheep
+        - /usr/bin/env sh .sqa/script.gamy-mauve-fousek.sh
+        container: qc.sty_snappy-indigo-bison
+      bitbucket.org/cessda/cessda.cvs.two stylelint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sloppy-pumpkin-quoll.sh
+        container: qc.sty_wheezy-orange-wombat
   QC.Ver:
     repos:
-      github.com/ljocha/recetox-aplcms get_git_tags.py:
+      bitbucket.org/cessda/cessda.cvs.two get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-grey-chow.sh
-        container: qc.ver_cloudy-scarlet-woodlouse
-timeout: 1800
+        - /usr/bin/env sh .sqa/script.flimsy-sapphire-drever.sh
+        container: qc.ver_ready-brown-capuchin
+timeout: 5400
