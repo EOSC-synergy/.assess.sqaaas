@@ -1,4 +1,4 @@
 (
-cd bitbucket.org/cessda/cessda.cvs.two &&
+cd github.com/cyfronet-fid/marketplace &&
     git rev-parse --is-inside-work-tree
 )

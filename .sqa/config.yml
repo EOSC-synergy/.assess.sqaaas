@@ -1,60 +1,56 @@
 config:
   credentials: []
   project_repos:
-    bitbucket.org/cessda/cessda.cvs.two:
-      branch: master
-      repo: https://bitbucket.org/cessda/cessda.cvs.two/
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.6
+      branch: release/1.7.7
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cyfronet-fid/marketplace:
+      branch: master
+      repo: https://github.com/cyfronet-fid/marketplace/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two git:
+      github.com/cyfronet-fid/marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-fuchsia-hedgehog.sh
-        container: qc.acc_greasy-orange-malamute
+        - /usr/bin/env sh .sqa/script.lousy-beige-shark.sh
+        container: qc.acc_shabby-rust-tapir
   QC.Doc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two find_doc_files.py:
+      github.com/cyfronet-fid/marketplace find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-persimmon-dhole.sh
-        container: qc.doc_flabby-lime-quokka
-      bitbucket.org/cessda/cessda.cvs.two git:
+        - /usr/bin/env sh .sqa/script.hilly-violet-butterfly.sh
+        container: qc.doc_queasy-maroon-kudu
+      github.com/cyfronet-fid/marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-periwinkle-caterpillar.sh
-        container: qc.doc_trippy-dandelion-foxhound
-      bitbucket.org/cessda/cessda.cvs.two markdownlint:
+        - /usr/bin/env sh .sqa/script.seedy-ivory-tarsier.sh
+        container: qc.doc_sickly-olive-worm
+      github.com/cyfronet-fid/marketplace markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-cerulean-mouse.sh
-        container: qc.doc_hazy-chartreuse-dachsbracke
+        - /usr/bin/env sh .sqa/script.paltry-olive-argentino.sh
+        container: qc.doc_hazy-ecru-seahorse
   QC.Lic:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two licensee:
+      github.com/cyfronet-fid/marketplace licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-periwinkle-penguin.sh
-        container: qc.lic_freaky-gamboge-octopus
+        - /usr/bin/env sh .sqa/script.sleazy-burgundy-jackal.sh
+        container: qc.lic_zippy-puce-leopard
   QC.Sty:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two checkstyle:
+      github.com/cyfronet-fid/marketplace jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-razzmatazz-mouse.sh
-        container: qc.sty_scanty-ruby-bonobo
-      bitbucket.org/cessda/cessda.cvs.two jsonlint:
+        - /usr/bin/env sh .sqa/script.ready-brass-okapi.sh
+        container: qc.sty_dorky-vermilion-snail
+      github.com/cyfronet-fid/marketplace rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-mauve-fousek.sh
-        container: qc.sty_snappy-indigo-bison
-      bitbucket.org/cessda/cessda.cvs.two stylelint:
-        commands:
-        - /usr/bin/env sh .sqa/script.sloppy-pumpkin-quoll.sh
-        container: qc.sty_wheezy-orange-wombat
+        - /usr/bin/env sh .sqa/script.seedy-cerulean-crane.sh
+        container: qc.sty_thirsty-cinnamon-worm
   QC.Ver:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two get_git_tags.py:
+      github.com/cyfronet-fid/marketplace get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-sapphire-drever.sh
-        container: qc.ver_ready-brown-capuchin
-timeout: 5400
+        - /usr/bin/env sh .sqa/script.bluesy-auburn-nightingale.sh
+        container: qc.ver_scanty-orange-bobcat
+timeout: 1800
