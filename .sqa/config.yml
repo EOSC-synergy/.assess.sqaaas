@@ -4,53 +4,55 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.7
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/cyfronet-fid/marketplace:
+    github.com/marekandreas/elpa:
       branch: master
-      repo: https://github.com/cyfronet-fid/marketplace/
+      repo: https://github.com/marekandreas/elpa/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/cyfronet-fid/marketplace git:
+      github.com/marekandreas/elpa git:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-beige-shark.sh
-        container: qc.acc_shabby-rust-tapir
+        - /usr/bin/env sh .sqa/script.seedy-chestnut-seal.sh
+        container: qc.acc_fuzzy-razzmatazz-affenpinscher
   QC.Doc:
     repos:
-      github.com/cyfronet-fid/marketplace find_doc_files.py:
+      github.com/marekandreas/elpa find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-violet-butterfly.sh
-        container: qc.doc_queasy-maroon-kudu
-      github.com/cyfronet-fid/marketplace git:
+        - /usr/bin/env sh .sqa/script.homely-flax-tarantula.sh
+        container: qc.doc_boozy-apricot-chihuahua
+      github.com/marekandreas/elpa git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-ivory-tarsier.sh
-        container: qc.doc_sickly-olive-worm
-      github.com/cyfronet-fid/marketplace markdownlint:
+        - /usr/bin/env sh .sqa/script.freaky-platinum-gecko.sh
+        container: qc.doc_smelly-sapphire-falcon
+      github.com/marekandreas/elpa markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-olive-argentino.sh
-        container: qc.doc_hazy-ecru-seahorse
+        - /usr/bin/env sh .sqa/script.pokey-red-dormouse.sh
+        container: qc.doc_cloudy-violet-abyssinian
   QC.Lic:
     repos:
-      github.com/cyfronet-fid/marketplace licensee:
+      github.com/marekandreas/elpa licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-burgundy-jackal.sh
-        container: qc.lic_zippy-puce-leopard
+        - /usr/bin/env sh .sqa/script.seedy-grey-ant.sh
+        container: qc.lic_shaggy-viridian-bongo
+  QC.Sec:
+    repos:
+      github.com/marekandreas/elpa bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-malachite-pig.sh
+        container: qc.sec_droopy-rose-wildebeest
   QC.Sty:
     repos:
-      github.com/cyfronet-fid/marketplace jsonlint:
+      github.com/marekandreas/elpa flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-brass-okapi.sh
-        container: qc.sty_dorky-vermilion-snail
-      github.com/cyfronet-fid/marketplace rubocop:
-        commands:
-        - /usr/bin/env sh .sqa/script.seedy-cerulean-crane.sh
-        container: qc.sty_thirsty-cinnamon-worm
+        - /usr/bin/env sh .sqa/script.gummy-heliotrope-frog.sh
+        container: qc.sty_thirsty-sapphire-hummingbird
   QC.Ver:
     repos:
-      github.com/cyfronet-fid/marketplace get_git_tags.py:
+      github.com/marekandreas/elpa get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-auburn-nightingale.sh
-        container: qc.ver_scanty-orange-bobcat
+        - /usr/bin/env sh .sqa/script.wiggy-salmon-dunker.sh
+        container: qc.ver_geeky-cinnabar-cheetah
 timeout: 1800

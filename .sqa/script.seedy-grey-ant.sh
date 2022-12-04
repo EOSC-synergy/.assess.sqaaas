@@ -1,4 +1,4 @@
 (
-cd github.com/cyfronet-fid/marketplace &&
+cd github.com/marekandreas/elpa &&
     licensee detect . --confidence 60 --json
 )

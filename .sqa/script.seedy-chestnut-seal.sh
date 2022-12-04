@@ -1,4 +1,4 @@
 (
-cd github.com/cyfronet-fid/marketplace &&
+cd github.com/marekandreas/elpa &&
     git rev-parse --is-inside-work-tree
 )
