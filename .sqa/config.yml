@@ -1,62 +1,70 @@
 config:
   credentials: []
   project_repos:
-    github.com/ARGOeu/eosc-recommender-metrics:
-      branch: master
-      repo: https://github.com/ARGOeu/eosc-recommender-metrics/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.7
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/argoeu/argo-messaging:
+      branch: master
+      repo: https://github.com/argoeu/argo-messaging/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics git:
+      github.com/argoeu/argo-messaging git:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-orchid-squirrel.sh
-        container: qc.acc_squirrely-lilac-chin
+        - /usr/bin/env sh .sqa/script.lousy-copper-antelope.sh
+        container: qc.acc_surly-persimmon-moose
   QC.Doc:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics find_doc_files.py:
+      github.com/argoeu/argo-messaging find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-violet-macaw.sh
-        container: qc.doc_shaky-lilac-insect
-      github.com/ARGOeu/eosc-recommender-metrics git:
+        - /usr/bin/env sh .sqa/script.lumpy-red-seal.sh
+        container: qc.doc_hasty-eggplant-insect
+      github.com/argoeu/argo-messaging git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-rust-lobster.sh
-        container: qc.doc_hilly-peach-flamingo
-      github.com/ARGOeu/eosc-recommender-metrics markdownlint:
+        - /usr/bin/env sh .sqa/script.sleazy-amaranth-bird.sh
+        container: qc.doc_breezy-indigo-squirt
+      github.com/argoeu/argo-messaging markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-rust-serval.sh
-        container: qc.doc_nerdy-buff-gerbil
+        - /usr/bin/env sh .sqa/script.bumpy-sepia-audemer.sh
+        container: qc.doc_dorky-cyan-robin
   QC.Lic:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics licensee:
+      github.com/argoeu/argo-messaging licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-ruby-bison.sh
-        container: qc.lic_scanty-ecru-hound
+        - /usr/bin/env sh .sqa/script.fuzzy-magnolia-forest.sh
+        container: qc.lic_sunny-white-ant
   QC.Sec:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics bandit:
+      github.com/argoeu/argo-messaging bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-copper-gharial.sh
-        container: qc.sec_homely-ivory-caracal
+        - /usr/bin/env sh .sqa/script.breezy-wisteria-snail.sh
+        container: qc.sec_snippy-razzmatazz-havanese
+      github.com/argoeu/argo-messaging gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-russet-mist.sh
+        container: qc.sec_cloudy-smalt-tarsier
   QC.Sty:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics flake8:
+      github.com/argoeu/argo-messaging flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-orchid-kangaroo.sh
-        container: qc.sty_wiggy-cobalt-ladybird
-      github.com/ARGOeu/eosc-recommender-metrics jsonlint:
+        - /usr/bin/env sh .sqa/script.paltry-saffron-caterpillar.sh
+        container: qc.sty_whiny-cyan-squid
+      github.com/argoeu/argo-messaging jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-rose-bat.sh
-        container: qc.sty_pokey-ultramarine-collie
+        - /usr/bin/env sh .sqa/script.stealthy-buff-budgerigar.sh
+        container: qc.sty_ugly-aqua-havanese
+      github.com/argoeu/argo-messaging staticcheck:
+        commands:
+        - /usr/bin/env sh .sqa/script.queasy-beige-affenpinscher.sh
+        container: qc.sty_pasty-smalt-bulldog
   QC.Ver:
     repos:
-      github.com/ARGOeu/eosc-recommender-metrics get_git_tags.py:
+      github.com/argoeu/argo-messaging get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-teal-pinscher.sh
-        container: qc.ver_nerdy-russet-dormouse
+        - /usr/bin/env sh .sqa/script.greasy-vermilion-tapir.sh
+        container: qc.ver_cheeky-apricot-sheepdog
 timeout: 5400
