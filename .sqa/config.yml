@@ -1,72 +1,70 @@
 config:
   credentials: []
   project_repos:
+    github.com/ARGOeu/argo-messaging:
+      branch: devel
+      repo: https://github.com/ARGOeu/argo-messaging/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/eWaterCycle/ewatercycle:
-      branch: sverhoeven-patch-1
-      repo: https://github.com/eWaterCycle/ewatercycle/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/eWaterCycle/ewatercycle git:
+      github.com/ARGOeu/argo-messaging git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-denim-mongrel.sh
-        container: qc.acc_messy-smalt-reindeer
+        - /usr/bin/env sh .sqa/script.stuffy-auburn-lemming.sh
+        container: qc.acc_jumpy-russet-quokka
   QC.Doc:
     repos:
-      github.com/eWaterCycle/ewatercycle find_doc_files.py:
+      github.com/ARGOeu/argo-messaging find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-brass-blue.sh
-        container: qc.doc_ugly-cardinal-emu
-      github.com/eWaterCycle/ewatercycle git:
+        - /usr/bin/env sh .sqa/script.sunny-blue-quokka.sh
+        container: qc.doc_randy-ultramarine-bison
+      github.com/ARGOeu/argo-messaging git:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-tomato-urchin.sh
-        container: qc.doc_bluesy-eggplant-wolverine
-      github.com/eWaterCycle/ewatercycle markdownlint:
+        - /usr/bin/env sh .sqa/script.messy-chestnut-harrier.sh
+        container: qc.doc_randy-corn-coyote
+      github.com/ARGOeu/argo-messaging markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-green-affenpinscher.sh
-        container: qc.doc_homey-russet-turtle
-      github.com/eWaterCycle/ewatercycle restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.blurry-viridian-dugong.sh
-        container: qc.doc_craggy-turquoise-buzzard
+        - /usr/bin/env sh .sqa/script.tasty-carmine-termite.sh
+        container: qc.doc_lousy-tan-collie
   QC.Lic:
     repos:
-      github.com/eWaterCycle/ewatercycle licensee:
+      github.com/ARGOeu/argo-messaging licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-corn-emu.sh
-        container: qc.lic_frumpy-auburn-harrier
-  QC.Met:
-    repos:
-      github.com/eWaterCycle/ewatercycle cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.seedy-olive-stoat.sh
-        container: qc.met_sleazy-sangria-cockroach
+        - /usr/bin/env sh .sqa/script.sloppy-fuchsia-mastiff.sh
+        container: qc.lic_lousy-silver-tiger
   QC.Sec:
     repos:
-      github.com/eWaterCycle/ewatercycle bandit:
+      github.com/ARGOeu/argo-messaging bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-periwinkle-alligator.sh
-        container: qc.sec_messy-rust-hare
+        - /usr/bin/env sh .sqa/script.skinny-tan-mau.sh
+        container: qc.sec_beady-amethyst-zebu
+      github.com/ARGOeu/argo-messaging gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.fuzzy-cerulean-guppy.sh
+        container: qc.sec_cheeky-grey-hippopotamus
   QC.Sty:
     repos:
-      github.com/eWaterCycle/ewatercycle flake8:
+      github.com/ARGOeu/argo-messaging flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.whiny-razzmatazz-flamingo.sh
-        container: qc.sty_pokey-azure-deer
-      github.com/eWaterCycle/ewatercycle jsonlint:
+        - /usr/bin/env sh .sqa/script.pretty-amaranth-vole.sh
+        container: qc.sty_wiggy-chestnut-falcon
+      github.com/ARGOeu/argo-messaging jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-pumpkin-squirrel.sh
-        container: qc.sty_geeky-fuchsia-mau
+        - /usr/bin/env sh .sqa/script.shabby-cerise-russel.sh
+        container: qc.sty_cozy-alizarin-pinscher
+      github.com/ARGOeu/argo-messaging staticcheck:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-xanthic-bandicoot.sh
+        container: qc.sty_woozy-aqua-cassowary
   QC.Ver:
     repos:
-      github.com/eWaterCycle/ewatercycle get_git_tags.py:
+      github.com/ARGOeu/argo-messaging get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-zucchini-tarsier.sh
-        container: qc.ver_gloppy-rust-chow
+        - /usr/bin/env sh .sqa/script.grumpy-seashell-abyssinian.sh
+        container: qc.ver_woozy-tangerine-rat
 timeout: 5400
