@@ -4,65 +4,69 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/themiszamani/eosc-recommender-metrics:
-      branch: QC.Doc02.X-updates
-      repo: https://github.com/themiszamani/eosc-recommender-metrics/
+    github.com/eWaterCycle/ewatercycle:
+      branch: sverhoeven-patch-1
+      repo: https://github.com/eWaterCycle/ewatercycle/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics git:
+      github.com/eWaterCycle/ewatercycle git:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-teal-duck.sh
-        container: qc.acc_slaphappy-harlequin-sloth
+        - /usr/bin/env sh .sqa/script.sleazy-denim-mongrel.sh
+        container: qc.acc_messy-smalt-reindeer
   QC.Doc:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics find_doc_files.py:
+      github.com/eWaterCycle/ewatercycle find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-heliotrope-leopard.sh
-        container: qc.doc_homey-xanthic-salamander
-      github.com/themiszamani/eosc-recommender-metrics git:
+        - /usr/bin/env sh .sqa/script.sloppy-brass-blue.sh
+        container: qc.doc_ugly-cardinal-emu
+      github.com/eWaterCycle/ewatercycle git:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-xanthic-wolf.sh
-        container: qc.doc_snoopy-seashell-nightingale
-      github.com/themiszamani/eosc-recommender-metrics markdownlint:
+        - /usr/bin/env sh .sqa/script.randy-tomato-urchin.sh
+        container: qc.doc_bluesy-eggplant-wolverine
+      github.com/eWaterCycle/ewatercycle markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-orchid-bracke.sh
-        container: qc.doc_ready-scarlet-dachshund
+        - /usr/bin/env sh .sqa/script.squeaky-green-affenpinscher.sh
+        container: qc.doc_homey-russet-turtle
+      github.com/eWaterCycle/ewatercycle restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.blurry-viridian-dugong.sh
+        container: qc.doc_craggy-turquoise-buzzard
   QC.Lic:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics licensee:
+      github.com/eWaterCycle/ewatercycle licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-coral-cuttlefish.sh
-        container: qc.lic_sunny-mustard-worm
+        - /usr/bin/env sh .sqa/script.slaphappy-corn-emu.sh
+        container: qc.lic_frumpy-auburn-harrier
   QC.Met:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics cff-converter-python:
+      github.com/eWaterCycle/ewatercycle cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-puce-uakari.sh
-        container: qc.met_whiny-cream-monster
+        - /usr/bin/env sh .sqa/script.seedy-olive-stoat.sh
+        container: qc.met_sleazy-sangria-cockroach
   QC.Sec:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics bandit:
+      github.com/eWaterCycle/ewatercycle bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-beige-emu.sh
-        container: qc.sec_leaky-ecru-kudu
+        - /usr/bin/env sh .sqa/script.paltry-periwinkle-alligator.sh
+        container: qc.sec_messy-rust-hare
   QC.Sty:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics flake8:
+      github.com/eWaterCycle/ewatercycle flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-wheat-angelfish.sh
-        container: qc.sty_fuzzy-cerise-spaniel
-      github.com/themiszamani/eosc-recommender-metrics jsonlint:
+        - /usr/bin/env sh .sqa/script.whiny-razzmatazz-flamingo.sh
+        container: qc.sty_pokey-azure-deer
+      github.com/eWaterCycle/ewatercycle jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-auburn-salamander.sh
-        container: qc.sty_nerdy-olivine-eagle
+        - /usr/bin/env sh .sqa/script.chewy-pumpkin-squirrel.sh
+        container: qc.sty_geeky-fuchsia-mau
   QC.Ver:
     repos:
-      github.com/themiszamani/eosc-recommender-metrics get_git_tags.py:
+      github.com/eWaterCycle/ewatercycle get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-cobalt-cat.sh
-        container: qc.ver_smelly-cream-capybara
+        - /usr/bin/env sh .sqa/script.clammy-zucchini-tarsier.sh
+        container: qc.ver_gloppy-rust-chow
 timeout: 5400
