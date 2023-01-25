@@ -1,62 +1,66 @@
 config:
   credentials: []
   project_repos:
-    bitbucket.org/cessda/cessda.cvs.two:
-      branch: 450-improve-SQA-rating
-      repo: https://bitbucket.org/cessda/cessda.cvs.two/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/bsc-wdc/dislib:
+      branch: master
+      repo: https://github.com/bsc-wdc/dislib/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two git:
+      github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-burgundy-toad.sh
-        container: qc.acc_jumpy-turquoise-husky
+        - /usr/bin/env sh .sqa/script.queasy-thistle-terrier.sh
+        container: qc.acc_jumpy-charcoal-kingfisher
   QC.Doc:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two find_doc_files.py:
+      github.com/bsc-wdc/dislib find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-jade-bobcat.sh
-        container: qc.doc_ugly-malachite-balinese
-      bitbucket.org/cessda/cessda.cvs.two git:
+        - /usr/bin/env sh .sqa/script.freaky-jade-barb.sh
+        container: qc.doc_scummy-ochre-harrier
+      github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-ochre-crab.sh
-        container: qc.doc_stuffy-lilac-hamster
-      bitbucket.org/cessda/cessda.cvs.two markdownlint:
+        - /usr/bin/env sh .sqa/script.wheezy-cyan-labradoodle.sh
+        container: qc.doc_crappy-mauve-tuatara
+      github.com/bsc-wdc/dislib markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-cardinal-sponge.sh
-        container: qc.doc_hilly-fuchsia-tiger
+        - /usr/bin/env sh .sqa/script.skimpy-wheat-indri.sh
+        container: qc.doc_squirrely-ultramarine-blue
+      github.com/bsc-wdc/dislib restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-mauve-buffalo.sh
+        container: qc.doc_whiny-blue-donkey
   QC.Lic:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two licensee:
+      github.com/bsc-wdc/dislib licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-carmine-barnacle.sh
-        container: qc.lic_woolly-periwinkle-macaw
-  QC.Met:
+        - /usr/bin/env sh .sqa/script.silly-olivine-catfish.sh
+        container: qc.lic_sloppy-orchid-antelope
+  QC.Sec:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two cff-converter-python:
+      github.com/bsc-wdc/dislib bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-violet-orangutan.sh
-        container: qc.met_scaly-maroon-dormouse
+        - /usr/bin/env sh .sqa/script.crabby-cardinal-grouse.sh
+        container: qc.sec_flimsy-tangerine-oriole
   QC.Sty:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two checkstyle:
+      github.com/bsc-wdc/dislib flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-sapphire-zebu.sh
-        container: qc.sty_skinny-seashell-angelfish
-      bitbucket.org/cessda/cessda.cvs.two jsonlint:
+        - /usr/bin/env sh .sqa/script.tacky-ultramarine-barracuda.sh
+        container: qc.sty_cozy-smalt-caterpillar
+      github.com/bsc-wdc/dislib hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-carmine-millipede.sh
-        container: qc.sty_wimpy-auburn-hornet
+        - /usr/bin/env sh .sqa/script.crappy-celadon-tang.sh
+        container: qc.sty_slaphappy-white-quoll
   QC.Ver:
     repos:
-      bitbucket.org/cessda/cessda.cvs.two get_git_tags.py:
+      github.com/bsc-wdc/dislib get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-platinum-dunker.sh
-        container: qc.ver_messy-brass-dugong
+        - /usr/bin/env sh .sqa/script.beady-heliotrope-tapir.sh
+        container: qc.ver_gummy-aqua-spaniel
 timeout: 5400

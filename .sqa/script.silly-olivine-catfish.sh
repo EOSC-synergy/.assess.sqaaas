@@ -1,4 +1,4 @@
 (
-cd bitbucket.org/cessda/cessda.cvs.two &&
+cd github.com/bsc-wdc/dislib &&
     licensee detect . --confidence 60 --json
 )
