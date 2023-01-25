@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-aqua-bat.sh
-        container: qc.acc_sloppy-orchid-frigatebird
+        - /usr/bin/env sh .sqa/script.randy-azure-kiwi.sh
+        container: qc.acc_frumpy-sepia-ibis
   QC.Doc:
     repos:
       github.com/bsc-wdc/dislib find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-asparagus-kudu.sh
-        container: qc.doc_snippy-plum-seal
+        - /usr/bin/env sh .sqa/script.gamy-salmon-chin.sh
+        container: qc.doc_shaky-green-opossum
       github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-vermilion-rabbit.sh
-        container: qc.doc_lovely-gold-axolotl
+        - /usr/bin/env sh .sqa/script.thirsty-ochre-chow.sh
+        container: qc.doc_sleepy-sepia-zebra
       github.com/bsc-wdc/dislib markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-rust-blue.sh
-        container: qc.doc_slaphappy-chartreuse-quetzal
+        - /usr/bin/env sh .sqa/script.muggy-orange-caiman.sh
+        container: qc.doc_geeky-aquamarine-sponge
       github.com/bsc-wdc/dislib restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-salmon-emu.sh
-        container: qc.doc_bumpy-rose-cat
+        - /usr/bin/env sh .sqa/script.geeky-orchid-indri.sh
+        container: qc.doc_chummy-pink-tetra
   QC.Lic:
     repos:
       github.com/bsc-wdc/dislib licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-sepia-beaver.sh
-        container: qc.lic_messy-lilac-flounder
+        - /usr/bin/env sh .sqa/script.woozy-eggplant-tarantula.sh
+        container: qc.lic_paltry-wheat-donkey
   QC.Sec:
     repos:
       github.com/bsc-wdc/dislib bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-lavender-cougar.sh
-        container: qc.sec_slaphappy-ochre-urchin
+        - /usr/bin/env sh .sqa/script.nippy-magnolia-fossa.sh
+        container: qc.sec_scaly-ruby-toucan
   QC.Sty:
     repos:
       github.com/bsc-wdc/dislib flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-black-whippet.sh
-        container: qc.sty_stinky-orchid-zorse
+        - /usr/bin/env sh .sqa/script.muggy-peach-neanderthal.sh
+        container: qc.sty_cheeky-gamboge-dugong
       github.com/bsc-wdc/dislib hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-saffron-tortoise.sh
-        container: qc.sty_thirsty-purple-crab
+        - /usr/bin/env sh .sqa/script.freaky-corn-blue.sh
+        container: qc.sty_whiny-goldenrod-chinook
   QC.Ver:
     repos:
       github.com/bsc-wdc/dislib get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-xanthic-dolphin.sh
-        container: qc.ver_shabby-scarlet-wrasse
+        - /usr/bin/env sh .sqa/script.goopy-ecru-iguana.sh
+        container: qc.ver_cheeky-salmon-dragonfly
 timeout: 5400
