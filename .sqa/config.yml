@@ -1,70 +1,66 @@
 config:
   credentials: []
   project_repos:
-    github.com/ARGOeu/argo-messaging:
-      branch: devel
-      repo: https://github.com/ARGOeu/argo-messaging/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/bsc-wdc/dislib:
+      branch: master
+      repo: https://github.com/bsc-wdc/dislib/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/ARGOeu/argo-messaging git:
+      github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-auburn-lemming.sh
-        container: qc.acc_jumpy-russet-quokka
+        - /usr/bin/env sh .sqa/script.wiggy-smalt-swan.sh
+        container: qc.acc_dorky-tangerine-dugong
   QC.Doc:
     repos:
-      github.com/ARGOeu/argo-messaging find_doc_files.py:
+      github.com/bsc-wdc/dislib find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-blue-quokka.sh
-        container: qc.doc_randy-ultramarine-bison
-      github.com/ARGOeu/argo-messaging git:
+        - /usr/bin/env sh .sqa/script.flaky-rust-gorilla.sh
+        container: qc.doc_seedy-buff-maltese
+      github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-chestnut-harrier.sh
-        container: qc.doc_randy-corn-coyote
-      github.com/ARGOeu/argo-messaging markdownlint:
+        - /usr/bin/env sh .sqa/script.skinny-aquamarine-newt.sh
+        container: qc.doc_beady-eggplant-hyrax
+      github.com/bsc-wdc/dislib markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-carmine-termite.sh
-        container: qc.doc_lousy-tan-collie
+        - /usr/bin/env sh .sqa/script.chummy-persimmon-labradoodle.sh
+        container: qc.doc_shabby-magenta-mandrill
+      github.com/bsc-wdc/dislib restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-periwinkle-tortoise.sh
+        container: qc.doc_randy-periwinkle-barnacle
   QC.Lic:
     repos:
-      github.com/ARGOeu/argo-messaging licensee:
+      github.com/bsc-wdc/dislib licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-fuchsia-mastiff.sh
-        container: qc.lic_lousy-silver-tiger
+        - /usr/bin/env sh .sqa/script.gimpy-orchid-corgi.sh
+        container: qc.lic_bumpy-heliotrope-chipmunk
   QC.Sec:
     repos:
-      github.com/ARGOeu/argo-messaging bandit:
+      github.com/bsc-wdc/dislib bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-tan-mau.sh
-        container: qc.sec_beady-amethyst-zebu
-      github.com/ARGOeu/argo-messaging gosec:
-        commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-cerulean-guppy.sh
-        container: qc.sec_cheeky-grey-hippopotamus
+        - /usr/bin/env sh .sqa/script.tacky-sapphire-sponge.sh
+        container: qc.sec_scanty-ruby-swan
   QC.Sty:
     repos:
-      github.com/ARGOeu/argo-messaging flake8:
+      github.com/bsc-wdc/dislib flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-amaranth-vole.sh
-        container: qc.sty_wiggy-chestnut-falcon
-      github.com/ARGOeu/argo-messaging jsonlint:
+        - /usr/bin/env sh .sqa/script.geeky-bronze-beagle.sh
+        container: qc.sty_flimsy-persimmon-cat
+      github.com/bsc-wdc/dislib hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-cerise-russel.sh
-        container: qc.sty_cozy-alizarin-pinscher
-      github.com/ARGOeu/argo-messaging staticcheck:
-        commands:
-        - /usr/bin/env sh .sqa/script.geeky-xanthic-bandicoot.sh
-        container: qc.sty_woozy-aqua-cassowary
+        - /usr/bin/env sh .sqa/script.skanky-khaki-eel.sh
+        container: qc.sty_woozy-persimmon-lobster
   QC.Ver:
     repos:
-      github.com/ARGOeu/argo-messaging get_git_tags.py:
+      github.com/bsc-wdc/dislib get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-seashell-abyssinian.sh
-        container: qc.ver_woozy-tangerine-rat
+        - /usr/bin/env sh .sqa/script.sloppy-green-goat.sh
+        container: qc.ver_cozy-sangria-ostrich
 timeout: 5400
