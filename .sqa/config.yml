@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-smalt-swan.sh
-        container: qc.acc_dorky-tangerine-dugong
+        - /usr/bin/env sh .sqa/script.bumpy-aqua-bat.sh
+        container: qc.acc_sloppy-orchid-frigatebird
   QC.Doc:
     repos:
       github.com/bsc-wdc/dislib find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-rust-gorilla.sh
-        container: qc.doc_seedy-buff-maltese
+        - /usr/bin/env sh .sqa/script.surly-asparagus-kudu.sh
+        container: qc.doc_snippy-plum-seal
       github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-aquamarine-newt.sh
-        container: qc.doc_beady-eggplant-hyrax
+        - /usr/bin/env sh .sqa/script.sloppy-vermilion-rabbit.sh
+        container: qc.doc_lovely-gold-axolotl
       github.com/bsc-wdc/dislib markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-persimmon-labradoodle.sh
-        container: qc.doc_shabby-magenta-mandrill
+        - /usr/bin/env sh .sqa/script.clammy-rust-blue.sh
+        container: qc.doc_slaphappy-chartreuse-quetzal
       github.com/bsc-wdc/dislib restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-periwinkle-tortoise.sh
-        container: qc.doc_randy-periwinkle-barnacle
+        - /usr/bin/env sh .sqa/script.smelly-salmon-emu.sh
+        container: qc.doc_bumpy-rose-cat
   QC.Lic:
     repos:
       github.com/bsc-wdc/dislib licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-orchid-corgi.sh
-        container: qc.lic_bumpy-heliotrope-chipmunk
+        - /usr/bin/env sh .sqa/script.sleazy-sepia-beaver.sh
+        container: qc.lic_messy-lilac-flounder
   QC.Sec:
     repos:
       github.com/bsc-wdc/dislib bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-sapphire-sponge.sh
-        container: qc.sec_scanty-ruby-swan
+        - /usr/bin/env sh .sqa/script.hazy-lavender-cougar.sh
+        container: qc.sec_slaphappy-ochre-urchin
   QC.Sty:
     repos:
       github.com/bsc-wdc/dislib flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-bronze-beagle.sh
-        container: qc.sty_flimsy-persimmon-cat
+        - /usr/bin/env sh .sqa/script.surly-black-whippet.sh
+        container: qc.sty_stinky-orchid-zorse
       github.com/bsc-wdc/dislib hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-khaki-eel.sh
-        container: qc.sty_woozy-persimmon-lobster
+        - /usr/bin/env sh .sqa/script.sleazy-saffron-tortoise.sh
+        container: qc.sty_thirsty-purple-crab
   QC.Ver:
     repos:
       github.com/bsc-wdc/dislib get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-green-goat.sh
-        container: qc.ver_cozy-sangria-ostrich
+        - /usr/bin/env sh .sqa/script.crabby-xanthic-dolphin.sh
+        container: qc.ver_shabby-scarlet-wrasse
 timeout: 5400
