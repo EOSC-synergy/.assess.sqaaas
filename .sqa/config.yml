@@ -4,63 +4,43 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/bsc-wdc/dislib:
+    github.com/INSPIRE-MIF/helpdesk-validator:
       branch: master
-      repo: https://github.com/bsc-wdc/dislib/
+      repo: https://github.com/INSPIRE-MIF/helpdesk-validator/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/bsc-wdc/dislib git:
+      github.com/INSPIRE-MIF/helpdesk-validator git:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-celadon-paradise.sh
-        container: qc.acc_sleepy-orange-quetzal
+        - /usr/bin/env sh .sqa/script.gimpy-cardinal-cheetah.sh
+        container: qc.acc_whiny-pumpkin-monster
   QC.Doc:
     repos:
-      github.com/bsc-wdc/dislib find_doc_files.py:
+      github.com/INSPIRE-MIF/helpdesk-validator find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-chestnut-ibis.sh
-        container: qc.doc_lovely-fuchsia-kiwi
-      github.com/bsc-wdc/dislib git:
+        - /usr/bin/env sh .sqa/script.snippy-vermilion-guppy.sh
+        container: qc.doc_leaky-beige-robin
+      github.com/INSPIRE-MIF/helpdesk-validator git:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-aquamarine-dhole.sh
-        container: qc.doc_hilly-eggplant-barnacle
-      github.com/bsc-wdc/dislib markdownlint:
+        - /usr/bin/env sh .sqa/script.snazzy-red-grasshopper.sh
+        container: qc.doc_sickly-lilac-cattle
+      github.com/INSPIRE-MIF/helpdesk-validator markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-apricot-spitz.sh
-        container: qc.doc_cheeky-scarlet-shrew
-      github.com/bsc-wdc/dislib restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.sickly-malachite-fossa.sh
-        container: qc.doc_craggy-gold-spitz
+        - /usr/bin/env sh .sqa/script.fuzzy-russet-swan.sh
+        container: qc.doc_shaggy-mustard-moose
   QC.Lic:
     repos:
-      github.com/bsc-wdc/dislib licensee:
+      github.com/INSPIRE-MIF/helpdesk-validator licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-ultramarine-kudu.sh
-        container: qc.lic_bumpy-aquamarine-ray
-  QC.Sec:
-    repos:
-      github.com/bsc-wdc/dislib bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.shaggy-cerise-otter.sh
-        container: qc.sec_sunny-magenta-falcon
-  QC.Sty:
-    repos:
-      github.com/bsc-wdc/dislib flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.flimsy-vermilion-drever.sh
-        container: qc.sty_bumpy-ecru-chipmunk
-      github.com/bsc-wdc/dislib hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.baggy-jade-jellyfish.sh
-        container: qc.sty_frumpy-pumpkin-discus
+        - /usr/bin/env sh .sqa/script.slimy-violet-tzu.sh
+        container: qc.lic_lumpy-green-rottweiler
   QC.Ver:
     repos:
-      github.com/bsc-wdc/dislib get_git_tags.py:
+      github.com/INSPIRE-MIF/helpdesk-validator get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-ecru-tamarin.sh
-        container: qc.ver_tacky-yellow-dolphin
+        - /usr/bin/env sh .sqa/script.snazzy-zucchini-squirt.sh
+        container: qc.ver_cranky-eggplant-skunk
 timeout: 5400
