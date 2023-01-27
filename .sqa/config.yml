@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-thistle-terrier.sh
-        container: qc.acc_jumpy-charcoal-kingfisher
+        - /usr/bin/env sh .sqa/script.gummy-celadon-paradise.sh
+        container: qc.acc_sleepy-orange-quetzal
   QC.Doc:
     repos:
       github.com/bsc-wdc/dislib find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-jade-barb.sh
-        container: qc.doc_scummy-ochre-harrier
+        - /usr/bin/env sh .sqa/script.pokey-chestnut-ibis.sh
+        container: qc.doc_lovely-fuchsia-kiwi
       github.com/bsc-wdc/dislib git:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-cyan-labradoodle.sh
-        container: qc.doc_crappy-mauve-tuatara
+        - /usr/bin/env sh .sqa/script.geeky-aquamarine-dhole.sh
+        container: qc.doc_hilly-eggplant-barnacle
       github.com/bsc-wdc/dislib markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.skimpy-wheat-indri.sh
-        container: qc.doc_squirrely-ultramarine-blue
+        - /usr/bin/env sh .sqa/script.snippy-apricot-spitz.sh
+        container: qc.doc_cheeky-scarlet-shrew
       github.com/bsc-wdc/dislib restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-mauve-buffalo.sh
-        container: qc.doc_whiny-blue-donkey
+        - /usr/bin/env sh .sqa/script.sickly-malachite-fossa.sh
+        container: qc.doc_craggy-gold-spitz
   QC.Lic:
     repos:
       github.com/bsc-wdc/dislib licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-olivine-catfish.sh
-        container: qc.lic_sloppy-orchid-antelope
+        - /usr/bin/env sh .sqa/script.skimpy-ultramarine-kudu.sh
+        container: qc.lic_bumpy-aquamarine-ray
   QC.Sec:
     repos:
       github.com/bsc-wdc/dislib bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-cardinal-grouse.sh
-        container: qc.sec_flimsy-tangerine-oriole
+        - /usr/bin/env sh .sqa/script.shaggy-cerise-otter.sh
+        container: qc.sec_sunny-magenta-falcon
   QC.Sty:
     repos:
       github.com/bsc-wdc/dislib flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-ultramarine-barracuda.sh
-        container: qc.sty_cozy-smalt-caterpillar
+        - /usr/bin/env sh .sqa/script.flimsy-vermilion-drever.sh
+        container: qc.sty_bumpy-ecru-chipmunk
       github.com/bsc-wdc/dislib hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-celadon-tang.sh
-        container: qc.sty_slaphappy-white-quoll
+        - /usr/bin/env sh .sqa/script.baggy-jade-jellyfish.sh
+        container: qc.sty_frumpy-pumpkin-discus
   QC.Ver:
     repos:
       github.com/bsc-wdc/dislib get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-heliotrope-tapir.sh
-        container: qc.ver_gummy-aqua-spaniel
+        - /usr/bin/env sh .sqa/script.lovely-ecru-tamarin.sh
+        container: qc.ver_tacky-yellow-dolphin
 timeout: 5400
