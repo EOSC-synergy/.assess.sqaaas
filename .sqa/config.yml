@@ -15,62 +15,62 @@ sqa_criteria:
     repos:
       gitlab.in2p3.fr/escape2020/wp3/eossr git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-burgundy-chipmunk.sh
-        container: qc.acc_sunny-myrtle-wrasse
+        - /usr/bin/env sh .sqa/script.gimpy-lemon-harrier.sh
+        container: qc.acc_chummy-lemon-balinese
   QC.Doc:
     repos:
       gitlab.in2p3.fr/escape2020/wp3/eossr find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-ivory-bloodhound.sh
-        container: qc.doc_muggy-mauve-wolverine
+        - /usr/bin/env sh .sqa/script.bluesy-aqua-wolverine.sh
+        container: qc.doc_scanty-buff-cuscus
       gitlab.in2p3.fr/escape2020/wp3/eossr git:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-tan-javanese.sh
-        container: qc.doc_skinny-bistre-ferret
+        - /usr/bin/env sh .sqa/script.boozy-bronze-ant.sh
+        container: qc.doc_messy-champagne-fox
       gitlab.in2p3.fr/escape2020/wp3/eossr markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-aquamarine-sheepdog.sh
-        container: qc.doc_pokey-black-lion
+        - /usr/bin/env sh .sqa/script.beady-chartreuse-nightingale.sh
+        container: qc.doc_lanky-turquoise-leopard
       gitlab.in2p3.fr/escape2020/wp3/eossr restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-carmine-hare.sh
-        container: qc.doc_grumpy-ruby-pinscher
+        - /usr/bin/env sh .sqa/script.trippy-asparagus-dragon.sh
+        container: qc.doc_woolly-saffron-eagle
   QC.Lic:
     repos:
       gitlab.in2p3.fr/escape2020/wp3/eossr licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-bronze-mule.sh
-        container: qc.lic_sickly-ruby-terrier
+        - /usr/bin/env sh .sqa/script.stinky-brown-spaniel.sh
+        container: qc.lic_bumpy-alizarin-chow
   QC.Met:
     repos:
       gitlab.in2p3.fr/escape2020/wp3/eossr validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-apricot-squirrel.sh
-        container: qc.met_smelly-myrtle-lemur
+        - /usr/bin/env sh .sqa/script.randy-ultramarine-worm.sh
+        container: qc.met_geeky-cerise-neanderthal
   QC.Sec:
     repos:
       gitlab.in2p3.fr/escape2020/wp3/eossr bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-sapphire-greyhound.sh
-        container: qc.sec_homey-crimson-eagle
+        - /usr/bin/env sh .sqa/script.flabby-maroon-indri.sh
+        container: qc.sec_scummy-turquoise-ray
   QC.Sty:
     repos:
       gitlab.in2p3.fr/escape2020/wp3/eossr flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-celadon-lion.sh
-        container: qc.sty_bumpy-lemon-rhinoceros
+        - /usr/bin/env sh .sqa/script.scummy-xanthic-ostrich.sh
+        container: qc.sty_wimpy-corn-gorilla
       gitlab.in2p3.fr/escape2020/wp3/eossr hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-harlequin-warthog.sh
-        container: qc.sty_squirrely-teal-owl
+        - /usr/bin/env sh .sqa/script.skinny-asparagus-impala.sh
+        container: qc.sty_geeky-persimmon-capuchin
       gitlab.in2p3.fr/escape2020/wp3/eossr jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-harlequin-eel.sh
-        container: qc.sty_ready-cobalt-quokka
+        - /usr/bin/env sh .sqa/script.muggy-green-zebu.sh
+        container: qc.sty_homely-saffron-bongo
   QC.Ver:
     repos:
       gitlab.in2p3.fr/escape2020/wp3/eossr get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-heliotrope-bracke.sh
-        container: qc.ver_boozy-ruby-goat
+        - /usr/bin/env sh .sqa/script.clammy-cardinal-monster.sh
+        container: qc.ver_gummy-lime-guppy
 timeout: 5400
