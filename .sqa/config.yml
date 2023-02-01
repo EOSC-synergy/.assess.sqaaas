@@ -4,43 +4,73 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.8
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/INSPIRE-MIF/helpdesk-validator:
+    gitlab.in2p3.fr/escape2020/wp3/eossr:
       branch: master
-      repo: https://github.com/INSPIRE-MIF/helpdesk-validator/
+      repo: https://gitlab.in2p3.fr/escape2020/wp3/eossr/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/INSPIRE-MIF/helpdesk-validator git:
+      gitlab.in2p3.fr/escape2020/wp3/eossr git:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-cardinal-cheetah.sh
-        container: qc.acc_whiny-pumpkin-monster
+        - /usr/bin/env sh .sqa/script.pretty-burgundy-chipmunk.sh
+        container: qc.acc_sunny-myrtle-wrasse
   QC.Doc:
     repos:
-      github.com/INSPIRE-MIF/helpdesk-validator find_doc_files.py:
+      gitlab.in2p3.fr/escape2020/wp3/eossr find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-vermilion-guppy.sh
-        container: qc.doc_leaky-beige-robin
-      github.com/INSPIRE-MIF/helpdesk-validator git:
+        - /usr/bin/env sh .sqa/script.crappy-ivory-bloodhound.sh
+        container: qc.doc_muggy-mauve-wolverine
+      gitlab.in2p3.fr/escape2020/wp3/eossr git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-red-grasshopper.sh
-        container: qc.doc_sickly-lilac-cattle
-      github.com/INSPIRE-MIF/helpdesk-validator markdownlint:
+        - /usr/bin/env sh .sqa/script.smelly-tan-javanese.sh
+        container: qc.doc_skinny-bistre-ferret
+      gitlab.in2p3.fr/escape2020/wp3/eossr markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-russet-swan.sh
-        container: qc.doc_shaggy-mustard-moose
+        - /usr/bin/env sh .sqa/script.silly-aquamarine-sheepdog.sh
+        container: qc.doc_pokey-black-lion
+      gitlab.in2p3.fr/escape2020/wp3/eossr restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.beady-carmine-hare.sh
+        container: qc.doc_grumpy-ruby-pinscher
   QC.Lic:
     repos:
-      github.com/INSPIRE-MIF/helpdesk-validator licensee:
+      gitlab.in2p3.fr/escape2020/wp3/eossr licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-violet-tzu.sh
-        container: qc.lic_lumpy-green-rottweiler
+        - /usr/bin/env sh .sqa/script.shabby-bronze-mule.sh
+        container: qc.lic_sickly-ruby-terrier
+  QC.Met:
+    repos:
+      gitlab.in2p3.fr/escape2020/wp3/eossr validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-apricot-squirrel.sh
+        container: qc.met_smelly-myrtle-lemur
+  QC.Sec:
+    repos:
+      gitlab.in2p3.fr/escape2020/wp3/eossr bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-sapphire-greyhound.sh
+        container: qc.sec_homey-crimson-eagle
+  QC.Sty:
+    repos:
+      gitlab.in2p3.fr/escape2020/wp3/eossr flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.flabby-celadon-lion.sh
+        container: qc.sty_bumpy-lemon-rhinoceros
+      gitlab.in2p3.fr/escape2020/wp3/eossr hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-harlequin-warthog.sh
+        container: qc.sty_squirrely-teal-owl
+      gitlab.in2p3.fr/escape2020/wp3/eossr jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-harlequin-eel.sh
+        container: qc.sty_ready-cobalt-quokka
   QC.Ver:
     repos:
-      github.com/INSPIRE-MIF/helpdesk-validator get_git_tags.py:
+      gitlab.in2p3.fr/escape2020/wp3/eossr get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-zucchini-squirt.sh
-        container: qc.ver_cranky-eggplant-skunk
+        - /usr/bin/env sh .sqa/script.scaly-heliotrope-bracke.sh
+        container: qc.ver_boozy-ruby-goat
 timeout: 5400
