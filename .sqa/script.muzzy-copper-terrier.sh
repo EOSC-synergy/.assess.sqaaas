@@ -1,4 +1,4 @@
 (
-cd gitlab.in2p3.fr/escape2020/wp3/eossr &&
+cd github.com/AI4S2S/lilio &&
     git rev-parse --is-inside-work-tree
 )

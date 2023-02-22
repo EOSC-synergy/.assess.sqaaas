@@ -1,4 +1,4 @@
 (
-cd gitlab.in2p3.fr/escape2020/wp3/eossr &&
+cd github.com/AI4S2S/lilio &&
     licensee detect . --confidence 60 --json
 )
