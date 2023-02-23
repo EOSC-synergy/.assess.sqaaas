@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/AI4S2S/lilio:
-      branch: main
+      branch: trick_sqaaash
       repo: https://github.com/AI4S2S/lilio/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.8
@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       github.com/AI4S2S/lilio git:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-copper-terrier.sh
-        container: qc.acc_shaky-sangria-hippopotamus
+        - /usr/bin/env sh .sqa/script.pretty-russet-cichlid.sh
+        container: qc.acc_thirsty-peach-frise
   QC.Doc:
     repos:
       github.com/AI4S2S/lilio find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-cinnamon-devil.sh
-        container: qc.doc_grumpy-cyan-monkey
+        - /usr/bin/env sh .sqa/script.jumpy-magnolia-jackal.sh
+        container: qc.doc_flimsy-coral-beagle
       github.com/AI4S2S/lilio git:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-scarlet-hedgehog.sh
-        container: qc.doc_wimpy-ecru-rattlesnake
+        - /usr/bin/env sh .sqa/script.cheeky-vermilion-flamingo.sh
+        container: qc.doc_goopy-corn-birman
       github.com/AI4S2S/lilio markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-tan-reindeer.sh
-        container: qc.doc_ready-tangerine-pinscher
+        - /usr/bin/env sh .sqa/script.foggy-grey-kakapo.sh
+        container: qc.doc_jumpy-ruby-ocelot
       github.com/AI4S2S/lilio restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-lilac-cheetah.sh
-        container: qc.doc_fuzzy-sapphire-zonkey
+        - /usr/bin/env sh .sqa/script.messy-lime-armadillo.sh
+        container: qc.doc_stuffy-indigo-urchin
   QC.Lic:
     repos:
       github.com/AI4S2S/lilio licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-mustard-jackal.sh
-        container: qc.lic_leaky-jade-cuscus
+        - /usr/bin/env sh .sqa/script.woolly-rust-bird.sh
+        container: qc.lic_tacky-khaki-cougar
   QC.Met:
     repos:
       github.com/AI4S2S/lilio cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-cinnabar-jellyfish.sh
-        container: qc.met_breezy-coral-mayfly
+        - /usr/bin/env sh .sqa/script.crappy-wisteria-greyhound.sh
+        container: qc.met_scaly-myrtle-bracke
   QC.Sec:
     repos:
       github.com/AI4S2S/lilio bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-viridian-gorilla.sh
-        container: qc.sec_skinny-seashell-russel
+        - /usr/bin/env sh .sqa/script.wheezy-turquoise-robin.sh
+        container: qc.sec_chummy-mustard-giraffe
   QC.Sty:
     repos:
       github.com/AI4S2S/lilio flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-cerulean-ragdoll.sh
-        container: qc.sty_squeaky-mauve-drever
+        - /usr/bin/env sh .sqa/script.lumpy-cornflower-maltese.sh
+        container: qc.sty_pretty-black-lobster
       github.com/AI4S2S/lilio jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-platinum-cockroach.sh
-        container: qc.sty_skimpy-ivory-lynx
+        - /usr/bin/env sh .sqa/script.shaggy-cardinal-greyhound.sh
+        container: qc.sty_droopy-taupe-zorse
   QC.Ver:
     repos:
       github.com/AI4S2S/lilio get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-orange-mole.sh
-        container: qc.ver_bumpy-olivine-dalmatian
+        - /usr/bin/env sh .sqa/script.gimpy-carmine-newt.sh
+        container: qc.ver_slimy-linen-harrier
 timeout: 5400
