@@ -1,4 +1,4 @@
 (
-cd github.com/AI4S2S/lilio &&
+cd gitlab.com/rcstar/openQxD &&
     find_doc_files.py --file_type all
 )

@@ -1,72 +1,46 @@
 config:
   credentials: []
   project_repos:
-    github.com/AI4S2S/lilio:
-      branch: trick_sqaaash
-      repo: https://github.com/AI4S2S/lilio/
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.8
+      branch: release/1.7.9
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.com/rcstar/openQxD:
+      branch: master
+      repo: https://gitlab.com/rcstar/openQxD/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/AI4S2S/lilio git:
+      gitlab.com/rcstar/openQxD git:
         commands:
-        - /usr/bin/env sh .sqa/script.pretty-russet-cichlid.sh
-        container: qc.acc_thirsty-peach-frise
+        - /usr/bin/env sh .sqa/script.pasty-plum-bloodhound.sh
+        container: qc.acc_sleepy-olivine-emu
   QC.Doc:
     repos:
-      github.com/AI4S2S/lilio find_doc_files.py:
+      gitlab.com/rcstar/openQxD find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.jumpy-magnolia-jackal.sh
-        container: qc.doc_flimsy-coral-beagle
-      github.com/AI4S2S/lilio git:
+        - /usr/bin/env sh .sqa/script.fuzzy-chestnut-frigatebird.sh
+        container: qc.doc_queasy-smalt-birman
+      gitlab.com/rcstar/openQxD git:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-vermilion-flamingo.sh
-        container: qc.doc_goopy-corn-birman
-      github.com/AI4S2S/lilio markdownlint:
+        - /usr/bin/env sh .sqa/script.silly-aqua-hedgehog.sh
+        container: qc.doc_clammy-olive-oyster
+      gitlab.com/rcstar/openQxD markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-grey-kakapo.sh
-        container: qc.doc_jumpy-ruby-ocelot
-      github.com/AI4S2S/lilio restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.messy-lime-armadillo.sh
-        container: qc.doc_stuffy-indigo-urchin
+        - /usr/bin/env sh .sqa/script.lanky-copper-grasshopper.sh
+        container: qc.doc_flaky-sangria-malamute
   QC.Lic:
     repos:
-      github.com/AI4S2S/lilio licensee:
+      gitlab.com/rcstar/openQxD licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-rust-bird.sh
-        container: qc.lic_tacky-khaki-cougar
-  QC.Met:
-    repos:
-      github.com/AI4S2S/lilio cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.crappy-wisteria-greyhound.sh
-        container: qc.met_scaly-myrtle-bracke
-  QC.Sec:
-    repos:
-      github.com/AI4S2S/lilio bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.wheezy-turquoise-robin.sh
-        container: qc.sec_chummy-mustard-giraffe
-  QC.Sty:
-    repos:
-      github.com/AI4S2S/lilio flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.lumpy-cornflower-maltese.sh
-        container: qc.sty_pretty-black-lobster
-      github.com/AI4S2S/lilio jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.shaggy-cardinal-greyhound.sh
-        container: qc.sty_droopy-taupe-zorse
+        - /usr/bin/env sh .sqa/script.snoopy-cerise-sponge.sh
+        container: qc.lic_nippy-rust-greyhound
   QC.Ver:
     repos:
-      github.com/AI4S2S/lilio get_git_tags.py:
+      gitlab.com/rcstar/openQxD get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-carmine-newt.sh
-        container: qc.ver_slimy-linen-harrier
+        - /usr/bin/env sh .sqa/script.cloudy-emerald-hummingbird.sh
+        container: qc.ver_squeaky-coral-collie
 timeout: 5400
