@@ -4,43 +4,59 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.9
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    gitlab.com/rcstar/openQxD:
+    github.com/dianagudu/motley_cue:
       branch: master
-      repo: https://gitlab.com/rcstar/openQxD/
+      repo: https://github.com/dianagudu/motley_cue/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      gitlab.com/rcstar/openQxD git:
+      github.com/dianagudu/motley_cue git:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-plum-bloodhound.sh
-        container: qc.acc_sleepy-olivine-emu
+        - /usr/bin/env sh .sqa/script.snazzy-maroon-mastiff.sh
+        container: qc.acc_chewy-wheat-javanese
   QC.Doc:
     repos:
-      gitlab.com/rcstar/openQxD find_doc_files.py:
+      github.com/dianagudu/motley_cue find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-chestnut-frigatebird.sh
-        container: qc.doc_queasy-smalt-birman
-      gitlab.com/rcstar/openQxD git:
+        - /usr/bin/env sh .sqa/script.sickly-malachite-chameleon.sh
+        container: qc.doc_skanky-cream-llama
+      github.com/dianagudu/motley_cue git:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-aqua-hedgehog.sh
-        container: qc.doc_clammy-olive-oyster
-      gitlab.com/rcstar/openQxD markdownlint:
+        - /usr/bin/env sh .sqa/script.crappy-cyan-squirrel.sh
+        container: qc.doc_freaky-dandelion-drever
+      github.com/dianagudu/motley_cue markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-copper-grasshopper.sh
-        container: qc.doc_flaky-sangria-malamute
+        - /usr/bin/env sh .sqa/script.bluesy-champagne-bear.sh
+        container: qc.doc_pretty-rust-raccoon
+      github.com/dianagudu/motley_cue restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lumpy-ecru-ladybird.sh
+        container: qc.doc_flabby-taupe-hyena
   QC.Lic:
     repos:
-      gitlab.com/rcstar/openQxD licensee:
+      github.com/dianagudu/motley_cue licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.snoopy-cerise-sponge.sh
-        container: qc.lic_nippy-rust-greyhound
+        - /usr/bin/env sh .sqa/script.silly-lime-shrew.sh
+        container: qc.lic_crabby-magnolia-weasel
+  QC.Sec:
+    repos:
+      github.com/dianagudu/motley_cue bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.crabby-denim-echidna.sh
+        container: qc.sec_greasy-amber-walrus
+  QC.Sty:
+    repos:
+      github.com/dianagudu/motley_cue flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-auburn-robin.sh
+        container: qc.sty_shaky-cinnabar-affenpinscher
   QC.Ver:
     repos:
-      gitlab.com/rcstar/openQxD get_git_tags.py:
+      github.com/dianagudu/motley_cue get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-emerald-hummingbird.sh
-        container: qc.ver_squeaky-coral-collie
+        - /usr/bin/env sh .sqa/script.shabby-russet-falcon.sh
+        container: qc.ver_clammy-razzmatazz-mole
 timeout: 5400
