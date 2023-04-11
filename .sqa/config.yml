@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/dianagudu/motley_cue git:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-maroon-mastiff.sh
-        container: qc.acc_chewy-wheat-javanese
+        - /usr/bin/env sh .sqa/script.flaky-myrtle-hornet.sh
+        container: qc.acc_bluesy-cornflower-caterpillar
   QC.Doc:
     repos:
       github.com/dianagudu/motley_cue find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-malachite-chameleon.sh
-        container: qc.doc_skanky-cream-llama
+        - /usr/bin/env sh .sqa/script.squeaky-vermilion-nightingale.sh
+        container: qc.doc_gloppy-linen-llama
       github.com/dianagudu/motley_cue git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-cyan-squirrel.sh
-        container: qc.doc_freaky-dandelion-drever
+        - /usr/bin/env sh .sqa/script.beady-black-russel.sh
+        container: qc.doc_skinny-lime-markhor
       github.com/dianagudu/motley_cue markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-champagne-bear.sh
-        container: qc.doc_pretty-rust-raccoon
+        - /usr/bin/env sh .sqa/script.cheeky-beige-dhole.sh
+        container: qc.doc_wiggy-flax-mayfly
       github.com/dianagudu/motley_cue restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-ecru-ladybird.sh
-        container: qc.doc_flabby-taupe-hyena
+        - /usr/bin/env sh .sqa/script.cloudy-azure-lion.sh
+        container: qc.doc_randy-teal-barb
   QC.Lic:
     repos:
       github.com/dianagudu/motley_cue licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-lime-shrew.sh
-        container: qc.lic_crabby-magnolia-weasel
+        - /usr/bin/env sh .sqa/script.hilly-aqua-mammoth.sh
+        container: qc.lic_snazzy-azure-barracuda
   QC.Sec:
     repos:
       github.com/dianagudu/motley_cue bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-denim-echidna.sh
-        container: qc.sec_greasy-amber-walrus
+        - /usr/bin/env sh .sqa/script.lovely-seashell-corgi.sh
+        container: qc.sec_nerdy-mauve-chameleon
   QC.Sty:
     repos:
       github.com/dianagudu/motley_cue flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-auburn-robin.sh
-        container: qc.sty_shaky-cinnabar-affenpinscher
+        - /usr/bin/env sh .sqa/script.blurry-mauve-sheep.sh
+        container: qc.sty_pretty-tan-chimpanzee
   QC.Ver:
     repos:
       github.com/dianagudu/motley_cue get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-russet-falcon.sh
-        container: qc.ver_clammy-razzmatazz-mole
+        - /usr/bin/env sh .sqa/script.beady-orange-retriever.sh
+        container: qc.ver_messy-lemon-dalmatian
 timeout: 5400
