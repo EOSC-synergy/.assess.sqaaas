@@ -1,4 +1,4 @@
 (
-cd github.com/ARGOeu/argo-messaging &&
+cd gitlab.cern.ch/corryvreckan/corryvreckan &&
     licensee detect . --confidence 60 --json
 )
