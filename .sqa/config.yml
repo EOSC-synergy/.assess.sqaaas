@@ -1,62 +1,58 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.10
-      repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    gitlab.cern.ch/corryvreckan/corryvreckan:
+    bitbucket.org/nschaeff/xshells:
       branch: master
-      repo: https://gitlab.cern.ch/corryvreckan/corryvreckan/
+      repo: https://bitbucket.org/nschaeff/xshells/
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.11
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      gitlab.cern.ch/corryvreckan/corryvreckan git:
+      bitbucket.org/nschaeff/xshells git:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-cornflower-zonkey.sh
-        container: qc.acc_jumpy-russet-reindeer
+        - /usr/bin/env sh .sqa/script.bumpy-orange-eel.sh
+        container: qc.acc_sleepy-magenta-bullfrog
   QC.Doc:
     repos:
-      gitlab.cern.ch/corryvreckan/corryvreckan find_doc_files.py:
+      bitbucket.org/nschaeff/xshells find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-wheat-setter.sh
-        container: qc.doc_gamy-violet-schnauzer
-      gitlab.cern.ch/corryvreckan/corryvreckan git:
+        - /usr/bin/env sh .sqa/script.lovely-cerise-eagle.sh
+        container: qc.doc_pretty-charcoal-labradoodle
+      bitbucket.org/nschaeff/xshells git:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-aquamarine-mule.sh
-        container: qc.doc_greasy-chestnut-oriole
-      gitlab.cern.ch/corryvreckan/corryvreckan markdownlint:
+        - /usr/bin/env sh .sqa/script.squirrely-linen-rattlesnake.sh
+        container: qc.doc_stinky-periwinkle-bonobo
+      bitbucket.org/nschaeff/xshells markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pasty-linen-jellyfish.sh
-        container: qc.doc_crabby-green-cassowary
+        - /usr/bin/env sh .sqa/script.dorky-sangria-cassowary.sh
+        container: qc.doc_scaly-peach-wallaby
   QC.Lic:
     repos:
-      gitlab.cern.ch/corryvreckan/corryvreckan licensee:
+      bitbucket.org/nschaeff/xshells licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-amaranth-drever.sh
-        container: qc.lic_seedy-goldenrod-beagle
+        - /usr/bin/env sh .sqa/script.pretty-jade-chipmunk.sh
+        container: qc.lic_skinny-champagne-swan
   QC.Sec:
     repos:
-      gitlab.cern.ch/corryvreckan/corryvreckan bandit:
+      bitbucket.org/nschaeff/xshells bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-aquamarine-uakari.sh
-        container: qc.sec_squeaky-seashell-grouse
+        - /usr/bin/env sh .sqa/script.sleazy-cardinal-devil.sh
+        container: qc.sec_messy-taupe-zebra
   QC.Sty:
     repos:
-      gitlab.cern.ch/corryvreckan/corryvreckan flake8:
+      bitbucket.org/nschaeff/xshells flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-copper-civet.sh
-        container: qc.sty_shaggy-ecru-zorse
-      gitlab.cern.ch/corryvreckan/corryvreckan hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.homely-mauve-drever.sh
-        container: qc.sty_boozy-ochre-burmese
+        - /usr/bin/env sh .sqa/script.homely-brass-bombay.sh
+        container: qc.sty_fuzzy-corn-hyrax
   QC.Ver:
     repos:
-      gitlab.cern.ch/corryvreckan/corryvreckan get_git_tags.py:
+      bitbucket.org/nschaeff/xshells get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-gold-gibbon.sh
-        container: qc.ver_muzzy-celadon-caterpillar
+        - /usr/bin/env sh .sqa/script.dorky-auburn-ant.sh
+        container: qc.ver_beady-saffron-dodo
 timeout: 5400

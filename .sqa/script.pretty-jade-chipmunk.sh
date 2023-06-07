@@ -1,4 +1,4 @@
 (
-cd gitlab.cern.ch/corryvreckan/corryvreckan &&
+cd bitbucket.org/nschaeff/xshells &&
     licensee detect . --confidence 60 --json
 )
