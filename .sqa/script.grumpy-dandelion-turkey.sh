@@ -1,4 +1,4 @@
 (
-cd bitbucket.org/nschaeff/xshells &&
+cd github.com/dCache/dcache &&
     git rev-parse --is-inside-work-tree
 )
