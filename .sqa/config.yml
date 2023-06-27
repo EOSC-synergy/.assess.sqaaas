@@ -1,80 +1,58 @@
 config:
   credentials: []
   project_repos:
+    bitbucket.org/nschaeff/xshells:
+      branch: master
+      repo: https://bitbucket.org/nschaeff/xshells/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/1.7.11
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/dCache/dcache:
-      branch: master
-      repo: https://github.com/dCache/dcache/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/dCache/dcache git:
+      bitbucket.org/nschaeff/xshells git:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-dandelion-turkey.sh
-        container: qc.acc_muzzy-dandelion-llama
+        - /usr/bin/env sh .sqa/script.squeaky-magnolia-serval.sh
+        container: qc.acc_squeaky-teal-discus
   QC.Doc:
     repos:
-      github.com/dCache/dcache find_doc_files.py:
+      bitbucket.org/nschaeff/xshells find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-periwinkle-frigatebird.sh
-        container: qc.doc_snippy-grey-dachshund
-      github.com/dCache/dcache git:
+        - /usr/bin/env sh .sqa/script.pokey-copper-badger.sh
+        container: qc.doc_grumpy-salmon-elephant
+      bitbucket.org/nschaeff/xshells git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-amaranth-cassowary.sh
-        container: qc.doc_whiny-heliotrope-loon
-      github.com/dCache/dcache markdownlint:
+        - /usr/bin/env sh .sqa/script.hasty-tomato-mau.sh
+        container: qc.doc_slimy-eggplant-deer
+      bitbucket.org/nschaeff/xshells markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lovely-pumpkin-angora.sh
-        container: qc.doc_squirrely-ecru-macaw
+        - /usr/bin/env sh .sqa/script.skanky-teal-russel.sh
+        container: qc.doc_lanky-lavender-dodo
   QC.Lic:
     repos:
-      github.com/dCache/dcache licensee:
+      bitbucket.org/nschaeff/xshells licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-coral-flounder.sh
-        container: qc.lic_craggy-taupe-quokka
-  QC.Met:
-    repos:
-      github.com/dCache/dcache cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.muzzy-vermilion-gecko.sh
-        container: qc.met_lovely-mustard-cichlid
+        - /usr/bin/env sh .sqa/script.cranky-sepia-russel.sh
+        container: qc.lic_cheeky-sepia-bulldog
   QC.Sec:
     repos:
-      github.com/dCache/dcache bandit:
+      bitbucket.org/nschaeff/xshells bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-carmine-sloth.sh
-        container: qc.sec_dorky-periwinkle-orangutan
+        - /usr/bin/env sh .sqa/script.skanky-magnolia-caterpillar.sh
+        container: qc.sec_droopy-rust-monster
   QC.Sty:
     repos:
-      github.com/dCache/dcache checkstyle:
+      bitbucket.org/nschaeff/xshells flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-mauve-squid.sh
-        container: qc.sty_ugly-eggplant-hyena
-      github.com/dCache/dcache flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.slimy-cream-yak.sh
-        container: qc.sty_cozy-brass-moth
-      github.com/dCache/dcache hadolint:
-        commands:
-        - /usr/bin/env sh .sqa/script.stinky-charcoal-grasshopper.sh
-        container: qc.sty_queasy-purple-barnacle
-      github.com/dCache/dcache jsonlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.ready-chocolate-burmese.sh
-        container: qc.sty_craggy-pumpkin-snail
-      github.com/dCache/dcache rubocop:
-        commands:
-        - /usr/bin/env sh .sqa/script.flimsy-magnolia-dachshund.sh
-        container: qc.sty_sleazy-jade-kingfisher
+        - /usr/bin/env sh .sqa/script.chewy-khaki-barb.sh
+        container: qc.sty_shabby-ochre-lobster
   QC.Ver:
     repos:
-      github.com/dCache/dcache get_git_tags.py:
+      bitbucket.org/nschaeff/xshells get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-thistle-lemur.sh
-        container: qc.ver_scanty-plum-lobster
+        - /usr/bin/env sh .sqa/script.tacky-wheat-ladybird.sh
+        container: qc.ver_paltry-sangria-cat
 timeout: 5400

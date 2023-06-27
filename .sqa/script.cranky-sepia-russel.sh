@@ -1,4 +1,4 @@
 (
-cd github.com/dCache/dcache &&
+cd bitbucket.org/nschaeff/xshells &&
     licensee detect . --confidence 60 --json
 )
