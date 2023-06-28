@@ -15,44 +15,44 @@ sqa_criteria:
     repos:
       bitbucket.org/nschaeff/xshells git:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-white-newfoundland.sh
-        container: qc.acc_paltry-burgundy-wolverine
+        - /usr/bin/env sh .sqa/script.breezy-tomato-termite.sh
+        container: qc.acc_squirrely-taupe-newfoundland
   QC.Doc:
     repos:
       bitbucket.org/nschaeff/xshells find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-white-chicken.sh
-        container: qc.doc_wiggy-tan-ibis
+        - /usr/bin/env sh .sqa/script.foggy-amber-dane.sh
+        container: qc.doc_snappy-orchid-anteater
       bitbucket.org/nschaeff/xshells git:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-amaranth-flamingo.sh
-        container: qc.doc_cheeky-violet-lynx
+        - /usr/bin/env sh .sqa/script.scanty-plum-mongrel.sh
+        container: qc.doc_squeaky-alizarin-flamingo
       bitbucket.org/nschaeff/xshells markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-blue-rottweiler.sh
-        container: qc.doc_greasy-burgundy-gerbil
+        - /usr/bin/env sh .sqa/script.jumpy-lemon-tang.sh
+        container: qc.doc_skinny-emerald-bullfrog
   QC.Lic:
     repos:
       bitbucket.org/nschaeff/xshells licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-burgundy-blue.sh
-        container: qc.lic_lousy-persimmon-hyrax
+        - /usr/bin/env sh .sqa/script.randy-copper-numbat.sh
+        container: qc.lic_pokey-periwinkle-reindeer
   QC.Sec:
     repos:
       bitbucket.org/nschaeff/xshells bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-zucchini-moose.sh
-        container: qc.sec_snippy-firebrick-jaguar
+        - /usr/bin/env sh .sqa/script.paltry-ivory-cow.sh
+        container: qc.sec_shabby-gamboge-badger
   QC.Sty:
     repos:
       bitbucket.org/nschaeff/xshells flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-tomato-seal.sh
-        container: qc.sty_lanky-ultramarine-eel
+        - /usr/bin/env sh .sqa/script.geeky-dandelion-molly.sh
+        container: qc.sty_bumpy-firebrick-harrier
   QC.Ver:
     repos:
       bitbucket.org/nschaeff/xshells get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-black-fossa.sh
-        container: qc.ver_ready-black-seal
+        - /usr/bin/env sh .sqa/script.sloppy-cornflower-fossa.sh
+        container: qc.ver_baggy-chestnut-chipmunk
 timeout: 5400
