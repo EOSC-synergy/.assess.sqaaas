@@ -1,58 +1,42 @@
 config:
   credentials: []
   project_repos:
-    bitbucket.org/nschaeff/xshells:
-      branch: master
-      repo: https://bitbucket.org/nschaeff/xshells/
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/1.7.11
+      branch: release/2.0.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.inf.unibz.it/earth_observation_public/raster-to-stac:
+      branch: main
+      repo: https://gitlab.inf.unibz.it/earth_observation_public/raster-to-stac/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      bitbucket.org/nschaeff/xshells git:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-tomato-termite.sh
-        container: qc.acc_squirrely-taupe-newfoundland
+        - /usr/bin/env sh .sqa/script.bluesy-crimson-fox.sh
+        container: qc.acc_gummy-myrtle-dhole
   QC.Doc:
     repos:
-      bitbucket.org/nschaeff/xshells find_doc_files.py:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-amber-dane.sh
-        container: qc.doc_snappy-orchid-anteater
-      bitbucket.org/nschaeff/xshells git:
+        - /usr/bin/env sh .sqa/script.flaky-cobalt-paradise.sh
+        container: qc.doc_skimpy-saffron-chinook
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-plum-mongrel.sh
-        container: qc.doc_squeaky-alizarin-flamingo
-      bitbucket.org/nschaeff/xshells markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.jumpy-lemon-tang.sh
-        container: qc.doc_skinny-emerald-bullfrog
+        - /usr/bin/env sh .sqa/script.leaky-bronze-tang.sh
+        container: qc.doc_leaky-cerise-buffalo
   QC.Lic:
     repos:
-      bitbucket.org/nschaeff/xshells licensee:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-copper-numbat.sh
-        container: qc.lic_pokey-periwinkle-reindeer
-  QC.Sec:
-    repos:
-      bitbucket.org/nschaeff/xshells bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.paltry-ivory-cow.sh
-        container: qc.sec_shabby-gamboge-badger
-  QC.Sty:
-    repos:
-      bitbucket.org/nschaeff/xshells flake8:
-        commands:
-        - /usr/bin/env sh .sqa/script.geeky-dandelion-molly.sh
-        container: qc.sty_bumpy-firebrick-harrier
+        - /usr/bin/env sh .sqa/script.flimsy-silver-coati.sh
+        container: qc.lic_droopy-vermilion-kangaroo
   QC.Ver:
     repos:
-      bitbucket.org/nschaeff/xshells get_git_tags.py:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-cornflower-fossa.sh
-        container: qc.ver_baggy-chestnut-chipmunk
+        - /usr/bin/env sh .sqa/script.lumpy-sangria-drever.sh
+        container: qc.ver_muzzy-cinnabar-robin
 timeout: 5400
