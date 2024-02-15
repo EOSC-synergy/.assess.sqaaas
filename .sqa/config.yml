@@ -4,39 +4,39 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/2.0.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    gitlab.inf.unibz.it/earth_observation_public/raster-to-stac:
+    github.com/m-team-kit/cookiecutter-web:
       branch: main
-      repo: https://gitlab.inf.unibz.it/earth_observation_public/raster-to-stac/
+      repo: https://github.com/m-team-kit/cookiecutter-web/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
+      github.com/m-team-kit/cookiecutter-web git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-green-buffalo.sh
-        container: qc.acc_snazzy-cinnabar-cuttlefish
+        - /usr/bin/env sh .sqa/script.leaky-myrtle-olm.sh
+        container: qc.acc_scummy-amethyst-newt
   QC.Doc:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac find_doc_files.py:
+      github.com/m-team-kit/cookiecutter-web find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-tangerine-gopher.sh
-        container: qc.doc_tacky-plum-wrasse
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
+        - /usr/bin/env sh .sqa/script.randy-viridian-penguin.sh
+        container: qc.doc_wheezy-amber-opossum
+      github.com/m-team-kit/cookiecutter-web git:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-beige-bombay.sh
-        container: qc.doc_lanky-bronze-numbat
+        - /usr/bin/env sh .sqa/script.muggy-khaki-eel.sh
+        container: qc.doc_sleepy-lavender-dragon
   QC.Lic:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac licensee:
+      github.com/m-team-kit/cookiecutter-web licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.cranky-eggplant-beaver.sh
-        container: qc.lic_snoopy-crimson-bandicoot
+        - /usr/bin/env sh .sqa/script.gloppy-chestnut-giraffe.sh
+        container: qc.lic_scummy-apricot-heron
   QC.Ver:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac get_git_tags.py:
+      github.com/m-team-kit/cookiecutter-web get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-magenta-coati.sh
-        container: qc.ver_dorky-orange-barracuda
+        - /usr/bin/env sh .sqa/script.clammy-lemon-giraffe.sh
+        container: qc.ver_bluesy-eggplant-zonkey
 timeout: 5400
