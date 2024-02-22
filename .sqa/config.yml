@@ -4,39 +4,39 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/2.0.0
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/m-team-kit/cookiecutter-web:
+    github.com/ai4os/ai4-compose:
       branch: main
-      repo: https://github.com/m-team-kit/cookiecutter-web/
+      repo: https://github.com/ai4os/ai4-compose/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/m-team-kit/cookiecutter-web git:
+      github.com/ai4os/ai4-compose git:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-myrtle-olm.sh
-        container: qc.acc_scummy-amethyst-newt
+        - /usr/bin/env sh .sqa/script.crappy-pear-schnauzer.sh
+        container: qc.acc_snoopy-ecru-snail
   QC.Doc:
     repos:
-      github.com/m-team-kit/cookiecutter-web find_doc_files.py:
+      github.com/ai4os/ai4-compose find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-viridian-penguin.sh
-        container: qc.doc_wheezy-amber-opossum
-      github.com/m-team-kit/cookiecutter-web git:
+        - /usr/bin/env sh .sqa/script.squirrely-azure-flamingo.sh
+        container: qc.doc_snazzy-persimmon-wolf
+      github.com/ai4os/ai4-compose git:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-khaki-eel.sh
-        container: qc.doc_sleepy-lavender-dragon
+        - /usr/bin/env sh .sqa/script.chewy-red-elephant.sh
+        container: qc.doc_randy-champagne-indri
   QC.Lic:
     repos:
-      github.com/m-team-kit/cookiecutter-web licensee:
+      github.com/ai4os/ai4-compose licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-chestnut-giraffe.sh
-        container: qc.lic_scummy-apricot-heron
+        - /usr/bin/env sh .sqa/script.bumpy-blue-mouse.sh
+        container: qc.lic_skimpy-magnolia-mouse
   QC.Ver:
     repos:
-      github.com/m-team-kit/cookiecutter-web get_git_tags.py:
+      github.com/ai4os/ai4-compose get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-lemon-giraffe.sh
-        container: qc.ver_bluesy-eggplant-zonkey
+        - /usr/bin/env sh .sqa/script.homey-seashell-orangutan.sh
+        container: qc.ver_surly-champagne-harrier
 timeout: 5400

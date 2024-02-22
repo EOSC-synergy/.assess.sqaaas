@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/m-team-kit/cookiecutter-web &&
-    licensee detect . --confidence 60 --json
+cd github.com/ai4os/ai4-compose &&
+    git rev-parse --is-inside-work-tree
 )
