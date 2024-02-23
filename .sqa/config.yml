@@ -1,42 +1,42 @@
 config:
   credentials: []
   project_repos:
-    codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui:
-      branch: main
-      repo: https://codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: feature/fair-epos-prototype
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/m-team-kit/mlflow-auth-gui:
+      branch: main
+      repo: https://github.com/m-team-kit/mlflow-auth-gui/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui git:
+      github.com/m-team-kit/mlflow-auth-gui git:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-jade-tetra.sh
-        container: qc.acc_cranky-chestnut-flamingo
+        - /usr/bin/env sh .sqa/script.foggy-ruby-woodpecker.sh
+        container: qc.acc_queasy-malachite-sheep
   QC.Doc:
     repos:
-      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui find_doc_files.py:
+      github.com/m-team-kit/mlflow-auth-gui find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-charcoal-javanese.sh
-        container: qc.doc_paltry-taupe-terrier
-      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui git:
+        - /usr/bin/env sh .sqa/script.woolly-cinnabar-dogfish.sh
+        container: qc.doc_stealthy-olivine-wallaby
+      github.com/m-team-kit/mlflow-auth-gui git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-blue-frise.sh
-        container: qc.doc_tasty-wheat-robin
+        - /usr/bin/env sh .sqa/script.tasty-gamboge-burmese.sh
+        container: qc.doc_homely-cream-ferret
   QC.Lic:
     repos:
-      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui licensee:
+      github.com/m-team-kit/mlflow-auth-gui licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-cerise-axolotl.sh
-        container: qc.lic_leaky-jade-caracal
+        - /usr/bin/env sh .sqa/script.queasy-coral-ladybird.sh
+        container: qc.lic_flimsy-emerald-fossa
   QC.Ver:
     repos:
-      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui get_git_tags.py:
+      github.com/m-team-kit/mlflow-auth-gui get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-lavender-chipmunk.sh
-        container: qc.ver_foggy-blue-dragonfly
+        - /usr/bin/env sh .sqa/script.chewy-platinum-wombat.sh
+        container: qc.ver_muggy-ruby-dingo
 timeout: 5400

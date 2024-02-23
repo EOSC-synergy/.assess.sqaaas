@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui &&
-    get_git_tags.py
+cd github.com/m-team-kit/mlflow-auth-gui &&
+    git rev-parse --is-inside-work-tree
 )
