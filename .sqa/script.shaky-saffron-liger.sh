@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/m-team-kit/mlflow-auth-gui &&
+cd gitlab.inf.unibz.it/earth_observation_public/raster-to-stac &&
     git rev-parse --is-inside-work-tree
 )

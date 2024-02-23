@@ -4,39 +4,39 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: feature/fair-epos-prototype
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/m-team-kit/mlflow-auth-gui:
+    gitlab.inf.unibz.it/earth_observation_public/raster-to-stac:
       branch: main
-      repo: https://github.com/m-team-kit/mlflow-auth-gui/
+      repo: https://gitlab.inf.unibz.it/earth_observation_public/raster-to-stac/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/m-team-kit/mlflow-auth-gui git:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-ruby-woodpecker.sh
-        container: qc.acc_queasy-malachite-sheep
+        - /usr/bin/env sh .sqa/script.stinky-persimmon-tetra.sh
+        container: qc.acc_gloppy-pear-dormouse
   QC.Doc:
     repos:
-      github.com/m-team-kit/mlflow-auth-gui find_doc_files.py:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.woolly-cinnabar-dogfish.sh
-        container: qc.doc_stealthy-olivine-wallaby
-      github.com/m-team-kit/mlflow-auth-gui git:
+        - /usr/bin/env sh .sqa/script.tacky-brass-quoll.sh
+        container: qc.doc_lovely-jade-cougar
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-gamboge-burmese.sh
-        container: qc.doc_homely-cream-ferret
+        - /usr/bin/env sh .sqa/script.shaky-saffron-liger.sh
+        container: qc.doc_squeaky-seashell-chow
   QC.Lic:
     repos:
-      github.com/m-team-kit/mlflow-auth-gui licensee:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.queasy-coral-ladybird.sh
-        container: qc.lic_flimsy-emerald-fossa
+        - /usr/bin/env sh .sqa/script.scanty-grey-catfish.sh
+        container: qc.lic_greasy-crimson-lynx
   QC.Ver:
     repos:
-      github.com/m-team-kit/mlflow-auth-gui get_git_tags.py:
+      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-platinum-wombat.sh
-        container: qc.ver_muggy-ruby-dingo
+        - /usr/bin/env sh .sqa/script.shabby-rose-stingray.sh
+        container: qc.ver_nippy-orange-bee
 timeout: 5400
