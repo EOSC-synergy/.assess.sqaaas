@@ -1,42 +1,42 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.0
-      repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/ai4os/ai4-compose:
+    codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui:
       branch: main
-      repo: https://github.com/ai4os/ai4-compose/
+      repo: https://codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui/
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/fair-epos-prototype
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/ai4os/ai4-compose git:
+      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-pear-schnauzer.sh
-        container: qc.acc_snoopy-ecru-snail
+        - /usr/bin/env sh .sqa/script.gummy-jade-tetra.sh
+        container: qc.acc_cranky-chestnut-flamingo
   QC.Doc:
     repos:
-      github.com/ai4os/ai4-compose find_doc_files.py:
+      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-azure-flamingo.sh
-        container: qc.doc_snazzy-persimmon-wolf
-      github.com/ai4os/ai4-compose git:
+        - /usr/bin/env sh .sqa/script.gloppy-charcoal-javanese.sh
+        container: qc.doc_paltry-taupe-terrier
+      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui git:
         commands:
-        - /usr/bin/env sh .sqa/script.chewy-red-elephant.sh
-        container: qc.doc_randy-champagne-indri
+        - /usr/bin/env sh .sqa/script.bumpy-blue-frise.sh
+        container: qc.doc_tasty-wheat-robin
   QC.Lic:
     repos:
-      github.com/ai4os/ai4-compose licensee:
+      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-blue-mouse.sh
-        container: qc.lic_skimpy-magnolia-mouse
+        - /usr/bin/env sh .sqa/script.lumpy-cerise-axolotl.sh
+        container: qc.lic_leaky-jade-caracal
   QC.Ver:
     repos:
-      github.com/ai4os/ai4-compose get_git_tags.py:
+      codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-seashell-orangutan.sh
-        container: qc.ver_surly-champagne-harrier
+        - /usr/bin/env sh .sqa/script.homely-lavender-chipmunk.sh
+        container: qc.ver_foggy-blue-dragonfly
 timeout: 5400

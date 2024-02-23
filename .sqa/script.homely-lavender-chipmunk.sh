@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/ai4os/ai4-compose &&
-    licensee detect . --confidence 60 --json
+cd codebase.helmholtz.cloud/m-team/ai/mlflow-auth-gui &&
+    get_git_tags.py
 )
