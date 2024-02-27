@@ -4,39 +4,63 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: feature/fair-epos-prototype
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    gitlab.inf.unibz.it/earth_observation_public/raster-to-stac:
+    github.com/m-team-kit/cookiecutter-web:
       branch: main
-      repo: https://gitlab.inf.unibz.it/earth_observation_public/raster-to-stac/
+      repo: https://github.com/m-team-kit/cookiecutter-web/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
+      github.com/m-team-kit/cookiecutter-web git:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-persimmon-tetra.sh
-        container: qc.acc_gloppy-pear-dormouse
+        - /usr/bin/env sh .sqa/script.snippy-cerulean-salamander.sh
+        container: qc.acc_cloudy-sepia-chin
   QC.Doc:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac find_doc_files.py:
+      github.com/m-team-kit/cookiecutter-web find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-brass-quoll.sh
-        container: qc.doc_lovely-jade-cougar
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac git:
+        - /usr/bin/env sh .sqa/script.randy-malachite-shark.sh
+        container: qc.doc_shabby-goldenrod-fowl
+      github.com/m-team-kit/cookiecutter-web git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaky-saffron-liger.sh
-        container: qc.doc_squeaky-seashell-chow
+        - /usr/bin/env sh .sqa/script.wimpy-tan-uakari.sh
+        container: qc.doc_stuffy-violet-moorhen
+      github.com/m-team-kit/cookiecutter-web markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-wheat-gecko.sh
+        container: qc.doc_pretty-cobalt-kakapo
   QC.Lic:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac licensee:
+      github.com/m-team-kit/cookiecutter-web licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-grey-catfish.sh
-        container: qc.lic_greasy-crimson-lynx
+        - /usr/bin/env sh .sqa/script.squirrely-pumpkin-bloodhound.sh
+        container: qc.lic_greasy-apricot-manatee
+  QC.Met:
+    repos:
+      github.com/m-team-kit/cookiecutter-web cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-vermilion-macaque.sh
+        container: qc.met_tasty-sapphire-chameleon
+      github.com/m-team-kit/cookiecutter-web validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.bluesy-cerulean-robin.sh
+        container: qc.met_fuzzy-carmine-mau
+  QC.Sty:
+    repos:
+      github.com/m-team-kit/cookiecutter-web hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.paltry-auburn-nightingale.sh
+        container: qc.sty_skinny-turquoise-weasel
+      github.com/m-team-kit/cookiecutter-web jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-magnolia-panda.sh
+        container: qc.sty_hazy-smalt-loon
   QC.Ver:
     repos:
-      gitlab.inf.unibz.it/earth_observation_public/raster-to-stac get_git_tags.py:
+      github.com/m-team-kit/cookiecutter-web get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.shabby-rose-stingray.sh
-        container: qc.ver_nippy-orange-bee
+        - /usr/bin/env sh .sqa/script.stealthy-peach-manatee.sh
+        container: qc.ver_snappy-eggplant-bobcat
 timeout: 5400

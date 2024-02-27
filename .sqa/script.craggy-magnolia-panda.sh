@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd gitlab.inf.unibz.it/earth_observation_public/raster-to-stac &&
-    licensee detect . --confidence 60 --json
+cd github.com/m-team-kit/cookiecutter-web &&
+    jsonlint-cli "**/*.json"
 )
