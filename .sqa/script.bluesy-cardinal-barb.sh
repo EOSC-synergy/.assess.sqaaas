@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/m-team-kit/cookiecutter-web &&
-    hadolint frontend/Dockerfile --failure-threshold error
+cd github.com/CERN-IT-INNOVATION/3DGAN &&
+    find_doc_files.py --file_type all
 )

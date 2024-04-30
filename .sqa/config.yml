@@ -1,66 +1,68 @@
 config:
   credentials: []
   project_repos:
-    github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/fair-epos-prototype
-      repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/m-team-kit/cookiecutter-web:
+    github.com/CERN-IT-INNOVATION/3DGAN:
       branch: main
-      repo: https://github.com/m-team-kit/cookiecutter-web/
+      repo: https://github.com/CERN-IT-INNOVATION/3DGAN/
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.0.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/m-team-kit/cookiecutter-web git:
+      github.com/CERN-IT-INNOVATION/3DGAN git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-cerulean-salamander.sh
-        container: qc.acc_cloudy-sepia-chin
+        - /usr/bin/env sh .sqa/script.wiggy-goldenrod-paradise.sh
+        container: qc.acc_stealthy-cornflower-caracal
   QC.Doc:
     repos:
-      github.com/m-team-kit/cookiecutter-web find_doc_files.py:
+      github.com/CERN-IT-INNOVATION/3DGAN find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-malachite-shark.sh
-        container: qc.doc_shabby-goldenrod-fowl
-      github.com/m-team-kit/cookiecutter-web git:
+        - /usr/bin/env sh .sqa/script.bluesy-cardinal-barb.sh
+        container: qc.doc_shabby-ochre-chameleon
+      github.com/CERN-IT-INNOVATION/3DGAN git:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-tan-uakari.sh
-        container: qc.doc_stuffy-violet-moorhen
-      github.com/m-team-kit/cookiecutter-web markdownlint:
+        - /usr/bin/env sh .sqa/script.hilly-chocolate-fousek.sh
+        container: qc.doc_paltry-linen-eel
+      github.com/CERN-IT-INNOVATION/3DGAN markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-wheat-gecko.sh
-        container: qc.doc_pretty-cobalt-kakapo
+        - /usr/bin/env sh .sqa/script.fuzzy-lilac-chow.sh
+        container: qc.doc_pokey-sapphire-jaguar
+      github.com/CERN-IT-INNOVATION/3DGAN restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-crimson-gecko.sh
+        container: qc.doc_craggy-heliotrope-fowl
   QC.Lic:
     repos:
-      github.com/m-team-kit/cookiecutter-web licensee:
+      github.com/CERN-IT-INNOVATION/3DGAN licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-pumpkin-bloodhound.sh
-        container: qc.lic_greasy-apricot-manatee
-  QC.Met:
+        - /usr/bin/env sh .sqa/script.shaggy-asparagus-labradoodle.sh
+        container: qc.lic_woolly-indigo-walrus
+  QC.Sec:
     repos:
-      github.com/m-team-kit/cookiecutter-web cff-converter-python:
+      github.com/CERN-IT-INNOVATION/3DGAN bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-vermilion-macaque.sh
-        container: qc.met_tasty-sapphire-chameleon
-      github.com/m-team-kit/cookiecutter-web validate_codemeta:
-        commands:
-        - /usr/bin/env sh .sqa/script.bluesy-cerulean-robin.sh
-        container: qc.met_fuzzy-carmine-mau
+        - /usr/bin/env sh .sqa/script.squirrely-saffron-corgi.sh
+        container: qc.sec_homey-cobalt-rhinoceros
   QC.Sty:
     repos:
-      github.com/m-team-kit/cookiecutter-web hadolint:
+      github.com/CERN-IT-INNOVATION/3DGAN flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-auburn-nightingale.sh
-        container: qc.sty_skinny-turquoise-weasel
-      github.com/m-team-kit/cookiecutter-web jsonlint:
+        - /usr/bin/env sh .sqa/script.squeaky-yellow-foxhound.sh
+        container: qc.sty_wimpy-chartreuse-goat
+  QC.Uni:
+    repos:
+      github.com/CERN-IT-INNOVATION/3DGAN pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-magnolia-panda.sh
-        container: qc.sty_hazy-smalt-loon
+        - /usr/bin/env sh .sqa/script.greasy-rust-cassowary.sh
+        container: qc.uni_queasy-cobalt-mandrill
   QC.Ver:
     repos:
-      github.com/m-team-kit/cookiecutter-web get_git_tags.py:
+      github.com/CERN-IT-INNOVATION/3DGAN get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stealthy-peach-manatee.sh
-        container: qc.ver_snappy-eggplant-bobcat
+        - /usr/bin/env sh .sqa/script.gloppy-buff-koala.sh
+        container: qc.ver_snoopy-ruby-magpie
 timeout: 5400

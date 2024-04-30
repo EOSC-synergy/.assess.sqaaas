@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/m-team-kit/cookiecutter-web &&
-    mdl --json .
+cd github.com/CERN-IT-INNOVATION/3DGAN &&
+    licensee detect . --confidence 60 --json
 )
