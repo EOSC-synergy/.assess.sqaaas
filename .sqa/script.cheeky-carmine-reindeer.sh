@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CERN-IT-INNOVATION/3DGAN &&
-    find_doc_files.py --file_type all
+cd github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject &&
+    get_git_tags.py
 )

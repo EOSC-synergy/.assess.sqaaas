@@ -1,68 +1,64 @@
 config:
   credentials: []
   project_repos:
-    github.com/CERN-IT-INNOVATION/3DGAN:
-      branch: main
-      repo: https://github.com/CERN-IT-INNOVATION/3DGAN/
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/2.0.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject:
+      branch: main
+      repo: https://github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/CERN-IT-INNOVATION/3DGAN git:
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject git:
         commands:
-        - /usr/bin/env sh .sqa/script.wiggy-goldenrod-paradise.sh
-        container: qc.acc_stealthy-cornflower-caracal
+        - /usr/bin/env sh .sqa/script.scanty-plum-albatross.sh
+        container: qc.acc_sleazy-cinnabar-slug
   QC.Doc:
     repos:
-      github.com/CERN-IT-INNOVATION/3DGAN find_doc_files.py:
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-cardinal-barb.sh
-        container: qc.doc_shabby-ochre-chameleon
-      github.com/CERN-IT-INNOVATION/3DGAN git:
+        - /usr/bin/env sh .sqa/script.leaky-grey-kakapo.sh
+        container: qc.doc_queasy-maroon-armadillo
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject git:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-chocolate-fousek.sh
-        container: qc.doc_paltry-linen-eel
-      github.com/CERN-IT-INNOVATION/3DGAN markdownlint:
+        - /usr/bin/env sh .sqa/script.blurry-buff-eleuth.sh
+        container: qc.doc_woolly-corn-swan
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-lilac-chow.sh
-        container: qc.doc_pokey-sapphire-jaguar
-      github.com/CERN-IT-INNOVATION/3DGAN restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.sleepy-crimson-gecko.sh
-        container: qc.doc_craggy-heliotrope-fowl
+        - /usr/bin/env sh .sqa/script.tasty-celadon-ragdoll.sh
+        container: qc.doc_shaky-zucchini-forest
   QC.Lic:
     repos:
-      github.com/CERN-IT-INNOVATION/3DGAN licensee:
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-asparagus-labradoodle.sh
-        container: qc.lic_woolly-indigo-walrus
+        - /usr/bin/env sh .sqa/script.lanky-ruby-wolfhound.sh
+        container: qc.lic_chewy-silver-koala
   QC.Sec:
     repos:
-      github.com/CERN-IT-INNOVATION/3DGAN bandit:
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.squirrely-saffron-corgi.sh
-        container: qc.sec_homey-cobalt-rhinoceros
+        - /usr/bin/env sh .sqa/script.skanky-chocolate-worm.sh
+        container: qc.sec_freaky-azure-dachsbracke
   QC.Sty:
     repos:
-      github.com/CERN-IT-INNOVATION/3DGAN flake8:
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-yellow-foxhound.sh
-        container: qc.sty_wimpy-chartreuse-goat
+        - /usr/bin/env sh .sqa/script.bumpy-sepia-woodpecker.sh
+        container: qc.sty_stinky-rose-maltese
   QC.Uni:
     repos:
-      github.com/CERN-IT-INNOVATION/3DGAN pytest:
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-rust-cassowary.sh
-        container: qc.uni_queasy-cobalt-mandrill
+        - /usr/bin/env sh .sqa/script.baggy-lavender-angelfish.sh
+        container: qc.uni_paltry-ruby-bordeaux
   QC.Ver:
     repos:
-      github.com/CERN-IT-INNOVATION/3DGAN get_git_tags.py:
+      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-buff-koala.sh
-        container: qc.ver_snoopy-ruby-magpie
+        - /usr/bin/env sh .sqa/script.cheeky-carmine-reindeer.sh
+        container: qc.ver_lovely-cobalt-koala
 timeout: 5400

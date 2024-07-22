@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CERN-IT-INNOVATION/3DGAN &&
-    mdl --json .
+cd github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject &&
+    flake8 .
 )

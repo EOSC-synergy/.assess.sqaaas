@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/CERN-IT-INNOVATION/3DGAN &&
-    pytest  --json-report  --json-report-indent 4
+cd github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject &&
+    git rev-parse --is-inside-work-tree
 )
