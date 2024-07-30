@@ -4,61 +4,69 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/2.0.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject:
-      branch: main
-      repo: https://github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject/
+    github.com/bcobo/SIRENA:
+      branch: master
+      repo: https://github.com/bcobo/SIRENA/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject git:
+      github.com/bcobo/SIRENA git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-plum-albatross.sh
-        container: qc.acc_sleazy-cinnabar-slug
+        - /usr/bin/env sh .sqa/script.woolly-magenta-capuchin.sh
+        container: qc.acc_muggy-carmine-ibis
   QC.Doc:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject find_doc_files.py:
+      github.com/bcobo/SIRENA find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-grey-kakapo.sh
-        container: qc.doc_queasy-maroon-armadillo
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject git:
+        - /usr/bin/env sh .sqa/script.slaphappy-seashell-retriever.sh
+        container: qc.doc_pokey-persimmon-chin
+      github.com/bcobo/SIRENA git:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-buff-eleuth.sh
-        container: qc.doc_woolly-corn-swan
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject markdownlint:
+        - /usr/bin/env sh .sqa/script.pretty-salmon-coyote.sh
+        container: qc.doc_nerdy-teal-hare
+      github.com/bcobo/SIRENA markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-celadon-ragdoll.sh
-        container: qc.doc_shaky-zucchini-forest
+        - /usr/bin/env sh .sqa/script.snoopy-mustard-seal.sh
+        container: qc.doc_chewy-turquoise-millipede
+      github.com/bcobo/SIRENA restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-russet-markhor.sh
+        container: qc.doc_breezy-cardinal-bison
   QC.Lic:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject licensee:
+      github.com/bcobo/SIRENA licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-ruby-wolfhound.sh
-        container: qc.lic_chewy-silver-koala
+        - /usr/bin/env sh .sqa/script.leaky-pear-falcon.sh
+        container: qc.lic_trippy-viridian-bear
   QC.Sec:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject bandit:
+      github.com/bcobo/SIRENA bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-chocolate-worm.sh
-        container: qc.sec_freaky-azure-dachsbracke
+        - /usr/bin/env sh .sqa/script.sloppy-blue-dhole.sh
+        container: qc.sec_snazzy-azure-insect
   QC.Sty:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject flake8:
+      github.com/bcobo/SIRENA flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-sepia-woodpecker.sh
-        container: qc.sty_stinky-rose-maltese
+        - /usr/bin/env sh .sqa/script.hazy-copper-kiwi.sh
+        container: qc.sty_silly-ruby-armadillo
+      github.com/bcobo/SIRENA jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.squirrely-burgundy-mandrill.sh
+        container: qc.sty_lumpy-fuchsia-fly
   QC.Uni:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject pytest:
+      github.com/bcobo/SIRENA pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-lavender-angelfish.sh
-        container: qc.uni_paltry-ruby-bordeaux
+        - /usr/bin/env sh .sqa/script.nippy-maroon-armadillo.sh
+        container: qc.uni_homely-plum-olm
   QC.Ver:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject get_git_tags.py:
+      github.com/bcobo/SIRENA get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-carmine-reindeer.sh
-        container: qc.ver_lovely-cobalt-koala
+        - /usr/bin/env sh .sqa/script.crappy-auburn-stingray.sh
+        container: qc.ver_boozy-linen-mau
 timeout: 5400
