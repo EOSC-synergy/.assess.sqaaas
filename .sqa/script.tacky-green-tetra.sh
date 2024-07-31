@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject &&
-    licensee detect . --confidence 60 --json
+cd github.com/rizac/stream2segment &&
+    licensee detect . --confidence 60 --json 
 )

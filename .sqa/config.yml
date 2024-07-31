@@ -2,63 +2,63 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.0.1
+      branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject:
+    github.com/rizac/stream2segment:
       branch: main
-      repo: https://github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject/
+      repo: https://github.com/rizac/stream2segment/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject git:
+      github.com/rizac/stream2segment git:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-plum-albatross.sh
-        container: qc.acc_sleazy-cinnabar-slug
+        - /usr/bin/env sh .sqa/script.bumpy-mustard-akbash.sh
+        container: qc.acc_queasy-corn-bison
   QC.Doc:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject find_doc_files.py:
+      github.com/rizac/stream2segment find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-grey-kakapo.sh
-        container: qc.doc_queasy-maroon-armadillo
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject git:
+        - /usr/bin/env sh .sqa/script.homey-lilac-tuatara.sh
+        container: qc.doc_slimy-apricot-alligator
+      github.com/rizac/stream2segment git:
         commands:
-        - /usr/bin/env sh .sqa/script.blurry-buff-eleuth.sh
-        container: qc.doc_woolly-corn-swan
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject markdownlint:
+        - /usr/bin/env sh .sqa/script.shaggy-bronze-alligator.sh
+        container: qc.doc_seedy-wisteria-donkey
+      github.com/rizac/stream2segment markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-celadon-ragdoll.sh
-        container: qc.doc_shaky-zucchini-forest
+        - /usr/bin/env sh .sqa/script.scanty-sepia-harrier.sh
+        container: qc.doc_frumpy-cream-retriever
   QC.Lic:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject licensee:
+      github.com/rizac/stream2segment licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-ruby-wolfhound.sh
-        container: qc.lic_chewy-silver-koala
+        - /usr/bin/env sh .sqa/script.tacky-green-tetra.sh
+        container: qc.lic_sleazy-tangerine-toucan
   QC.Sec:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject bandit:
+      github.com/rizac/stream2segment bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.skanky-chocolate-worm.sh
-        container: qc.sec_freaky-azure-dachsbracke
+        - /usr/bin/env sh .sqa/script.dorky-thistle-numbat.sh
+        container: qc.sec_tacky-purple-monkey
   QC.Sty:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject flake8:
+      github.com/rizac/stream2segment flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-sepia-woodpecker.sh
-        container: qc.sty_stinky-rose-maltese
+        - /usr/bin/env sh .sqa/script.pokey-crimson-terrier.sh
+        container: qc.sty_droopy-olive-heron
   QC.Uni:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject pytest:
+      github.com/rizac/stream2segment pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-lavender-angelfish.sh
-        container: qc.uni_paltry-ruby-bordeaux
+        - /usr/bin/env sh .sqa/script.cloudy-green-bee.sh
+        container: qc.uni_stuffy-cerise-bordeaux
   QC.Ver:
     repos:
-      github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject get_git_tags.py:
+      github.com/rizac/stream2segment get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-carmine-reindeer.sh
-        container: qc.ver_lovely-cobalt-koala
+        - /usr/bin/env sh .sqa/script.wimpy-olivine-mongrel.sh
+        container: qc.ver_craggy-wisteria-macaque
 timeout: 5400

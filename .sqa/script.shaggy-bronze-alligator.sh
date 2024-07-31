@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject &&
-    mdl --json .
+cd github.com/rizac/stream2segment &&
+    git rev-parse --is-inside-work-tree 
 )

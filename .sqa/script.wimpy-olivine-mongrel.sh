@@ -4,6 +4,6 @@
 # SPDX-License-Identifier: GPL-3.0-only
 
 (
-cd github.com/mCodingLLC/SlapThatLikeButton-TestingStarterProject &&
-    pytest  --json-report  --json-report-indent 4
+cd github.com/rizac/stream2segment &&
+    get_git_tags.py
 )
