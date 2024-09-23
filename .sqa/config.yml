@@ -4,61 +4,73 @@ config:
     github.com/EOSC-synergy/sqaaas-tooling:
       branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
-    github.com/rizac/stream2segment:
-      branch: main
-      repo: https://github.com/rizac/stream2segment/
+    github.com/interTwin-eu/itwinai:
+      branch: fix/sqaaas
+      repo: https://github.com/interTwin-eu/itwinai/
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
   QC.Acc:
     repos:
-      github.com/rizac/stream2segment git:
+      github.com/interTwin-eu/itwinai git:
         commands:
-        - /usr/bin/env sh .sqa/script.bumpy-mustard-akbash.sh
-        container: qc.acc_queasy-corn-bison
+        - /usr/bin/env sh .sqa/script.cloudy-persimmon-mammoth.sh
+        container: qc.acc_goopy-green-bison
   QC.Doc:
     repos:
-      github.com/rizac/stream2segment find_doc_files.py:
+      github.com/interTwin-eu/itwinai find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homey-lilac-tuatara.sh
-        container: qc.doc_slimy-apricot-alligator
-      github.com/rizac/stream2segment git:
+        - /usr/bin/env sh .sqa/script.cloudy-rose-chin.sh
+        container: qc.doc_gloppy-grey-jellyfish
+      github.com/interTwin-eu/itwinai git:
         commands:
-        - /usr/bin/env sh .sqa/script.shaggy-bronze-alligator.sh
-        container: qc.doc_seedy-wisteria-donkey
-      github.com/rizac/stream2segment markdownlint:
+        - /usr/bin/env sh .sqa/script.flimsy-wheat-bordeaux.sh
+        container: qc.doc_muggy-sapphire-angelfish
+      github.com/interTwin-eu/itwinai markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-sepia-harrier.sh
-        container: qc.doc_frumpy-cream-retriever
+        - /usr/bin/env sh .sqa/script.scummy-ultramarine-coati.sh
+        container: qc.doc_gloppy-olive-cougar
+      github.com/interTwin-eu/itwinai restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.frumpy-smalt-hound.sh
+        container: qc.doc_grumpy-lemon-greyhound
   QC.Lic:
     repos:
-      github.com/rizac/stream2segment licensee:
+      github.com/interTwin-eu/itwinai licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-green-tetra.sh
-        container: qc.lic_sleazy-tangerine-toucan
+        - /usr/bin/env sh .sqa/script.chewy-salmon-goose.sh
+        container: qc.lic_snoopy-white-antelope
   QC.Sec:
     repos:
-      github.com/rizac/stream2segment bandit:
+      github.com/interTwin-eu/itwinai bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.dorky-thistle-numbat.sh
-        container: qc.sec_tacky-purple-monkey
+        - /usr/bin/env sh .sqa/script.cheeky-sepia-chimpanzee.sh
+        container: qc.sec_scanty-magenta-toucan
   QC.Sty:
     repos:
-      github.com/rizac/stream2segment flake8:
+      github.com/interTwin-eu/itwinai flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-crimson-terrier.sh
-        container: qc.sty_droopy-olive-heron
+        - /usr/bin/env sh .sqa/script.shabby-razzmatazz-monkey.sh
+        container: qc.sty_flabby-persimmon-tarsier
+      github.com/interTwin-eu/itwinai hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.messy-dandelion-coati.sh
+        container: qc.sty_lovely-celadon-ant
+      github.com/interTwin-eu/itwinai jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-salmon-elephant.sh
+        container: qc.sty_sleepy-salmon-bison
   QC.Uni:
     repos:
-      github.com/rizac/stream2segment pytest:
+      github.com/interTwin-eu/itwinai pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-green-bee.sh
-        container: qc.uni_stuffy-cerise-bordeaux
+        - /usr/bin/env sh .sqa/script.pokey-amaranth-russel.sh
+        container: qc.uni_crabby-alizarin-skunk
   QC.Ver:
     repos:
-      github.com/rizac/stream2segment get_git_tags.py:
+      github.com/interTwin-eu/itwinai get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-olivine-mongrel.sh
-        container: qc.ver_craggy-wisteria-macaque
+        - /usr/bin/env sh .sqa/script.droopy-aqua-frigatebird.sh
+        container: qc.ver_stinky-azure-owl
 timeout: 5400
